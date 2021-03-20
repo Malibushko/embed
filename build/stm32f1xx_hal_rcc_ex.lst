@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\POLZOV~1\AppData\Local\Temp\ccSTrJ0S.s 			page 1
+ARM GAS  C:\Users\POLZOV~1\AppData\Local\Temp\cc1mPeLl.s 			page 1
 
 
    1              		.cpu cortex-m3
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\POLZOV~1\AppData\Local\Temp\ccSTrJ0S.s 			page 1
   28:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c ****   * @{
   29:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c ****   */
   30:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c **** 
-ARM GAS  C:\Users\POLZOV~1\AppData\Local\Temp\ccSTrJ0S.s 			page 2
+ARM GAS  C:\Users\POLZOV~1\AppData\Local\Temp\cc1mPeLl.s 			page 2
 
 
   31:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c **** #ifdef HAL_RCC_MODULE_ENABLED
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\POLZOV~1\AppData\Local\Temp\ccSTrJ0S.s 			page 1
   85:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c ****   *         RCC_PeriphCLKInitTypeDef.
   86:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c ****   * @param  PeriphClkInit pointer to an RCC_PeriphCLKInitTypeDef structure that
   87:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c ****   *         contains the configuration information for the Extended Peripherals clocks(RTC clock).
-ARM GAS  C:\Users\POLZOV~1\AppData\Local\Temp\ccSTrJ0S.s 			page 3
+ARM GAS  C:\Users\POLZOV~1\AppData\Local\Temp\cc1mPeLl.s 			page 3
 
 
   88:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c ****   *
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\POLZOV~1\AppData\Local\Temp\ccSTrJ0S.s 			page 1
  113:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c ****     /* check for RTC Parameters used to output RTCCLK */
  114:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c ****     assert_param(IS_RCC_RTCCLKSOURCE(PeriphClkInit->RTCClockSelection));
   58              		.loc 1 114 5 is_stmt 1 view .LVU7
-ARM GAS  C:\Users\POLZOV~1\AppData\Local\Temp\ccSTrJ0S.s 			page 4
+ARM GAS  C:\Users\POLZOV~1\AppData\Local\Temp\cc1mPeLl.s 			page 4
 
 
  115:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c **** 
@@ -238,7 +238,7 @@ ARM GAS  C:\Users\POLZOV~1\AppData\Local\Temp\ccSTrJ0S.s 			page 1
  100 0036 3BD0     		beq	.L15
  101              	.LVL5:
  102              	.L4:
-ARM GAS  C:\Users\POLZOV~1\AppData\Local\Temp\ccSTrJ0S.s 			page 5
+ARM GAS  C:\Users\POLZOV~1\AppData\Local\Temp\cc1mPeLl.s 			page 5
 
 
  128:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c ****     {
@@ -298,7 +298,7 @@ ARM GAS  C:\Users\POLZOV~1\AppData\Local\Temp\ccSTrJ0S.s 			page 1
  132              		.loc 1 152 7 view .LVU34
  133 005c 0026     		movs	r6, #0
  134 005e C1F84064 		str	r6, [r1, #1088]
-ARM GAS  C:\Users\POLZOV~1\AppData\Local\Temp\ccSTrJ0S.s 			page 6
+ARM GAS  C:\Users\POLZOV~1\AppData\Local\Temp\cc1mPeLl.s 			page 6
 
 
  153:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c ****       /* Restore the Content of BDCR register */
@@ -358,7 +358,7 @@ ARM GAS  C:\Users\POLZOV~1\AppData\Local\Temp\ccSTrJ0S.s 			page 1
  159              		.loc 1 182 24 is_stmt 0 view .LVU42
  160 007c 2368     		ldr	r3, [r4]
  161              		.loc 1 182 3 view .LVU43
-ARM GAS  C:\Users\POLZOV~1\AppData\Local\Temp\ccSTrJ0S.s 			page 7
+ARM GAS  C:\Users\POLZOV~1\AppData\Local\Temp\cc1mPeLl.s 			page 7
 
 
  162 007e 13F0020F 		tst	r3, #2
@@ -418,7 +418,7 @@ ARM GAS  C:\Users\POLZOV~1\AppData\Local\Temp\ccSTrJ0S.s 			page 1
  226:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c ****       /* Check the parameters */
  227:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c ****       assert_param(IS_RCC_PLLI2S_MUL(PeriphClkInit->PLLI2S.PLLI2SMUL));
  228:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c ****       assert_param(IS_RCC_HSE_PREDIV2(PeriphClkInit->PLLI2S.HSEPrediv2Value));
-ARM GAS  C:\Users\POLZOV~1\AppData\Local\Temp\ccSTrJ0S.s 			page 8
+ARM GAS  C:\Users\POLZOV~1\AppData\Local\Temp\cc1mPeLl.s 			page 8
 
 
  229:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c **** 
@@ -478,7 +478,7 @@ ARM GAS  C:\Users\POLZOV~1\AppData\Local\Temp\ccSTrJ0S.s 			page 1
  277:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c ****     assert_param(IS_RCC_USBPLLCLK_DIV(PeriphClkInit->UsbClockSelection));
  179              		.loc 1 277 5 is_stmt 1 view .LVU49
  278:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c **** 
-ARM GAS  C:\Users\POLZOV~1\AppData\Local\Temp\ccSTrJ0S.s 			page 9
+ARM GAS  C:\Users\POLZOV~1\AppData\Local\Temp\cc1mPeLl.s 			page 9
 
 
  279:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c ****     /* Configure the USB clock source */
@@ -538,7 +538,7 @@ ARM GAS  C:\Users\POLZOV~1\AppData\Local\Temp\ccSTrJ0S.s 			page 1
  219              		.loc 1 137 25 is_stmt 0 view .LVU60
  220 00ca FFF7FEFF 		bl	HAL_GetTick
  221              	.LVL16:
-ARM GAS  C:\Users\POLZOV~1\AppData\Local\Temp\ccSTrJ0S.s 			page 10
+ARM GAS  C:\Users\POLZOV~1\AppData\Local\Temp\cc1mPeLl.s 			page 10
 
 
  137:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c ****         {
@@ -598,7 +598,7 @@ ARM GAS  C:\Users\POLZOV~1\AppData\Local\Temp\ccSTrJ0S.s 			page 1
  261              	.LVL21:
  262              	.L17:
  177:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c ****     }
-ARM GAS  C:\Users\POLZOV~1\AppData\Local\Temp\ccSTrJ0S.s 			page 11
+ARM GAS  C:\Users\POLZOV~1\AppData\Local\Temp\cc1mPeLl.s 			page 11
 
 
  263              		.loc 1 177 7 is_stmt 1 view .LVU76
@@ -658,7 +658,7 @@ ARM GAS  C:\Users\POLZOV~1\AppData\Local\Temp\ccSTrJ0S.s 			page 1
  307              		.cfi_startproc
  308              		@ args = 0, pretend = 0, frame = 0
  309              		@ frame_needed = 0, uses_anonymous_args = 0
-ARM GAS  C:\Users\POLZOV~1\AppData\Local\Temp\ccSTrJ0S.s 			page 12
+ARM GAS  C:\Users\POLZOV~1\AppData\Local\Temp\cc1mPeLl.s 			page 12
 
 
  310              		@ link register save eliminated.
@@ -718,7 +718,7 @@ ARM GAS  C:\Users\POLZOV~1\AppData\Local\Temp\ccSTrJ0S.s 			page 1
  322:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c ****   /* Get the I2S2 clock configuration -----------------------------------------*/
  323:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c ****   PeriphClkInit->PeriphClockSelection |= RCC_PERIPHCLK_I2S2;
  324:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c ****   PeriphClkInit->I2s2ClockSelection = RCC_I2S2CLKSOURCE_SYSCLK;
-ARM GAS  C:\Users\POLZOV~1\AppData\Local\Temp\ccSTrJ0S.s 			page 13
+ARM GAS  C:\Users\POLZOV~1\AppData\Local\Temp\cc1mPeLl.s 			page 13
 
 
  325:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c **** 
@@ -778,7 +778,7 @@ ARM GAS  C:\Users\POLZOV~1\AppData\Local\Temp\ccSTrJ0S.s 			page 1
  340:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c **** 
  341:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c **** /**
  342:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c ****   * @brief  Returns the peripheral clock frequency
-ARM GAS  C:\Users\POLZOV~1\AppData\Local\Temp\ccSTrJ0S.s 			page 14
+ARM GAS  C:\Users\POLZOV~1\AppData\Local\Temp\cc1mPeLl.s 			page 14
 
 
  343:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c ****   * @note   Returns 0 if peripheral clock is unknown
@@ -838,7 +838,7 @@ ARM GAS  C:\Users\POLZOV~1\AppData\Local\Temp\ccSTrJ0S.s 			page 1
  384              		.cfi_def_cfa_offset 4
  385              		.cfi_offset 14, -4
  386              		.pad #28
-ARM GAS  C:\Users\POLZOV~1\AppData\Local\Temp\ccSTrJ0S.s 			page 15
+ARM GAS  C:\Users\POLZOV~1\AppData\Local\Temp\cc1mPeLl.s 			page 15
 
 
  387 0002 87B0     		sub	sp, sp, #28
@@ -898,7 +898,7 @@ ARM GAS  C:\Users\POLZOV~1\AppData\Local\Temp\ccSTrJ0S.s 			page 1
  413:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c ****     case RCC_PERIPHCLK_USB:
  414:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c ****     {
  415:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c ****       /* Get RCC configuration ------------------------------------------------------*/
-ARM GAS  C:\Users\POLZOV~1\AppData\Local\Temp\ccSTrJ0S.s 			page 16
+ARM GAS  C:\Users\POLZOV~1\AppData\Local\Temp\cc1mPeLl.s 			page 16
 
 
  416:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c ****       temp_reg = RCC->CFGR;
@@ -958,7 +958,7 @@ ARM GAS  C:\Users\POLZOV~1\AppData\Local\Temp\ccSTrJ0S.s 			page 1
  470:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c ****         {
  471:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c ****           /* Prescaler of 2 selected for USB */
  472:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c ****           frequency = pllclk;
-ARM GAS  C:\Users\POLZOV~1\AppData\Local\Temp\ccSTrJ0S.s 			page 17
+ARM GAS  C:\Users\POLZOV~1\AppData\Local\Temp\cc1mPeLl.s 			page 17
 
 
  473:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c ****         }
@@ -1018,7 +1018,7 @@ ARM GAS  C:\Users\POLZOV~1\AppData\Local\Temp\ccSTrJ0S.s 			page 1
  527:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c **** #else
  528:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c ****       if (__HAL_RCC_GET_I2S3_SOURCE() == RCC_I2S3CLKSOURCE_SYSCLK)
  529:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c ****       {
-ARM GAS  C:\Users\POLZOV~1\AppData\Local\Temp\ccSTrJ0S.s 			page 18
+ARM GAS  C:\Users\POLZOV~1\AppData\Local\Temp\cc1mPeLl.s 			page 18
 
 
  530:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c ****         /* SYSCLK used as source clock for I2S3 */
@@ -1078,7 +1078,7 @@ ARM GAS  C:\Users\POLZOV~1\AppData\Local\Temp\ccSTrJ0S.s 			page 1
  584:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c ****   return (frequency);
  585:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c **** }
  417              		.loc 1 585 1 is_stmt 0 view .LVU113
-ARM GAS  C:\Users\POLZOV~1\AppData\Local\Temp\ccSTrJ0S.s 			page 19
+ARM GAS  C:\Users\POLZOV~1\AppData\Local\Temp\cc1mPeLl.s 			page 19
 
 
  418 002e 07B0     		add	sp, sp, #28
@@ -1138,7 +1138,7 @@ ARM GAS  C:\Users\POLZOV~1\AppData\Local\Temp\ccSTrJ0S.s 			page 1
  428:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c **** #endif /* STM32F105xC || STM32F107xC || STM32F100xB || STM32F100xE */
  458              		.loc 1 428 106 view .LVU128
  459 005a 0B44     		add	r3, r3, r1
-ARM GAS  C:\Users\POLZOV~1\AppData\Local\Temp\ccSTrJ0S.s 			page 20
+ARM GAS  C:\Users\POLZOV~1\AppData\Local\Temp\cc1mPeLl.s 			page 20
 
 
  460 005c 13F8142C 		ldrb	r2, [r3, #-20]	@ zero_extendqisi2
@@ -1198,7 +1198,7 @@ ARM GAS  C:\Users\POLZOV~1\AppData\Local\Temp\ccSTrJ0S.s 			page 1
  548:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c ****     {
  500              		.loc 1 548 5 is_stmt 1 view .LVU143
  549:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c ****       /* Get RCC BDCR configuration ------------------------------------------------------*/
-ARM GAS  C:\Users\POLZOV~1\AppData\Local\Temp\ccSTrJ0S.s 			page 21
+ARM GAS  C:\Users\POLZOV~1\AppData\Local\Temp\cc1mPeLl.s 			page 21
 
 
  501              		.loc 1 549 5 view .LVU144
@@ -1258,7 +1258,7 @@ ARM GAS  C:\Users\POLZOV~1\AppData\Local\Temp\ccSTrJ0S.s 			page 1
  540              		.loc 1 563 82 discriminator 1 view .LVU159
  541 00bc 0B4B     		ldr	r3, .L38+4
  542 00be 1868     		ldr	r0, [r3]
-ARM GAS  C:\Users\POLZOV~1\AppData\Local\Temp\ccSTrJ0S.s 			page 22
+ARM GAS  C:\Users\POLZOV~1\AppData\Local\Temp\cc1mPeLl.s 			page 22
 
 
  563:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c ****       {
@@ -1318,7 +1318,7 @@ ARM GAS  C:\Users\POLZOV~1\AppData\Local\Temp\ccSTrJ0S.s 			page 1
  582 00e8 00000000 		.word	.LC0
  583 00ec 00100240 		.word	1073876992
  584 00f0 00127A00 		.word	8000000
-ARM GAS  C:\Users\POLZOV~1\AppData\Local\Temp\ccSTrJ0S.s 			page 23
+ARM GAS  C:\Users\POLZOV~1\AppData\Local\Temp\cc1mPeLl.s 			page 23
 
 
  585 00f4 ABAAAAAA 		.word	-1431655765
@@ -1328,31 +1328,31 @@ ARM GAS  C:\Users\POLZOV~1\AppData\Local\Temp\ccSTrJ0S.s 			page 1
  589              		.fnend
  591              		.text
  592              	.Letext0:
- 593              		.file 2 "c:\\users\\polzovatel\\appdata\\roaming\\gnu mcu eclipse\\xpack-arm-none-eabi-gcc-10.2.1-
- 594              		.file 3 "c:\\users\\polzovatel\\appdata\\roaming\\gnu mcu eclipse\\xpack-arm-none-eabi-gcc-10.2.1-
+ 593              		.file 2 "c:\\users\\polzovatel\\appdata\\roaming\\gnu_mcu_eclipse\\xpack-arm-none-eabi-gcc-10.2.1-
+ 594              		.file 3 "c:\\users\\polzovatel\\appdata\\roaming\\gnu_mcu_eclipse\\xpack-arm-none-eabi-gcc-10.2.1-
  595              		.file 4 "Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f103xb.h"
  596              		.file 5 "Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f1xx.h"
  597              		.file 6 "Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_def.h"
  598              		.file 7 "Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc_ex.h"
  599              		.file 8 "Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc.h"
  600              		.file 9 "Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h"
-ARM GAS  C:\Users\POLZOV~1\AppData\Local\Temp\ccSTrJ0S.s 			page 24
+ARM GAS  C:\Users\POLZOV~1\AppData\Local\Temp\cc1mPeLl.s 			page 24
 
 
 DEFINED SYMBOLS
                             *ABS*:0000000000000000 stm32f1xx_hal_rcc_ex.c
-C:\Users\POLZOV~1\AppData\Local\Temp\ccSTrJ0S.s:16     .text.HAL_RCCEx_PeriphCLKConfig:0000000000000000 $t
-C:\Users\POLZOV~1\AppData\Local\Temp\ccSTrJ0S.s:24     .text.HAL_RCCEx_PeriphCLKConfig:0000000000000000 HAL_RCCEx_PeriphCLKConfig
-C:\Users\POLZOV~1\AppData\Local\Temp\ccSTrJ0S.s:287    .text.HAL_RCCEx_PeriphCLKConfig:000000000000010c $d
+C:\Users\POLZOV~1\AppData\Local\Temp\cc1mPeLl.s:16     .text.HAL_RCCEx_PeriphCLKConfig:0000000000000000 $t
+C:\Users\POLZOV~1\AppData\Local\Temp\cc1mPeLl.s:24     .text.HAL_RCCEx_PeriphCLKConfig:0000000000000000 HAL_RCCEx_PeriphCLKConfig
+C:\Users\POLZOV~1\AppData\Local\Temp\cc1mPeLl.s:287    .text.HAL_RCCEx_PeriphCLKConfig:000000000000010c $d
 .ARM.exidx.text.HAL_RCCEx_PeriphCLKConfig:0000000000000000 $d
-C:\Users\POLZOV~1\AppData\Local\Temp\ccSTrJ0S.s:295    .text.HAL_RCCEx_GetPeriphCLKConfig:0000000000000000 $t
-C:\Users\POLZOV~1\AppData\Local\Temp\ccSTrJ0S.s:302    .text.HAL_RCCEx_GetPeriphCLKConfig:0000000000000000 HAL_RCCEx_GetPeriphCLKConfig
-C:\Users\POLZOV~1\AppData\Local\Temp\ccSTrJ0S.s:353    .text.HAL_RCCEx_GetPeriphCLKConfig:0000000000000028 $d
+C:\Users\POLZOV~1\AppData\Local\Temp\cc1mPeLl.s:295    .text.HAL_RCCEx_GetPeriphCLKConfig:0000000000000000 $t
+C:\Users\POLZOV~1\AppData\Local\Temp\cc1mPeLl.s:302    .text.HAL_RCCEx_GetPeriphCLKConfig:0000000000000000 HAL_RCCEx_GetPeriphCLKConfig
+C:\Users\POLZOV~1\AppData\Local\Temp\cc1mPeLl.s:353    .text.HAL_RCCEx_GetPeriphCLKConfig:0000000000000028 $d
 .ARM.exidx.text.HAL_RCCEx_GetPeriphCLKConfig:0000000000000000 $d
-C:\Users\POLZOV~1\AppData\Local\Temp\ccSTrJ0S.s:360    .rodata.HAL_RCCEx_GetPeriphCLKFreq.str1.4:0000000000000000 $d
-C:\Users\POLZOV~1\AppData\Local\Temp\ccSTrJ0S.s:365    .text.HAL_RCCEx_GetPeriphCLKFreq:0000000000000000 $t
-C:\Users\POLZOV~1\AppData\Local\Temp\ccSTrJ0S.s:372    .text.HAL_RCCEx_GetPeriphCLKFreq:0000000000000000 HAL_RCCEx_GetPeriphCLKFreq
-C:\Users\POLZOV~1\AppData\Local\Temp\ccSTrJ0S.s:582    .text.HAL_RCCEx_GetPeriphCLKFreq:00000000000000e8 $d
+C:\Users\POLZOV~1\AppData\Local\Temp\cc1mPeLl.s:360    .rodata.HAL_RCCEx_GetPeriphCLKFreq.str1.4:0000000000000000 $d
+C:\Users\POLZOV~1\AppData\Local\Temp\cc1mPeLl.s:365    .text.HAL_RCCEx_GetPeriphCLKFreq:0000000000000000 $t
+C:\Users\POLZOV~1\AppData\Local\Temp\cc1mPeLl.s:372    .text.HAL_RCCEx_GetPeriphCLKFreq:0000000000000000 HAL_RCCEx_GetPeriphCLKFreq
+C:\Users\POLZOV~1\AppData\Local\Temp\cc1mPeLl.s:582    .text.HAL_RCCEx_GetPeriphCLKFreq:00000000000000e8 $d
 .ARM.exidx.text.HAL_RCCEx_GetPeriphCLKFreq:0000000000000000 $d
 
 UNDEFINED SYMBOLS

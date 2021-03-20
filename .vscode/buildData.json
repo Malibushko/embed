@@ -3,10 +3,8 @@
     "ABOUT2": "User should not edit this fields, instead it should edit 'c_cpp_properties.json'",
     "ABOUT3": "This file is regenerated on 'Update workspace' task.",
     "VERSION": "1.7",
-    "LAST_RUN": "2021-03-20 15:59:26.056136",
+    "LAST_RUN": "2021-03-20 16:20:08.085751",
     "cSources": [
-        "Core/Src/main.c",
-        "Core/Src/stm32f1xx_it.c",
         "Core/Src/stm32f1xx_hal_msp.c",
         "Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio_ex.c",
         "Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim.c",
@@ -75,7 +73,7 @@
     "ldFlags": [
         "-mcpu=cortex-m3",
         "-mthumb",
-        "-specs=nano.specs",
+        "-specs=nosys.specs",
         "-TSTM32F103C8Tx_FLASH.ld",
         "-lc",
         "-lm",
@@ -91,10 +89,10 @@
     ],
     "stm32SvdPath": ".vscode/STM32F103xx.svd",
     "ABOUT4": "---- Paths below are fetched from user-specific 'toolsPaths.json'. ----",
-    "gccExePath": "C:/Users/polzovatel/AppData/Roaming/GNU MCU Eclipse/xpack-arm-none-eabi-gcc-10.2.1-1.1/bin/arm-none-eabi-gcc.exe",
-    "gccInludePath": "C:/Users/polzovatel/AppData/Roaming/GNU MCU Eclipse/xpack-arm-none-eabi-gcc-10.2.1-1.1/lib/gcc/arm-none-eabi/10.2.1/include",
-    "buildToolsPath": "C:/Users/polzovatel/AppData/Roaming/GNU MCU Eclipse/Build Tools/2.12-20190422-1053/bin/make.exe",
+    "gccExePath": "C:/Users/polzovatel/AppData/Roaming/GNU_MCU_Eclipse/xpack-arm-none-eabi-gcc-10.2.1-1.1/bin/arm-none-eabi-gcc.exe",
+    "gccInludePath": "C:/Users/polzovatel/AppData/Roaming/GNU_MCU_Eclipse/xpack-arm-none-eabi-gcc-10.2.1-1.1/lib/gcc/arm-none-eabi/10.2.1/include",
+    "buildToolsPath": "C:/Users/polzovatel/AppData/Roaming/GNU_MCU_Eclipse/Build Tools/2.12-20190422-1053/bin/make.exe",
     "pythonExec": "python",
-    "openOcdPath": "C:/Users/polzovatel/AppData/Roaming/GNU MCU Eclipse/OpenOCD/0.10.0-12-20190422-2015/bin/openocd.exe",
-    "openOcdInterfacePath": "C:/Users/polzovatel/AppData/Roaming/GNU MCU Eclipse/OpenOCD/0.10.0-12-20190422-2015/scripts/interface/stlink.cfg"
+    "openOcdPath": "C:/Users/polzovatel/AppData/Roaming/GNU_MCU_Eclipse/OpenOCD/0.10.0-12-20190422-2015/bin/openocd.exe",
+    "openOcdInterfacePath": "C:/Users/polzovatel/AppData/Roaming/GNU_MCU_Eclipse/OpenOCD/0.10.0-12-20190422-2015/scripts/interface/stlink.cfg"
 }

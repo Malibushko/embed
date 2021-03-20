@@ -14,8 +14,6 @@
         "user_ldFlags": [],
         "____________________DO_NOT_MODIFY_FIELDS_BELOW____________________": "",
         "cubemx_sourceFiles": [
-            "Core/Src/main.c",
-            "Core/Src/stm32f1xx_it.c",
             "Core/Src/stm32f1xx_hal_msp.c",
             "Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio_ex.c",
             "Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim.c",
@@ -45,8 +43,8 @@
             "USE_HAL_DRIVER",
             "STM32F103xB"
         ],
-        "gccExePath": "C:/Users/polzovatel/AppData/Roaming/GNU MCU Eclipse/xpack-arm-none-eabi-gcc-10.2.1-1.1/bin/arm-none-eabi-gcc.exe",
-        "gccIncludePath": "C:/Users/polzovatel/AppData/Roaming/GNU MCU Eclipse/xpack-arm-none-eabi-gcc-10.2.1-1.1/lib/gcc/arm-none-eabi/10.2.1/include"
+        "gccExePath": "C:/Users/polzovatel/AppData/Roaming/GNU_MCU_Eclipse/xpack-arm-none-eabi-gcc-10.2.1-1.1/bin/arm-none-eabi-gcc.exe",
+        "gccIncludePath": "C:/Users/polzovatel/AppData/Roaming/GNU_MCU_Eclipse/xpack-arm-none-eabi-gcc-10.2.1-1.1/lib/gcc/arm-none-eabi/10.2.1/include"
     },
     "configurations": [
         {

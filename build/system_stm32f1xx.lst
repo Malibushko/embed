@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\POLZOV~1\AppData\Local\Temp\ccCvdt7d.s 			page 1
+ARM GAS  C:\Users\POLZOV~1\AppData\Local\Temp\cczsnqU8.s 			page 1
 
 
    1              		.cpu cortex-m3
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\POLZOV~1\AppData\Local\Temp\ccCvdt7d.s 			page 1
   29:Core/Src/system_stm32f1xx.c ****   *    When HSE is used as system clock source, directly or through PLL, and you
   30:Core/Src/system_stm32f1xx.c ****   *    are using different crystal you have to adapt the HSE value to your own
   31:Core/Src/system_stm32f1xx.c ****   *    configuration.
-ARM GAS  C:\Users\POLZOV~1\AppData\Local\Temp\ccCvdt7d.s 			page 2
+ARM GAS  C:\Users\POLZOV~1\AppData\Local\Temp\cczsnqU8.s 			page 2
 
 
   32:Core/Src/system_stm32f1xx.c ****   *        
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\POLZOV~1\AppData\Local\Temp\ccCvdt7d.s 			page 1
   86:Core/Src/system_stm32f1xx.c **** 
   87:Core/Src/system_stm32f1xx.c **** #endif
   88:Core/Src/system_stm32f1xx.c **** 
-ARM GAS  C:\Users\POLZOV~1\AppData\Local\Temp\ccCvdt7d.s 			page 3
+ARM GAS  C:\Users\POLZOV~1\AppData\Local\Temp\cczsnqU8.s 			page 3
 
 
   89:Core/Src/system_stm32f1xx.c **** #if defined(USER_VECT_TAB_ADDRESS)
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\POLZOV~1\AppData\Local\Temp\ccCvdt7d.s 			page 1
  143:Core/Src/system_stm32f1xx.c **** 
  144:Core/Src/system_stm32f1xx.c **** /**
  145:Core/Src/system_stm32f1xx.c ****   * @brief  Setup the microcontroller system
-ARM GAS  C:\Users\POLZOV~1\AppData\Local\Temp\ccCvdt7d.s 			page 4
+ARM GAS  C:\Users\POLZOV~1\AppData\Local\Temp\cczsnqU8.s 			page 4
 
 
  146:Core/Src/system_stm32f1xx.c ****   *         Initialize the Embedded Flash Interface, the PLL and update the 
@@ -238,7 +238,7 @@ ARM GAS  C:\Users\POLZOV~1\AppData\Local\Temp\ccCvdt7d.s 			page 1
  179:Core/Src/system_stm32f1xx.c ****   *           - If SYSCLK source is HSI, SystemCoreClock will contain the HSI_VALUE(*)
  180:Core/Src/system_stm32f1xx.c ****   *                                              
  181:Core/Src/system_stm32f1xx.c ****   *           - If SYSCLK source is HSE, SystemCoreClock will contain the HSE_VALUE(**)
-ARM GAS  C:\Users\POLZOV~1\AppData\Local\Temp\ccCvdt7d.s 			page 5
+ARM GAS  C:\Users\POLZOV~1\AppData\Local\Temp\cczsnqU8.s 			page 5
 
 
  182:Core/Src/system_stm32f1xx.c ****   *                          
@@ -298,7 +298,7 @@ ARM GAS  C:\Users\POLZOV~1\AppData\Local\Temp\ccCvdt7d.s 			page 1
  216:Core/Src/system_stm32f1xx.c ****   case 0x00U:
  217:Core/Src/system_stm32f1xx.c ****     SystemCoreClock = HSI_VALUE;
  218:Core/Src/system_stm32f1xx.c ****     break;
-ARM GAS  C:\Users\POLZOV~1\AppData\Local\Temp\ccCvdt7d.s 			page 6
+ARM GAS  C:\Users\POLZOV~1\AppData\Local\Temp\cczsnqU8.s 			page 6
 
 
  219:Core/Src/system_stm32f1xx.c ****   case 0x04U:
@@ -358,7 +358,7 @@ ARM GAS  C:\Users\POLZOV~1\AppData\Local\Temp\ccCvdt7d.s 			page 1
  273:Core/Src/system_stm32f1xx.c ****       prediv1source = RCC->CFGR2 & RCC_CFGR2_PREDIV1SRC;
  274:Core/Src/system_stm32f1xx.c ****       prediv1factor = (RCC->CFGR2 & RCC_CFGR2_PREDIV1) + 1U;
  275:Core/Src/system_stm32f1xx.c **** 
-ARM GAS  C:\Users\POLZOV~1\AppData\Local\Temp\ccCvdt7d.s 			page 7
+ARM GAS  C:\Users\POLZOV~1\AppData\Local\Temp\cczsnqU8.s 			page 7
 
 
  276:Core/Src/system_stm32f1xx.c ****       if (prediv1source == 0U)
@@ -418,7 +418,7 @@ ARM GAS  C:\Users\POLZOV~1\AppData\Local\Temp\ccCvdt7d.s 			page 1
   98              		.loc 1 297 52 view .LVU20
   99 0024 C3F30313 		ubfx	r3, r3, #4, #4
  100              		.loc 1 297 58 view .LVU21
-ARM GAS  C:\Users\POLZOV~1\AppData\Local\Temp\ccCvdt7d.s 			page 8
+ARM GAS  C:\Users\POLZOV~1\AppData\Local\Temp\cczsnqU8.s 			page 8
 
 
  101 0028 184A     		ldr	r2, .L10+12
@@ -478,7 +478,7 @@ ARM GAS  C:\Users\POLZOV~1\AppData\Local\Temp\ccCvdt7d.s 			page 1
  228:Core/Src/system_stm32f1xx.c **** 
  140              		.loc 1 228 13 view .LVU37
  141 0048 0233     		adds	r3, r3, #2
-ARM GAS  C:\Users\POLZOV~1\AppData\Local\Temp\ccCvdt7d.s 			page 9
+ARM GAS  C:\Users\POLZOV~1\AppData\Local\Temp\cczsnqU8.s 			page 9
 
 
  142              	.LVL13:
@@ -538,7 +538,7 @@ ARM GAS  C:\Users\POLZOV~1\AppData\Local\Temp\ccCvdt7d.s 			page 1
  182 0074 02FB03F3 		mul	r3, r2, r3
  183              	.LVL20:
  249:Core/Src/system_stm32f1xx.c ****       }
-ARM GAS  C:\Users\POLZOV~1\AppData\Local\Temp\ccCvdt7d.s 			page 10
+ARM GAS  C:\Users\POLZOV~1\AppData\Local\Temp\cczsnqU8.s 			page 10
 
 
  184              		.loc 1 249 25 view .LVU52
@@ -581,29 +581,29 @@ ARM GAS  C:\Users\POLZOV~1\AppData\Local\Temp\ccCvdt7d.s 			page 1
  224      01020304 
  225              		.text
  226              	.Letext0:
- 227              		.file 2 "c:\\users\\polzovatel\\appdata\\roaming\\gnu mcu eclipse\\xpack-arm-none-eabi-gcc-10.2.1-
- 228              		.file 3 "c:\\users\\polzovatel\\appdata\\roaming\\gnu mcu eclipse\\xpack-arm-none-eabi-gcc-10.2.1-
+ 227              		.file 2 "c:\\users\\polzovatel\\appdata\\roaming\\gnu_mcu_eclipse\\xpack-arm-none-eabi-gcc-10.2.1-
+ 228              		.file 3 "c:\\users\\polzovatel\\appdata\\roaming\\gnu_mcu_eclipse\\xpack-arm-none-eabi-gcc-10.2.1-
  229              		.file 4 "Drivers/CMSIS/Device/ST/STM32F1xx/Include/system_stm32f1xx.h"
  230              		.file 5 "Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f103xb.h"
  231              		.file 6 "Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f1xx.h"
  232              		.file 7 "Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h"
-ARM GAS  C:\Users\POLZOV~1\AppData\Local\Temp\ccCvdt7d.s 			page 11
+ARM GAS  C:\Users\POLZOV~1\AppData\Local\Temp\cczsnqU8.s 			page 11
 
 
 DEFINED SYMBOLS
                             *ABS*:0000000000000000 system_stm32f1xx.c
-C:\Users\POLZOV~1\AppData\Local\Temp\ccCvdt7d.s:16     .text.SystemInit:0000000000000000 $t
-C:\Users\POLZOV~1\AppData\Local\Temp\ccCvdt7d.s:24     .text.SystemInit:0000000000000000 SystemInit
+C:\Users\POLZOV~1\AppData\Local\Temp\cczsnqU8.s:16     .text.SystemInit:0000000000000000 $t
+C:\Users\POLZOV~1\AppData\Local\Temp\cczsnqU8.s:24     .text.SystemInit:0000000000000000 SystemInit
        .ARM.exidx.text.SystemInit:0000000000000000 $d
-C:\Users\POLZOV~1\AppData\Local\Temp\ccCvdt7d.s:41     .text.SystemCoreClockUpdate:0000000000000000 $t
-C:\Users\POLZOV~1\AppData\Local\Temp\ccCvdt7d.s:48     .text.SystemCoreClockUpdate:0000000000000000 SystemCoreClockUpdate
-C:\Users\POLZOV~1\AppData\Local\Temp\ccCvdt7d.s:191    .text.SystemCoreClockUpdate:0000000000000080 $d
+C:\Users\POLZOV~1\AppData\Local\Temp\cczsnqU8.s:41     .text.SystemCoreClockUpdate:0000000000000000 $t
+C:\Users\POLZOV~1\AppData\Local\Temp\cczsnqU8.s:48     .text.SystemCoreClockUpdate:0000000000000000 SystemCoreClockUpdate
+C:\Users\POLZOV~1\AppData\Local\Temp\cczsnqU8.s:191    .text.SystemCoreClockUpdate:0000000000000080 $d
 .ARM.exidx.text.SystemCoreClockUpdate:0000000000000000 $d
-C:\Users\POLZOV~1\AppData\Local\Temp\ccCvdt7d.s:223    .rodata.APBPrescTable:0000000000000000 APBPrescTable
-C:\Users\POLZOV~1\AppData\Local\Temp\ccCvdt7d.s:216    .rodata.AHBPrescTable:0000000000000000 AHBPrescTable
-C:\Users\POLZOV~1\AppData\Local\Temp\ccCvdt7d.s:209    .data.SystemCoreClock:0000000000000000 SystemCoreClock
-C:\Users\POLZOV~1\AppData\Local\Temp\ccCvdt7d.s:205    .data.SystemCoreClock:0000000000000000 $d
-C:\Users\POLZOV~1\AppData\Local\Temp\ccCvdt7d.s:212    .rodata.AHBPrescTable:0000000000000000 $d
-C:\Users\POLZOV~1\AppData\Local\Temp\ccCvdt7d.s:220    .rodata.APBPrescTable:0000000000000000 $d
+C:\Users\POLZOV~1\AppData\Local\Temp\cczsnqU8.s:223    .rodata.APBPrescTable:0000000000000000 APBPrescTable
+C:\Users\POLZOV~1\AppData\Local\Temp\cczsnqU8.s:216    .rodata.AHBPrescTable:0000000000000000 AHBPrescTable
+C:\Users\POLZOV~1\AppData\Local\Temp\cczsnqU8.s:209    .data.SystemCoreClock:0000000000000000 SystemCoreClock
+C:\Users\POLZOV~1\AppData\Local\Temp\cczsnqU8.s:205    .data.SystemCoreClock:0000000000000000 $d
+C:\Users\POLZOV~1\AppData\Local\Temp\cczsnqU8.s:212    .rodata.AHBPrescTable:0000000000000000 $d
+C:\Users\POLZOV~1\AppData\Local\Temp\cczsnqU8.s:220    .rodata.APBPrescTable:0000000000000000 $d
 
 NO UNDEFINED SYMBOLS

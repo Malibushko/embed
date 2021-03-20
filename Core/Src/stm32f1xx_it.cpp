@@ -24,7 +24,7 @@
 
 extern Uart               ESP;
 extern UART_HandleTypeDef huart1;
-
+extern void Uart_isr (UART_HandleTypeDef *huart);
 /******************************************************************************/
 
 /******************************************************************************/
@@ -122,7 +122,7 @@ void SysTick_Handler(void)
   */
 void USART1_IRQHandler(void)
 {
-  ESP.HandleIRQ();
+  Uart_isr(&huart1);
 }
 
 /************************ (C) COPYRIGHT STMicroelectronics *****END OF FILE****/

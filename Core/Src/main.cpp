@@ -1,8 +1,7 @@
 #include "main.h"
-#include "uart.h"
+#include "ESP_DATA_HANDLER.h"
 
 UART_HandleTypeDef huart1;
-Uart ESP(&huart1);
 
 void SystemClock_Config(void);
 static void MX_GPIO_Init(void);
@@ -16,14 +15,10 @@ int main(void)
   MX_GPIO_Init();
   MX_USART1_UART_Init();
  
-  ESP.WriteData("AT+RST\r\n");
-  HAL_Delay(5000);
-
-  ESP.WriteData("AT\r\n");
-  ESP.WaitForData("OK\r\n", 3000);
-
+  ESP_Init("Vernite_2007_2.4G","pAkishOh", "192.168.0.8");
   while (1)
   {
+    Server_Start();
   }
 }
 

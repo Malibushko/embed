@@ -5,10 +5,10 @@
         }
     ],
     "settings": {
-        "cortex-debug.armToolchainPath": "C:/Users/polzovatel/AppData/Roaming/GNU MCU Eclipse/xpack-arm-none-eabi-gcc-10.2.1-1.1/bin",
-        "cortex-debug.openocdPath": "C:/Users/polzovatel/AppData/Roaming/GNU MCU Eclipse/OpenOCD/0.10.0-12-20190422-2015/bin/openocd.exe",
+        "cortex-debug.armToolchainPath": "C:/Users/polzovatel/AppData/Roaming/GNU_MCU_Eclipse/xpack-arm-none-eabi-gcc-10.2.1-1.1/bin",
+        "cortex-debug.openocdPath": "AppData/Roaming/GNU_MCU_Eclipse/OpenOCD/0.10.0-12-20190422-2015/bin/openocd.exe",
         "files.associations": {
-            "main.h": "c",
+            "main.h": "cpp",
             "stm32f1xx_hal.h": "c"
         }
     }

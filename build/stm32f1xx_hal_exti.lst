@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\POLZOV~1\AppData\Local\Temp\ccixIVLb.s 			page 1
+ARM GAS  C:\Users\POLZOV~1\AppData\Local\Temp\ccFJPAt2.s 			page 1
 
 
    1              		.cpu cortex-m3
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\POLZOV~1\AppData\Local\Temp\ccixIVLb.s 			page 1
   28:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_exti.c ****     (+) When set in interrupt mode, configurable Exti lines have two different
   29:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_exti.c ****         interrupts pending registers which allow to distinguish which transition
   30:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_exti.c ****         occurs:
-ARM GAS  C:\Users\POLZOV~1\AppData\Local\Temp\ccixIVLb.s 			page 2
+ARM GAS  C:\Users\POLZOV~1\AppData\Local\Temp\ccFJPAt2.s 			page 2
 
 
   31:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_exti.c ****         (++) Rising edge pending interrupt
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\POLZOV~1\AppData\Local\Temp\ccixIVLb.s 			page 1
   85:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_exti.c **** 
   86:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_exti.c **** /* Includes ------------------------------------------------------------------*/
   87:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_exti.c **** #include "stm32f1xx_hal.h"
-ARM GAS  C:\Users\POLZOV~1\AppData\Local\Temp\ccixIVLb.s 			page 3
+ARM GAS  C:\Users\POLZOV~1\AppData\Local\Temp\ccFJPAt2.s 			page 3
 
 
   88:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_exti.c **** 
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\POLZOV~1\AppData\Local\Temp\ccixIVLb.s 			page 1
  142:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_exti.c ****   */
  143:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_exti.c **** HAL_StatusTypeDef HAL_EXTI_SetConfigLine(EXTI_HandleTypeDef *hexti, EXTI_ConfigTypeDef *pExtiConfig
  144:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_exti.c **** {
-ARM GAS  C:\Users\POLZOV~1\AppData\Local\Temp\ccixIVLb.s 			page 4
+ARM GAS  C:\Users\POLZOV~1\AppData\Local\Temp\ccFJPAt2.s 			page 4
 
 
   29              		.loc 1 144 1 view -0
@@ -238,7 +238,7 @@ ARM GAS  C:\Users\POLZOV~1\AppData\Local\Temp\ccixIVLb.s 			page 1
   62              		.loc 1 164 12 is_stmt 0 view .LVU15
   63 0012 0120     		movs	r0, #1
   64              	.LVL2:
-ARM GAS  C:\Users\POLZOV~1\AppData\Local\Temp\ccixIVLb.s 			page 5
+ARM GAS  C:\Users\POLZOV~1\AppData\Local\Temp\ccFJPAt2.s 			page 5
 
 
   65              		.loc 1 164 12 view .LVU16
@@ -298,7 +298,7 @@ ARM GAS  C:\Users\POLZOV~1\AppData\Local\Temp\ccixIVLb.s 			page 1
  190:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_exti.c ****       EXTI->FTSR &= ~maskline;
  191:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_exti.c ****     }
  192:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_exti.c **** 
-ARM GAS  C:\Users\POLZOV~1\AppData\Local\Temp\ccixIVLb.s 			page 6
+ARM GAS  C:\Users\POLZOV~1\AppData\Local\Temp\ccFJPAt2.s 			page 6
 
 
  193:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_exti.c **** 
@@ -358,7 +358,7 @@ ARM GAS  C:\Users\POLZOV~1\AppData\Local\Temp\ccixIVLb.s 			page 1
  120 005a 13F0020F 		tst	r3, #2
  121 005e 2BD0     		beq	.L10
  221:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_exti.c ****   {
-ARM GAS  C:\Users\POLZOV~1\AppData\Local\Temp\ccixIVLb.s 			page 7
+ARM GAS  C:\Users\POLZOV~1\AppData\Local\Temp\ccFJPAt2.s 			page 7
 
 
  222:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_exti.c ****     EXTI->EMR |= maskline;
@@ -418,7 +418,7 @@ ARM GAS  C:\Users\POLZOV~1\AppData\Local\Temp\ccixIVLb.s 			page 1
  162              		.loc 1 197 7 is_stmt 1 view .LVU45
  198:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_exti.c ****       
  163              		.loc 1 198 7 view .LVU46
-ARM GAS  C:\Users\POLZOV~1\AppData\Local\Temp\ccixIVLb.s 			page 8
+ARM GAS  C:\Users\POLZOV~1\AppData\Local\Temp\ccFJPAt2.s 			page 8
 
 
  200:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_exti.c ****       regval &= ~(AFIO_EXTICR1_EXTI0 << (AFIO_EXTICR1_EXTI1_Pos * (linepos & 0x03u)));
@@ -478,7 +478,7 @@ ARM GAS  C:\Users\POLZOV~1\AppData\Local\Temp\ccixIVLb.s 			page 1
  203 00b4 1360     		str	r3, [r2]
  204 00b6 CFE7     		b	.L9
  205              	.L10:
-ARM GAS  C:\Users\POLZOV~1\AppData\Local\Temp\ccixIVLb.s 			page 9
+ARM GAS  C:\Users\POLZOV~1\AppData\Local\Temp\ccFJPAt2.s 			page 9
 
 
  226:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_exti.c ****   }
@@ -538,7 +538,7 @@ ARM GAS  C:\Users\POLZOV~1\AppData\Local\Temp\ccixIVLb.s 			page 1
  255              		.fnstart
  256              	.LVL18:
  257              	.LFB66:
-ARM GAS  C:\Users\POLZOV~1\AppData\Local\Temp\ccixIVLb.s 			page 10
+ARM GAS  C:\Users\POLZOV~1\AppData\Local\Temp\ccFJPAt2.s 			page 10
 
 
  231:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_exti.c **** 
@@ -598,7 +598,7 @@ ARM GAS  C:\Users\POLZOV~1\AppData\Local\Temp\ccixIVLb.s 			page 1
  284              		.loc 1 258 12 is_stmt 0 view .LVU83
  285 0010 0123     		movs	r3, #1
  286 0012 03FA0CF3 		lsl	r3, r3, ip
-ARM GAS  C:\Users\POLZOV~1\AppData\Local\Temp\ccixIVLb.s 			page 11
+ARM GAS  C:\Users\POLZOV~1\AppData\Local\Temp\ccFJPAt2.s 			page 11
 
 
  287              	.LVL21:
@@ -658,7 +658,7 @@ ARM GAS  C:\Users\POLZOV~1\AppData\Local\Temp\ccixIVLb.s 			page 1
  316              		.loc 1 283 5 view .LVU95
  317              		.loc 1 283 16 is_stmt 0 view .LVU96
  318 0038 1A4A     		ldr	r2, .L33
-ARM GAS  C:\Users\POLZOV~1\AppData\Local\Temp\ccixIVLb.s 			page 12
+ARM GAS  C:\Users\POLZOV~1\AppData\Local\Temp\ccFJPAt2.s 			page 12
 
 
  319 003a 9268     		ldr	r2, [r2, #8]
@@ -718,7 +718,7 @@ ARM GAS  C:\Users\POLZOV~1\AppData\Local\Temp\ccixIVLb.s 			page 1
  308:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_exti.c ****     {
  309:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_exti.c ****       pExtiConfig->GPIOSel = 0x00u;
  349              		.loc 1 309 7 is_stmt 1 view .LVU109
-ARM GAS  C:\Users\POLZOV~1\AppData\Local\Temp\ccixIVLb.s 			page 13
+ARM GAS  C:\Users\POLZOV~1\AppData\Local\Temp\ccFJPAt2.s 			page 13
 
 
  350              		.loc 1 309 28 is_stmt 0 view .LVU110
@@ -778,7 +778,7 @@ ARM GAS  C:\Users\POLZOV~1\AppData\Local\Temp\ccixIVLb.s 			page 1
  310:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_exti.c ****     }
  311:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_exti.c ****   }
  312:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_exti.c ****   else
-ARM GAS  C:\Users\POLZOV~1\AppData\Local\Temp\ccixIVLb.s 			page 14
+ARM GAS  C:\Users\POLZOV~1\AppData\Local\Temp\ccFJPAt2.s 			page 14
 
 
  313:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_exti.c ****   {
@@ -838,7 +838,7 @@ ARM GAS  C:\Users\POLZOV~1\AppData\Local\Temp\ccixIVLb.s 			page 1
  430              		.syntax unified
  431              		.thumb
  432              		.thumb_func
-ARM GAS  C:\Users\POLZOV~1\AppData\Local\Temp\ccixIVLb.s 			page 15
+ARM GAS  C:\Users\POLZOV~1\AppData\Local\Temp\ccFJPAt2.s 			page 15
 
 
  433              		.fpu softvfp
@@ -898,7 +898,7 @@ ARM GAS  C:\Users\POLZOV~1\AppData\Local\Temp\ccixIVLb.s 			page 1
  463              		.loc 1 344 3 is_stmt 1 view .LVU144
  464              		.loc 1 344 12 is_stmt 0 view .LVU145
  465 000e 0123     		movs	r3, #1
-ARM GAS  C:\Users\POLZOV~1\AppData\Local\Temp\ccixIVLb.s 			page 16
+ARM GAS  C:\Users\POLZOV~1\AppData\Local\Temp\ccFJPAt2.s 			page 16
 
 
  466 0010 8340     		lsls	r3, r3, r0
@@ -958,7 +958,7 @@ ARM GAS  C:\Users\POLZOV~1\AppData\Local\Temp\ccixIVLb.s 			page 1
  359:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_exti.c ****     if ((hexti->Line & EXTI_GPIO) == EXTI_GPIO)
  506              		.loc 1 359 5 is_stmt 1 view .LVU166
  507              		.loc 1 359 17 is_stmt 0 view .LVU167
-ARM GAS  C:\Users\POLZOV~1\AppData\Local\Temp\ccixIVLb.s 			page 17
+ARM GAS  C:\Users\POLZOV~1\AppData\Local\Temp\ccFJPAt2.s 			page 17
 
 
  508 0042 DCF80030 		ldr	r3, [ip]
@@ -1018,7 +1018,7 @@ ARM GAS  C:\Users\POLZOV~1\AppData\Local\Temp\ccixIVLb.s 			page 1
  365:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_exti.c ****     }
  543              		.loc 1 365 7 is_stmt 1 view .LVU181
  365:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_exti.c ****     }
-ARM GAS  C:\Users\POLZOV~1\AppData\Local\Temp\ccixIVLb.s 			page 18
+ARM GAS  C:\Users\POLZOV~1\AppData\Local\Temp\ccFJPAt2.s 			page 18
 
 
  544              		.loc 1 365 35 is_stmt 0 view .LVU182
@@ -1078,7 +1078,7 @@ ARM GAS  C:\Users\POLZOV~1\AppData\Local\Temp\ccixIVLb.s 			page 1
  374:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_exti.c ****   * @param  hexti Exti handle.
  375:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_exti.c ****   * @param  CallbackID User callback identifier.
  376:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_exti.c ****   *         This parameter can be one of @arg @ref EXTI_CallbackIDTypeDef values.
-ARM GAS  C:\Users\POLZOV~1\AppData\Local\Temp\ccixIVLb.s 			page 19
+ARM GAS  C:\Users\POLZOV~1\AppData\Local\Temp\ccFJPAt2.s 			page 19
 
 
  377:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_exti.c ****   * @param  pPendingCbfn function pointer to be stored as callback.
@@ -1138,7 +1138,7 @@ ARM GAS  C:\Users\POLZOV~1\AppData\Local\Temp\ccixIVLb.s 			page 1
  629              		.syntax unified
  630              		.thumb
  631              		.thumb_func
-ARM GAS  C:\Users\POLZOV~1\AppData\Local\Temp\ccixIVLb.s 			page 20
+ARM GAS  C:\Users\POLZOV~1\AppData\Local\Temp\ccFJPAt2.s 			page 20
 
 
  632              		.fpu softvfp
@@ -1198,7 +1198,7 @@ ARM GAS  C:\Users\POLZOV~1\AppData\Local\Temp\ccixIVLb.s 			page 1
  660              		.loc 1 422 1 view .LVU209
  661 000a 7047     		bx	lr
  662              		.cfi_endproc
-ARM GAS  C:\Users\POLZOV~1\AppData\Local\Temp\ccixIVLb.s 			page 21
+ARM GAS  C:\Users\POLZOV~1\AppData\Local\Temp\ccFJPAt2.s 			page 21
 
 
  663              	.LFE69:
@@ -1258,7 +1258,7 @@ ARM GAS  C:\Users\POLZOV~1\AppData\Local\Temp\ccixIVLb.s 			page 1
  450:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_exti.c ****   /* Compute line mask */
  451:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_exti.c ****   maskline = (1uL << (hexti->Line & EXTI_PIN_MASK));
  692              		.loc 1 451 3 view .LVU214
-ARM GAS  C:\Users\POLZOV~1\AppData\Local\Temp\ccixIVLb.s 			page 22
+ARM GAS  C:\Users\POLZOV~1\AppData\Local\Temp\ccFJPAt2.s 			page 22
 
 
  693              		.loc 1 451 30 is_stmt 0 view .LVU215
@@ -1318,7 +1318,7 @@ ARM GAS  C:\Users\POLZOV~1\AppData\Local\Temp\ccixIVLb.s 			page 1
  732              		.cfi_endproc
  733              	.LFE70:
  734              		.fnend
-ARM GAS  C:\Users\POLZOV~1\AppData\Local\Temp\ccixIVLb.s 			page 23
+ARM GAS  C:\Users\POLZOV~1\AppData\Local\Temp\ccFJPAt2.s 			page 23
 
 
  736              		.section	.text.HAL_EXTI_GetPending,"ax",%progbits
@@ -1378,7 +1378,7 @@ ARM GAS  C:\Users\POLZOV~1\AppData\Local\Temp\ccixIVLb.s 			page 1
  767 0006 0120     		movs	r0, #1
  768              	.LVL61:
  769              		.loc 1 490 12 view .LVU242
-ARM GAS  C:\Users\POLZOV~1\AppData\Local\Temp\ccixIVLb.s 			page 24
+ARM GAS  C:\Users\POLZOV~1\AppData\Local\Temp\ccFJPAt2.s 			page 24
 
 
  770 0008 00FA03F2 		lsl	r2, r0, r3
@@ -1438,7 +1438,7 @@ ARM GAS  C:\Users\POLZOV~1\AppData\Local\Temp\ccixIVLb.s 			page 1
  809              		.cfi_startproc
  810              		@ args = 0, pretend = 0, frame = 0
  811              		@ frame_needed = 0, uses_anonymous_args = 0
-ARM GAS  C:\Users\POLZOV~1\AppData\Local\Temp\ccixIVLb.s 			page 25
+ARM GAS  C:\Users\POLZOV~1\AppData\Local\Temp\ccFJPAt2.s 			page 25
 
 
  812              		@ link register save eliminated.
@@ -1498,7 +1498,7 @@ ARM GAS  C:\Users\POLZOV~1\AppData\Local\Temp\ccixIVLb.s 			page 1
  523:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_exti.c ****   * @brief  Generate a software interrupt for a dedicated line.
  524:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_exti.c ****   * @param  hexti Exti handle.
  525:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_exti.c ****   * @retval None.
-ARM GAS  C:\Users\POLZOV~1\AppData\Local\Temp\ccixIVLb.s 			page 26
+ARM GAS  C:\Users\POLZOV~1\AppData\Local\Temp\ccFJPAt2.s 			page 26
 
 
  526:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_exti.c ****   */
@@ -1549,50 +1549,50 @@ ARM GAS  C:\Users\POLZOV~1\AppData\Local\Temp\ccixIVLb.s 			page 1
  883              		.fnend
  885              		.text
  886              	.Letext0:
- 887              		.file 2 "c:\\users\\polzovatel\\appdata\\roaming\\gnu mcu eclipse\\xpack-arm-none-eabi-gcc-10.2.1-
- 888              		.file 3 "c:\\users\\polzovatel\\appdata\\roaming\\gnu mcu eclipse\\xpack-arm-none-eabi-gcc-10.2.1-
+ 887              		.file 2 "c:\\users\\polzovatel\\appdata\\roaming\\gnu_mcu_eclipse\\xpack-arm-none-eabi-gcc-10.2.1-
+ 888              		.file 3 "c:\\users\\polzovatel\\appdata\\roaming\\gnu_mcu_eclipse\\xpack-arm-none-eabi-gcc-10.2.1-
  889              		.file 4 "Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f103xb.h"
  890              		.file 5 "Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_def.h"
  891              		.file 6 "Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_exti.h"
-ARM GAS  C:\Users\POLZOV~1\AppData\Local\Temp\ccixIVLb.s 			page 27
+ARM GAS  C:\Users\POLZOV~1\AppData\Local\Temp\ccFJPAt2.s 			page 27
 
 
 DEFINED SYMBOLS
                             *ABS*:0000000000000000 stm32f1xx_hal_exti.c
-C:\Users\POLZOV~1\AppData\Local\Temp\ccixIVLb.s:16     .text.HAL_EXTI_SetConfigLine:0000000000000000 $t
-C:\Users\POLZOV~1\AppData\Local\Temp\ccixIVLb.s:24     .text.HAL_EXTI_SetConfigLine:0000000000000000 HAL_EXTI_SetConfigLine
-C:\Users\POLZOV~1\AppData\Local\Temp\ccixIVLb.s:239    .text.HAL_EXTI_SetConfigLine:00000000000000d0 $d
+C:\Users\POLZOV~1\AppData\Local\Temp\ccFJPAt2.s:16     .text.HAL_EXTI_SetConfigLine:0000000000000000 $t
+C:\Users\POLZOV~1\AppData\Local\Temp\ccFJPAt2.s:24     .text.HAL_EXTI_SetConfigLine:0000000000000000 HAL_EXTI_SetConfigLine
+C:\Users\POLZOV~1\AppData\Local\Temp\ccFJPAt2.s:239    .text.HAL_EXTI_SetConfigLine:00000000000000d0 $d
 .ARM.exidx.text.HAL_EXTI_SetConfigLine:0000000000000000 $d
-C:\Users\POLZOV~1\AppData\Local\Temp\ccixIVLb.s:247    .text.HAL_EXTI_GetConfigLine:0000000000000000 $t
-C:\Users\POLZOV~1\AppData\Local\Temp\ccixIVLb.s:254    .text.HAL_EXTI_GetConfigLine:0000000000000000 HAL_EXTI_GetConfigLine
-C:\Users\POLZOV~1\AppData\Local\Temp\ccixIVLb.s:420    .text.HAL_EXTI_GetConfigLine:00000000000000a4 $d
+C:\Users\POLZOV~1\AppData\Local\Temp\ccFJPAt2.s:247    .text.HAL_EXTI_GetConfigLine:0000000000000000 $t
+C:\Users\POLZOV~1\AppData\Local\Temp\ccFJPAt2.s:254    .text.HAL_EXTI_GetConfigLine:0000000000000000 HAL_EXTI_GetConfigLine
+C:\Users\POLZOV~1\AppData\Local\Temp\ccFJPAt2.s:420    .text.HAL_EXTI_GetConfigLine:00000000000000a4 $d
 .ARM.exidx.text.HAL_EXTI_GetConfigLine:0000000000000000 $d
-C:\Users\POLZOV~1\AppData\Local\Temp\ccixIVLb.s:428    .text.HAL_EXTI_ClearConfigLine:0000000000000000 $t
-C:\Users\POLZOV~1\AppData\Local\Temp\ccixIVLb.s:435    .text.HAL_EXTI_ClearConfigLine:0000000000000000 HAL_EXTI_ClearConfigLine
-C:\Users\POLZOV~1\AppData\Local\Temp\ccixIVLb.s:575    .text.HAL_EXTI_ClearConfigLine:0000000000000080 $d
+C:\Users\POLZOV~1\AppData\Local\Temp\ccFJPAt2.s:428    .text.HAL_EXTI_ClearConfigLine:0000000000000000 $t
+C:\Users\POLZOV~1\AppData\Local\Temp\ccFJPAt2.s:435    .text.HAL_EXTI_ClearConfigLine:0000000000000000 HAL_EXTI_ClearConfigLine
+C:\Users\POLZOV~1\AppData\Local\Temp\ccFJPAt2.s:575    .text.HAL_EXTI_ClearConfigLine:0000000000000080 $d
 .ARM.exidx.text.HAL_EXTI_ClearConfigLine:0000000000000000 $d
-C:\Users\POLZOV~1\AppData\Local\Temp\ccixIVLb.s:583    .text.HAL_EXTI_RegisterCallback:0000000000000000 $t
-C:\Users\POLZOV~1\AppData\Local\Temp\ccixIVLb.s:590    .text.HAL_EXTI_RegisterCallback:0000000000000000 HAL_EXTI_RegisterCallback
+C:\Users\POLZOV~1\AppData\Local\Temp\ccFJPAt2.s:583    .text.HAL_EXTI_RegisterCallback:0000000000000000 $t
+C:\Users\POLZOV~1\AppData\Local\Temp\ccFJPAt2.s:590    .text.HAL_EXTI_RegisterCallback:0000000000000000 HAL_EXTI_RegisterCallback
 .ARM.exidx.text.HAL_EXTI_RegisterCallback:0000000000000000 $d
-C:\Users\POLZOV~1\AppData\Local\Temp\ccixIVLb.s:627    .text.HAL_EXTI_GetHandle:0000000000000000 $t
-C:\Users\POLZOV~1\AppData\Local\Temp\ccixIVLb.s:634    .text.HAL_EXTI_GetHandle:0000000000000000 HAL_EXTI_GetHandle
+C:\Users\POLZOV~1\AppData\Local\Temp\ccFJPAt2.s:627    .text.HAL_EXTI_GetHandle:0000000000000000 $t
+C:\Users\POLZOV~1\AppData\Local\Temp\ccFJPAt2.s:634    .text.HAL_EXTI_GetHandle:0000000000000000 HAL_EXTI_GetHandle
 .ARM.exidx.text.HAL_EXTI_GetHandle:0000000000000000 $d
-C:\Users\POLZOV~1\AppData\Local\Temp\ccixIVLb.s:668    .text.HAL_EXTI_IRQHandler:0000000000000000 $t
-C:\Users\POLZOV~1\AppData\Local\Temp\ccixIVLb.s:675    .text.HAL_EXTI_IRQHandler:0000000000000000 HAL_EXTI_IRQHandler
-C:\Users\POLZOV~1\AppData\Local\Temp\ccixIVLb.s:731    .text.HAL_EXTI_IRQHandler:0000000000000020 $d
+C:\Users\POLZOV~1\AppData\Local\Temp\ccFJPAt2.s:668    .text.HAL_EXTI_IRQHandler:0000000000000000 $t
+C:\Users\POLZOV~1\AppData\Local\Temp\ccFJPAt2.s:675    .text.HAL_EXTI_IRQHandler:0000000000000000 HAL_EXTI_IRQHandler
+C:\Users\POLZOV~1\AppData\Local\Temp\ccFJPAt2.s:731    .text.HAL_EXTI_IRQHandler:0000000000000020 $d
 .ARM.extab.text.HAL_EXTI_IRQHandler:0000000000000000 $d
 .ARM.exidx.text.HAL_EXTI_IRQHandler:0000000000000000 $d
-C:\Users\POLZOV~1\AppData\Local\Temp\ccixIVLb.s:737    .text.HAL_EXTI_GetPending:0000000000000000 $t
-C:\Users\POLZOV~1\AppData\Local\Temp\ccixIVLb.s:744    .text.HAL_EXTI_GetPending:0000000000000000 HAL_EXTI_GetPending
-C:\Users\POLZOV~1\AppData\Local\Temp\ccixIVLb.s:790    .text.HAL_EXTI_GetPending:0000000000000018 $d
+C:\Users\POLZOV~1\AppData\Local\Temp\ccFJPAt2.s:737    .text.HAL_EXTI_GetPending:0000000000000000 $t
+C:\Users\POLZOV~1\AppData\Local\Temp\ccFJPAt2.s:744    .text.HAL_EXTI_GetPending:0000000000000000 HAL_EXTI_GetPending
+C:\Users\POLZOV~1\AppData\Local\Temp\ccFJPAt2.s:790    .text.HAL_EXTI_GetPending:0000000000000018 $d
 .ARM.exidx.text.HAL_EXTI_GetPending:0000000000000000 $d
-C:\Users\POLZOV~1\AppData\Local\Temp\ccixIVLb.s:797    .text.HAL_EXTI_ClearPending:0000000000000000 $t
-C:\Users\POLZOV~1\AppData\Local\Temp\ccixIVLb.s:804    .text.HAL_EXTI_ClearPending:0000000000000000 HAL_EXTI_ClearPending
-C:\Users\POLZOV~1\AppData\Local\Temp\ccixIVLb.s:835    .text.HAL_EXTI_ClearPending:0000000000000010 $d
+C:\Users\POLZOV~1\AppData\Local\Temp\ccFJPAt2.s:797    .text.HAL_EXTI_ClearPending:0000000000000000 $t
+C:\Users\POLZOV~1\AppData\Local\Temp\ccFJPAt2.s:804    .text.HAL_EXTI_ClearPending:0000000000000000 HAL_EXTI_ClearPending
+C:\Users\POLZOV~1\AppData\Local\Temp\ccFJPAt2.s:835    .text.HAL_EXTI_ClearPending:0000000000000010 $d
 .ARM.exidx.text.HAL_EXTI_ClearPending:0000000000000000 $d
-C:\Users\POLZOV~1\AppData\Local\Temp\ccixIVLb.s:842    .text.HAL_EXTI_GenerateSWI:0000000000000000 $t
-C:\Users\POLZOV~1\AppData\Local\Temp\ccixIVLb.s:849    .text.HAL_EXTI_GenerateSWI:0000000000000000 HAL_EXTI_GenerateSWI
-C:\Users\POLZOV~1\AppData\Local\Temp\ccixIVLb.s:879    .text.HAL_EXTI_GenerateSWI:0000000000000010 $d
+C:\Users\POLZOV~1\AppData\Local\Temp\ccFJPAt2.s:842    .text.HAL_EXTI_GenerateSWI:0000000000000000 $t
+C:\Users\POLZOV~1\AppData\Local\Temp\ccFJPAt2.s:849    .text.HAL_EXTI_GenerateSWI:0000000000000000 HAL_EXTI_GenerateSWI
+C:\Users\POLZOV~1\AppData\Local\Temp\ccFJPAt2.s:879    .text.HAL_EXTI_GenerateSWI:0000000000000010 $d
 .ARM.exidx.text.HAL_EXTI_GenerateSWI:0000000000000000 $d
 
 UNDEFINED SYMBOLS

@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\POLZOV~1\AppData\Local\Temp\cceFvogC.s 			page 1
+ARM GAS  C:\Users\POLZOV~1\AppData\Local\Temp\cceGsoq8.s 			page 1
 
 
    1              		.cpu cortex-m3
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\POLZOV~1\AppData\Local\Temp\cceFvogC.s 			page 1
   29              		.cfi_startproc
   30              		@ args = 0, pretend = 0, frame = 8
   31              		@ frame_needed = 0, uses_anonymous_args = 0
-ARM GAS  C:\Users\POLZOV~1\AppData\Local\Temp\cceFvogC.s 			page 2
+ARM GAS  C:\Users\POLZOV~1\AppData\Local\Temp\cceGsoq8.s 			page 2
 
 
   32              		@ link register save eliminated.
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\POLZOV~1\AppData\Local\Temp\cceFvogC.s 			page 1
   79              	.LBE4:
   35:Core/Src/stm32f1xx_hal_msp.c **** }
   80              		.loc 1 35 1 is_stmt 0 view .LVU16
-ARM GAS  C:\Users\POLZOV~1\AppData\Local\Temp\cceFvogC.s 			page 3
+ARM GAS  C:\Users\POLZOV~1\AppData\Local\Temp\cceGsoq8.s 			page 3
 
 
   81 0036 02B0     		add	sp, sp, #8
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\POLZOV~1\AppData\Local\Temp\cceFvogC.s 			page 1
  127 0006 0293     		str	r3, [sp, #8]
  128 0008 0393     		str	r3, [sp, #12]
  129 000a 0493     		str	r3, [sp, #16]
-ARM GAS  C:\Users\POLZOV~1\AppData\Local\Temp\cceFvogC.s 			page 4
+ARM GAS  C:\Users\POLZOV~1\AppData\Local\Temp\cceGsoq8.s 			page 4
 
 
  130 000c 0593     		str	r3, [sp, #20]
@@ -238,7 +238,7 @@ ARM GAS  C:\Users\POLZOV~1\AppData\Local\Temp\cceFvogC.s 			page 1
  158              		.loc 1 49 5 view .LVU27
   49:Core/Src/stm32f1xx_hal_msp.c **** 
  159              		.loc 1 49 5 view .LVU28
-ARM GAS  C:\Users\POLZOV~1\AppData\Local\Temp\cceFvogC.s 			page 5
+ARM GAS  C:\Users\POLZOV~1\AppData\Local\Temp\cceGsoq8.s 			page 5
 
 
  160 001a 03F55843 		add	r3, r3, #55296
@@ -298,7 +298,7 @@ ARM GAS  C:\Users\POLZOV~1\AppData\Local\Temp\cceFvogC.s 			page 1
  199 0050 0C4D     		ldr	r5, .L9+4
  200 0052 02A9     		add	r1, sp, #8
  201 0054 2846     		mov	r0, r5
-ARM GAS  C:\Users\POLZOV~1\AppData\Local\Temp\cceFvogC.s 			page 6
+ARM GAS  C:\Users\POLZOV~1\AppData\Local\Temp\cceGsoq8.s 			page 6
 
 
  202              	.LVL6:
@@ -358,7 +358,7 @@ ARM GAS  C:\Users\POLZOV~1\AppData\Local\Temp\cceFvogC.s 			page 1
  243 0084 00080140 		.word	1073809408
  244              		.cfi_endproc
  245              	.LFE66:
-ARM GAS  C:\Users\POLZOV~1\AppData\Local\Temp\cceFvogC.s 			page 7
+ARM GAS  C:\Users\POLZOV~1\AppData\Local\Temp\cceGsoq8.s 			page 7
 
 
  246              		.fnend
@@ -418,7 +418,7 @@ ARM GAS  C:\Users\POLZOV~1\AppData\Local\Temp\cceFvogC.s 			page 1
   92:Core/Src/stm32f1xx_hal_msp.c **** }
  280              		.loc 1 92 1 view .LVU63
  281 000a 08BD     		pop	{r3, pc}
-ARM GAS  C:\Users\POLZOV~1\AppData\Local\Temp\cceFvogC.s 			page 8
+ARM GAS  C:\Users\POLZOV~1\AppData\Local\Temp\cceGsoq8.s 			page 8
 
 
  282              	.LVL13:
@@ -461,29 +461,29 @@ ARM GAS  C:\Users\POLZOV~1\AppData\Local\Temp\cceFvogC.s 			page 1
  314              		.text
  315              	.Letext0:
  316              		.file 2 "Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f103xb.h"
- 317              		.file 3 "c:\\users\\polzovatel\\appdata\\roaming\\gnu mcu eclipse\\xpack-arm-none-eabi-gcc-10.2.1-
- 318              		.file 4 "c:\\users\\polzovatel\\appdata\\roaming\\gnu mcu eclipse\\xpack-arm-none-eabi-gcc-10.2.1-
+ 317              		.file 3 "c:\\users\\polzovatel\\appdata\\roaming\\gnu_mcu_eclipse\\xpack-arm-none-eabi-gcc-10.2.1-
+ 318              		.file 4 "c:\\users\\polzovatel\\appdata\\roaming\\gnu_mcu_eclipse\\xpack-arm-none-eabi-gcc-10.2.1-
  319              		.file 5 "Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_def.h"
  320              		.file 6 "Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio.h"
  321              		.file 7 "Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_dma.h"
  322              		.file 8 "Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_uart.h"
  323              		.file 9 "Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_cortex.h"
-ARM GAS  C:\Users\POLZOV~1\AppData\Local\Temp\cceFvogC.s 			page 9
+ARM GAS  C:\Users\POLZOV~1\AppData\Local\Temp\cceGsoq8.s 			page 9
 
 
 DEFINED SYMBOLS
                             *ABS*:0000000000000000 stm32f1xx_hal_msp.c
-C:\Users\POLZOV~1\AppData\Local\Temp\cceFvogC.s:16     .text.HAL_MspInit:0000000000000000 $t
-C:\Users\POLZOV~1\AppData\Local\Temp\cceFvogC.s:24     .text.HAL_MspInit:0000000000000000 HAL_MspInit
-C:\Users\POLZOV~1\AppData\Local\Temp\cceFvogC.s:89     .text.HAL_MspInit:000000000000003c $d
+C:\Users\POLZOV~1\AppData\Local\Temp\cceGsoq8.s:16     .text.HAL_MspInit:0000000000000000 $t
+C:\Users\POLZOV~1\AppData\Local\Temp\cceGsoq8.s:24     .text.HAL_MspInit:0000000000000000 HAL_MspInit
+C:\Users\POLZOV~1\AppData\Local\Temp\cceGsoq8.s:89     .text.HAL_MspInit:000000000000003c $d
       .ARM.exidx.text.HAL_MspInit:0000000000000000 $d
-C:\Users\POLZOV~1\AppData\Local\Temp\cceFvogC.s:97     .text.HAL_UART_MspInit:0000000000000000 $t
-C:\Users\POLZOV~1\AppData\Local\Temp\cceFvogC.s:104    .text.HAL_UART_MspInit:0000000000000000 HAL_UART_MspInit
-C:\Users\POLZOV~1\AppData\Local\Temp\cceFvogC.s:242    .text.HAL_UART_MspInit:0000000000000080 $d
+C:\Users\POLZOV~1\AppData\Local\Temp\cceGsoq8.s:97     .text.HAL_UART_MspInit:0000000000000000 $t
+C:\Users\POLZOV~1\AppData\Local\Temp\cceGsoq8.s:104    .text.HAL_UART_MspInit:0000000000000000 HAL_UART_MspInit
+C:\Users\POLZOV~1\AppData\Local\Temp\cceGsoq8.s:242    .text.HAL_UART_MspInit:0000000000000080 $d
  .ARM.exidx.text.HAL_UART_MspInit:0000000000000000 $d
-C:\Users\POLZOV~1\AppData\Local\Temp\cceFvogC.s:249    .text.HAL_UART_MspDeInit:0000000000000000 $t
-C:\Users\POLZOV~1\AppData\Local\Temp\cceFvogC.s:256    .text.HAL_UART_MspDeInit:0000000000000000 HAL_UART_MspDeInit
-C:\Users\POLZOV~1\AppData\Local\Temp\cceFvogC.s:307    .text.HAL_UART_MspDeInit:0000000000000028 $d
+C:\Users\POLZOV~1\AppData\Local\Temp\cceGsoq8.s:249    .text.HAL_UART_MspDeInit:0000000000000000 $t
+C:\Users\POLZOV~1\AppData\Local\Temp\cceGsoq8.s:256    .text.HAL_UART_MspDeInit:0000000000000000 HAL_UART_MspDeInit
+C:\Users\POLZOV~1\AppData\Local\Temp\cceGsoq8.s:307    .text.HAL_UART_MspDeInit:0000000000000028 $d
 .ARM.extab.text.HAL_UART_MspDeInit:0000000000000000 $d
 .ARM.exidx.text.HAL_UART_MspDeInit:0000000000000000 $d
 

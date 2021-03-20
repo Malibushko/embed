@@ -1,0 +1,1632 @@
+ARM GAS  C:\Users\POLZOV~1\AppData\Local\Temp\ccInkQf5.s 			page 1
+
+
+   1              		.cpu cortex-m3
+   2              		.eabi_attribute 20, 1
+   3              		.eabi_attribute 21, 1
+   4              		.eabi_attribute 23, 3
+   5              		.eabi_attribute 24, 1
+   6              		.eabi_attribute 25, 1
+   7              		.eabi_attribute 26, 1
+   8              		.eabi_attribute 30, 1
+   9              		.eabi_attribute 34, 1
+  10              		.eabi_attribute 18, 4
+  11              		.file	"ESP_DATA_HANDLER.c"
+  12              		.text
+  13              	.Ltext0:
+  14              		.cfi_sections	.debug_frame
+  15              		.section	.text._Z10sizeofuserP11userDetails,"ax",%progbits
+  16              		.align	1
+  17              		.global	_Z10sizeofuserP11userDetails
+  18              		.arch armv7-m
+  19              		.syntax unified
+  20              		.thumb
+  21              		.thumb_func
+  22              		.fpu softvfp
+  24              	_Z10sizeofuserP11userDetails:
+  25              		.fnstart
+  26              	.LVL0:
+  27              	.LFB66:
+  28              		.file 1 "Core/Src/ESP_DATA_HANDLER.c"
+   1:Core/Src/ESP_DATA_HANDLER.c **** /**
+   2:Core/Src/ESP_DATA_HANDLER.c ****   ******************************************************************************
+   3:Core/Src/ESP_DATA_HANDLER.c **** 
+   4:Core/Src/ESP_DATA_HANDLER.c ****   File:		ESP DATA HANDLER
+   5:Core/Src/ESP_DATA_HANDLER.c ****   Author:   ControllersTech
+   6:Core/Src/ESP_DATA_HANDLER.c ****   Updated:  3rd Aug 2020
+   7:Core/Src/ESP_DATA_HANDLER.c **** 
+   8:Core/Src/ESP_DATA_HANDLER.c ****   ******************************************************************************
+   9:Core/Src/ESP_DATA_HANDLER.c ****   Copyright (C) 2017 ControllersTech.com
+  10:Core/Src/ESP_DATA_HANDLER.c **** 
+  11:Core/Src/ESP_DATA_HANDLER.c ****   This is a free software under the GNU license, you can redistribute it and/or modify it under the
+  12:Core/Src/ESP_DATA_HANDLER.c ****   of the GNU General Public License version 3 as published by the Free Software Foundation.
+  13:Core/Src/ESP_DATA_HANDLER.c ****   This software library is shared with public for educational purposes, without WARRANTY and Author
+  14:Core/Src/ESP_DATA_HANDLER.c ****   or indirectly by this software, read more about this on the GNU General Public License.
+  15:Core/Src/ESP_DATA_HANDLER.c **** 
+  16:Core/Src/ESP_DATA_HANDLER.c ****   ******************************************************************************
+  17:Core/Src/ESP_DATA_HANDLER.c **** */
+  18:Core/Src/ESP_DATA_HANDLER.c **** 
+  19:Core/Src/ESP_DATA_HANDLER.c **** 
+  20:Core/Src/ESP_DATA_HANDLER.c **** 
+  21:Core/Src/ESP_DATA_HANDLER.c **** #include "ESP_DATA_HANDLER.h"
+  22:Core/Src/ESP_DATA_HANDLER.c **** #include "UartRingbuffer.h"
+  23:Core/Src/ESP_DATA_HANDLER.c **** #include "stdio.h"
+  24:Core/Src/ESP_DATA_HANDLER.c **** #include "string.h"
+  25:Core/Src/ESP_DATA_HANDLER.c **** 
+  26:Core/Src/ESP_DATA_HANDLER.c **** extern UART_HandleTypeDef huart1;
+  27:Core/Src/ESP_DATA_HANDLER.c **** 
+  28:Core/Src/ESP_DATA_HANDLER.c **** #define wifi_uart &huart1
+  29:Core/Src/ESP_DATA_HANDLER.c **** 
+  30:Core/Src/ESP_DATA_HANDLER.c **** #define maxnumberofusers  10  // Max number of users
+ARM GAS  C:\Users\POLZOV~1\AppData\Local\Temp\ccInkQf5.s 			page 2
+
+
+  31:Core/Src/ESP_DATA_HANDLER.c **** 
+  32:Core/Src/ESP_DATA_HANDLER.c **** char buffer[20];
+  33:Core/Src/ESP_DATA_HANDLER.c **** userDetails user[maxnumberofusers];
+  34:Core/Src/ESP_DATA_HANDLER.c **** 
+  35:Core/Src/ESP_DATA_HANDLER.c **** int usernumber = 0;
+  36:Core/Src/ESP_DATA_HANDLER.c **** 
+  37:Core/Src/ESP_DATA_HANDLER.c **** int sizeofuser (userDetails *user)
+  38:Core/Src/ESP_DATA_HANDLER.c **** {
+  29              		.loc 1 38 1 view -0
+  30              		.cfi_startproc
+  31              		@ args = 0, pretend = 0, frame = 0
+  32              		@ frame_needed = 0, uses_anonymous_args = 0
+  33              		@ link register save eliminated.
+  39:Core/Src/ESP_DATA_HANDLER.c **** 	int size=0;
+  34              		.loc 1 39 2 view .LVU1
+  35              		.loc 1 39 6 is_stmt 0 view .LVU2
+  36 0000 0023     		movs	r3, #0
+  37 0002 00E0     		b	.L3
+  38              	.LVL1:
+  39              	.L4:
+  40:Core/Src/ESP_DATA_HANDLER.c **** 	while (user[size].firstname[0] != '\0') size++;
+  40              		.loc 1 40 42 is_stmt 1 discriminator 1 view .LVU3
+  41              		.loc 1 40 46 is_stmt 0 discriminator 1 view .LVU4
+  42 0004 0133     		adds	r3, r3, #1
+  43              	.LVL2:
+  44              	.L3:
+  45              		.loc 1 40 2 is_stmt 1 discriminator 2 view .LVU5
+  46              		.loc 1 40 33 discriminator 2 view .LVU6
+  47              		.loc 1 40 18 is_stmt 0 discriminator 2 view .LVU7
+  48 0006 03EB4312 		add	r2, r3, r3, lsl #5
+  49              		.loc 1 40 31 discriminator 2 view .LVU8
+  50 000a 825C     		ldrb	r2, [r0, r2]	@ zero_extendqisi2
+  51              		.loc 1 40 33 discriminator 2 view .LVU9
+  52 000c 002A     		cmp	r2, #0
+  53 000e F9D1     		bne	.L4
+  41:Core/Src/ESP_DATA_HANDLER.c **** 	return size+1;
+  54              		.loc 1 41 2 is_stmt 1 view .LVU10
+  42:Core/Src/ESP_DATA_HANDLER.c **** }
+  55              		.loc 1 42 1 is_stmt 0 view .LVU11
+  56 0010 581C     		adds	r0, r3, #1
+  57              	.LVL3:
+  58              		.loc 1 42 1 view .LVU12
+  59 0012 7047     		bx	lr
+  60              		.cfi_endproc
+  61              	.LFE66:
+  62              		.cantunwind
+  63              		.fnend
+  65              		.section	.rodata._Z8ESP_InitPcS_S_.str1.4,"aMS",%progbits,1
+  66              		.align	2
+  67              	.LC0:
+  68 0000 41542B52 		.ascii	"AT+RST\015\012\000"
+  68      53540D0A 
+  68      00
+  69 0009 000000   		.align	2
+  70              	.LC1:
+  71 000c 41540D0A 		.ascii	"AT\015\012\000"
+  71      00
+ARM GAS  C:\Users\POLZOV~1\AppData\Local\Temp\ccInkQf5.s 			page 3
+
+
+  72 0011 000000   		.align	2
+  73              	.LC2:
+  74 0014 4F4B0D0A 		.ascii	"OK\015\012\000"
+  74      00
+  75 0019 000000   		.align	2
+  76              	.LC3:
+  77 001c 41542B43 		.ascii	"AT+CWMODE=1\015\012\000"
+  77      574D4F44 
+  77      453D310D 
+  77      0A00
+  78 002a 0000     		.align	2
+  79              	.LC4:
+  80 002c 41542B43 		.ascii	"AT+CIPSTA=\"%s\"\015\012\000"
+  80      49505354 
+  80      413D2225 
+  80      73220D0A 
+  80      00
+  81 003d 000000   		.align	2
+  82              	.LC5:
+  83 0040 41542B43 		.ascii	"AT+CWJAP=\"%s\",\"%s\"\015\012\000"
+  83      574A4150 
+  83      3D222573 
+  83      222C2225 
+  83      73220D0A 
+  84 0055 000000   		.align	2
+  85              	.LC6:
+  86 0058 41542B43 		.ascii	"AT+CIPMUX=1\015\012\000"
+  86      49504D55 
+  86      583D310D 
+  86      0A00
+  87 0066 0000     		.align	2
+  88              	.LC7:
+  89 0068 41542B43 		.ascii	"AT+CIPSERVER=1,80\015\012\000"
+  89      49505345 
+  89      52564552 
+  89      3D312C38 
+  89      300D0A00 
+  90              		.section	.text._Z8ESP_InitPcS_S_,"ax",%progbits
+  91              		.align	1
+  92              		.global	_Z8ESP_InitPcS_S_
+  93              		.syntax unified
+  94              		.thumb
+  95              		.thumb_func
+  96              		.fpu softvfp
+  98              	_Z8ESP_InitPcS_S_:
+  99              		.fnstart
+ 100              	.LVL4:
+ 101              	.LFB67:
+  43:Core/Src/ESP_DATA_HANDLER.c **** 
+  44:Core/Src/ESP_DATA_HANDLER.c **** char *home = "<!DOCTYPE html>\n\
+  45:Core/Src/ESP_DATA_HANDLER.c **** 		<html>\n\
+  46:Core/Src/ESP_DATA_HANDLER.c **** 		<body>\n\
+  47:Core/Src/ESP_DATA_HANDLER.c **** 		<h1>ESP8266 USER DATA COLLECTION</h1>\n\
+  48:Core/Src/ESP_DATA_HANDLER.c **** 		<p>Enter the Details in the form below: </p>\n\
+  49:Core/Src/ESP_DATA_HANDLER.c **** 		<form action=\"/page1\">\n\
+  50:Core/Src/ESP_DATA_HANDLER.c **** 		<label for=\"fname\">First Name:</label><br>\n\
+  51:Core/Src/ESP_DATA_HANDLER.c **** 		<input type=\"text\" id=\"fname\" name=\"fname\" value=\"\"><br><br>\n\
+ARM GAS  C:\Users\POLZOV~1\AppData\Local\Temp\ccInkQf5.s 			page 4
+
+
+  52:Core/Src/ESP_DATA_HANDLER.c **** 		<label for=\"lname\">Last Name:</label><br>\n\
+  53:Core/Src/ESP_DATA_HANDLER.c **** 		<input type=\"text\" id=\"lname\" name=\"lname\" value=\"\"><br><br>\n\
+  54:Core/Src/ESP_DATA_HANDLER.c **** 		<label for=\"age\">Age:</label><br>\n\
+  55:Core/Src/ESP_DATA_HANDLER.c **** 		<input type=\"number\" id=\"age\" name=\"age\" value=\"\"><br><br>\n\
+  56:Core/Src/ESP_DATA_HANDLER.c **** 		<input type=\"submit\" value=\"Submit\">\n\
+  57:Core/Src/ESP_DATA_HANDLER.c **** 		</form><br><br>\n\
+  58:Core/Src/ESP_DATA_HANDLER.c **** 		<form action=\"/page2\">\n\
+  59:Core/Src/ESP_DATA_HANDLER.c **** 		<input type=\"submit\" value=\"View Data\">\n\
+  60:Core/Src/ESP_DATA_HANDLER.c **** 		</form>\n\
+  61:Core/Src/ESP_DATA_HANDLER.c **** 		</body></html>";
+  62:Core/Src/ESP_DATA_HANDLER.c **** 
+  63:Core/Src/ESP_DATA_HANDLER.c **** char *page1 = "<!DOCTYPE html>\n\
+  64:Core/Src/ESP_DATA_HANDLER.c **** 		<html>\n\
+  65:Core/Src/ESP_DATA_HANDLER.c **** 		<body>\n\
+  66:Core/Src/ESP_DATA_HANDLER.c **** 		<h1>ESP8266 USER DATA COLLECTION</h1>\n\
+  67:Core/Src/ESP_DATA_HANDLER.c **** 		<h2> DATA STORED Successfully </h2>\n\
+  68:Core/Src/ESP_DATA_HANDLER.c **** 		<p> Click Below to Submit again </p>\n\
+  69:Core/Src/ESP_DATA_HANDLER.c **** 		<form action=\"/home\">\n\
+  70:Core/Src/ESP_DATA_HANDLER.c **** 		<input type=\"submit\" value=\"Submit Again\">\n\
+  71:Core/Src/ESP_DATA_HANDLER.c **** 		</form><br><br>\n\
+  72:Core/Src/ESP_DATA_HANDLER.c **** 		<form action=\"/page2\">\n\
+  73:Core/Src/ESP_DATA_HANDLER.c **** 		<input type=\"submit\" value=\"View Data\">\n\
+  74:Core/Src/ESP_DATA_HANDLER.c **** 		</form>\n\
+  75:Core/Src/ESP_DATA_HANDLER.c **** 		</body></html>";
+  76:Core/Src/ESP_DATA_HANDLER.c **** 
+  77:Core/Src/ESP_DATA_HANDLER.c **** char *page2_Top = "<!DOCTYPE html>\n\
+  78:Core/Src/ESP_DATA_HANDLER.c **** 		<html>\n\
+  79:Core/Src/ESP_DATA_HANDLER.c **** 		<body>\n\
+  80:Core/Src/ESP_DATA_HANDLER.c **** 		<h1>ESP8266 USER DATA COLLECTION</h1>\n\
+  81:Core/Src/ESP_DATA_HANDLER.c **** 		<h2> DATA CCOLLECTED is Shown BELOW </h2>\n";
+  82:Core/Src/ESP_DATA_HANDLER.c **** 
+  83:Core/Src/ESP_DATA_HANDLER.c **** char *page2_end = "<p> Click Below to Submit again </p>\n\
+  84:Core/Src/ESP_DATA_HANDLER.c **** 		<form action=\"/home\">\n\
+  85:Core/Src/ESP_DATA_HANDLER.c **** 		<input type=\"submit\" value=\"Submit again\">\n\
+  86:Core/Src/ESP_DATA_HANDLER.c **** 		</body></html>";
+  87:Core/Src/ESP_DATA_HANDLER.c **** 
+  88:Core/Src/ESP_DATA_HANDLER.c **** char *table = "<style>table {  font-family: arial, sans-serif;\
+  89:Core/Src/ESP_DATA_HANDLER.c **** 		border-collapse: collapse;  width: 50%;}\
+  90:Core/Src/ESP_DATA_HANDLER.c **** 		td, th {  border: 1px solid #dddddd;\
+  91:Core/Src/ESP_DATA_HANDLER.c **** 		text-align: left;  padding: 8px;}tr:nth-child(even)\
+  92:Core/Src/ESP_DATA_HANDLER.c **** 		{  background-color: #dddddd;}</style><table><tr><th>Name</th><th>Age</th></tr>";
+  93:Core/Src/ESP_DATA_HANDLER.c **** 
+  94:Core/Src/ESP_DATA_HANDLER.c **** 
+  95:Core/Src/ESP_DATA_HANDLER.c **** /**************************************************************************************************
+  96:Core/Src/ESP_DATA_HANDLER.c **** 
+  97:Core/Src/ESP_DATA_HANDLER.c **** void ESP_Init (char *SSID, char *PASSWD, char *STAIP)
+  98:Core/Src/ESP_DATA_HANDLER.c **** {
+ 102              		.loc 1 98 1 is_stmt 1 view -0
+ 103              		.cfi_startproc
+ 104              		@ args = 0, pretend = 0, frame = 80
+ 105              		@ frame_needed = 0, uses_anonymous_args = 0
+ 106              		.loc 1 98 1 is_stmt 0 view .LVU14
+ 107 0000 70B5     		push	{r4, r5, r6, lr}
+ 108              		.save {r4, r5, r6, lr}
+ 109              	.LCFI0:
+ 110              		.cfi_def_cfa_offset 16
+ 111              		.cfi_offset 4, -16
+ARM GAS  C:\Users\POLZOV~1\AppData\Local\Temp\ccInkQf5.s 			page 5
+
+
+ 112              		.cfi_offset 5, -12
+ 113              		.cfi_offset 6, -8
+ 114              		.cfi_offset 14, -4
+ 115              		.pad #80
+ 116 0002 94B0     		sub	sp, sp, #80
+ 117              	.LCFI1:
+ 118              		.cfi_def_cfa_offset 96
+ 119 0004 0446     		mov	r4, r0
+ 120 0006 0D46     		mov	r5, r1
+ 121 0008 1646     		mov	r6, r2
+  99:Core/Src/ESP_DATA_HANDLER.c **** 	char data[80];
+ 122              		.loc 1 99 2 is_stmt 1 view .LVU15
+ 100:Core/Src/ESP_DATA_HANDLER.c **** 
+ 101:Core/Src/ESP_DATA_HANDLER.c **** 	Ringbuf_init();
+ 123              		.loc 1 101 2 view .LVU16
+ 124              		.loc 1 101 14 is_stmt 0 view .LVU17
+ 125 000a FFF7FEFF 		bl	_Z12Ringbuf_initv
+ 126              	.LVL5:
+ 102:Core/Src/ESP_DATA_HANDLER.c **** 
+ 103:Core/Src/ESP_DATA_HANDLER.c **** 	Uart_sendstring("AT+RST\r\n");
+ 127              		.loc 1 103 2 is_stmt 1 view .LVU18
+ 128              		.loc 1 103 17 is_stmt 0 view .LVU19
+ 129 000e 2848     		ldr	r0, .L13
+ 130 0010 FFF7FEFF 		bl	_Z15Uart_sendstringPKc
+ 131              	.LVL6:
+ 104:Core/Src/ESP_DATA_HANDLER.c **** 	HAL_Delay(2000);
+ 132              		.loc 1 104 2 is_stmt 1 view .LVU20
+ 133              		.loc 1 104 11 is_stmt 0 view .LVU21
+ 134 0014 4FF4FA60 		mov	r0, #2000
+ 135 0018 FFF7FEFF 		bl	HAL_Delay
+ 136              	.LVL7:
+ 105:Core/Src/ESP_DATA_HANDLER.c **** 
+ 106:Core/Src/ESP_DATA_HANDLER.c **** 	/********* AT **********/
+ 107:Core/Src/ESP_DATA_HANDLER.c **** 	Uart_flush();
+ 137              		.loc 1 107 2 is_stmt 1 view .LVU22
+ 138              		.loc 1 107 12 is_stmt 0 view .LVU23
+ 139 001c FFF7FEFF 		bl	_Z10Uart_flushv
+ 140              	.LVL8:
+ 108:Core/Src/ESP_DATA_HANDLER.c **** 	Uart_sendstring("AT\r\n");
+ 141              		.loc 1 108 2 is_stmt 1 view .LVU24
+ 142              		.loc 1 108 17 is_stmt 0 view .LVU25
+ 143 0020 2448     		ldr	r0, .L13+4
+ 144 0022 FFF7FEFF 		bl	_Z15Uart_sendstringPKc
+ 145              	.LVL9:
+ 146              	.L6:
+ 109:Core/Src/ESP_DATA_HANDLER.c **** 	while(!(Wait_for("OK\r\n")));
+ 147              		.loc 1 109 2 is_stmt 1 view .LVU26
+ 148              		.loc 1 109 8 view .LVU27
+ 149              		.loc 1 109 18 is_stmt 0 view .LVU28
+ 150 0026 2448     		ldr	r0, .L13+8
+ 151 0028 FFF7FEFF 		bl	_Z8Wait_forPc
+ 152              	.LVL10:
+ 153              		.loc 1 109 8 view .LVU29
+ 154 002c 0028     		cmp	r0, #0
+ 155 002e FAD0     		beq	.L6
+ 110:Core/Src/ESP_DATA_HANDLER.c **** 
+ 111:Core/Src/ESP_DATA_HANDLER.c **** 
+ARM GAS  C:\Users\POLZOV~1\AppData\Local\Temp\ccInkQf5.s 			page 6
+
+
+ 112:Core/Src/ESP_DATA_HANDLER.c **** 	/********* AT+CWMODE=1 **********/
+ 113:Core/Src/ESP_DATA_HANDLER.c **** 	Uart_flush();
+ 156              		.loc 1 113 2 is_stmt 1 view .LVU30
+ 157              		.loc 1 113 12 is_stmt 0 view .LVU31
+ 158 0030 FFF7FEFF 		bl	_Z10Uart_flushv
+ 159              	.LVL11:
+ 114:Core/Src/ESP_DATA_HANDLER.c **** 	Uart_sendstring("AT+CWMODE=1\r\n");
+ 160              		.loc 1 114 2 is_stmt 1 view .LVU32
+ 161              		.loc 1 114 17 is_stmt 0 view .LVU33
+ 162 0034 2148     		ldr	r0, .L13+12
+ 163 0036 FFF7FEFF 		bl	_Z15Uart_sendstringPKc
+ 164              	.LVL12:
+ 165              	.L7:
+ 115:Core/Src/ESP_DATA_HANDLER.c **** 	while (!(Wait_for("OK\r\n")));
+ 166              		.loc 1 115 2 is_stmt 1 view .LVU34
+ 167              		.loc 1 115 9 view .LVU35
+ 168              		.loc 1 115 19 is_stmt 0 view .LVU36
+ 169 003a 1F48     		ldr	r0, .L13+8
+ 170 003c FFF7FEFF 		bl	_Z8Wait_forPc
+ 171              	.LVL13:
+ 172              		.loc 1 115 9 view .LVU37
+ 173 0040 0028     		cmp	r0, #0
+ 174 0042 FAD0     		beq	.L7
+ 116:Core/Src/ESP_DATA_HANDLER.c **** 
+ 117:Core/Src/ESP_DATA_HANDLER.c **** 	/* Set Static IP Address */
+ 118:Core/Src/ESP_DATA_HANDLER.c **** 	/********* AT+CWSTAIP=IPADDRESS **********/
+ 119:Core/Src/ESP_DATA_HANDLER.c **** 	Uart_flush();
+ 175              		.loc 1 119 2 is_stmt 1 view .LVU38
+ 176              		.loc 1 119 12 is_stmt 0 view .LVU39
+ 177 0044 FFF7FEFF 		bl	_Z10Uart_flushv
+ 178              	.LVL14:
+ 120:Core/Src/ESP_DATA_HANDLER.c **** 	sprintf (data, "AT+CIPSTA=\"%s\"\r\n", STAIP);
+ 179              		.loc 1 120 2 is_stmt 1 view .LVU40
+ 180              		.loc 1 120 10 is_stmt 0 view .LVU41
+ 181 0048 3246     		mov	r2, r6
+ 182 004a 1D49     		ldr	r1, .L13+16
+ 183 004c 6846     		mov	r0, sp
+ 184 004e FFF7FEFF 		bl	sprintf
+ 185              	.LVL15:
+ 121:Core/Src/ESP_DATA_HANDLER.c **** 	Uart_sendstring(data);
+ 186              		.loc 1 121 2 is_stmt 1 view .LVU42
+ 187              		.loc 1 121 17 is_stmt 0 view .LVU43
+ 188 0052 6846     		mov	r0, sp
+ 189 0054 FFF7FEFF 		bl	_Z15Uart_sendstringPKc
+ 190              	.LVL16:
+ 191              	.L8:
+ 122:Core/Src/ESP_DATA_HANDLER.c **** 	while (!(Wait_for("OK\r\n")));
+ 192              		.loc 1 122 2 is_stmt 1 view .LVU44
+ 193              		.loc 1 122 9 view .LVU45
+ 194              		.loc 1 122 19 is_stmt 0 view .LVU46
+ 195 0058 1748     		ldr	r0, .L13+8
+ 196 005a FFF7FEFF 		bl	_Z8Wait_forPc
+ 197              	.LVL17:
+ 198              		.loc 1 122 9 view .LVU47
+ 199 005e 0028     		cmp	r0, #0
+ 200 0060 FAD0     		beq	.L8
+ 123:Core/Src/ESP_DATA_HANDLER.c **** 
+ARM GAS  C:\Users\POLZOV~1\AppData\Local\Temp\ccInkQf5.s 			page 7
+
+
+ 124:Core/Src/ESP_DATA_HANDLER.c **** 	/********* AT+CWJAP="SSID","PASSWD" **********/
+ 125:Core/Src/ESP_DATA_HANDLER.c **** 	Uart_flush();
+ 201              		.loc 1 125 2 is_stmt 1 view .LVU48
+ 202              		.loc 1 125 12 is_stmt 0 view .LVU49
+ 203 0062 FFF7FEFF 		bl	_Z10Uart_flushv
+ 204              	.LVL18:
+ 126:Core/Src/ESP_DATA_HANDLER.c **** 	sprintf (data, "AT+CWJAP=\"%s\",\"%s\"\r\n", SSID, PASSWD);
+ 205              		.loc 1 126 2 is_stmt 1 view .LVU50
+ 206              		.loc 1 126 10 is_stmt 0 view .LVU51
+ 207 0066 2B46     		mov	r3, r5
+ 208 0068 2246     		mov	r2, r4
+ 209 006a 1649     		ldr	r1, .L13+20
+ 210 006c 6846     		mov	r0, sp
+ 211 006e FFF7FEFF 		bl	sprintf
+ 212              	.LVL19:
+ 127:Core/Src/ESP_DATA_HANDLER.c **** 	Uart_sendstring(data);
+ 213              		.loc 1 127 2 is_stmt 1 view .LVU52
+ 214              		.loc 1 127 17 is_stmt 0 view .LVU53
+ 215 0072 6846     		mov	r0, sp
+ 216 0074 FFF7FEFF 		bl	_Z15Uart_sendstringPKc
+ 217              	.LVL20:
+ 218              	.L9:
+ 128:Core/Src/ESP_DATA_HANDLER.c **** 	while (!(Wait_for("OK\r\n")));
+ 219              		.loc 1 128 2 is_stmt 1 view .LVU54
+ 220              		.loc 1 128 9 view .LVU55
+ 221              		.loc 1 128 19 is_stmt 0 view .LVU56
+ 222 0078 0F48     		ldr	r0, .L13+8
+ 223 007a FFF7FEFF 		bl	_Z8Wait_forPc
+ 224              	.LVL21:
+ 225              		.loc 1 128 9 view .LVU57
+ 226 007e 0028     		cmp	r0, #0
+ 227 0080 FAD0     		beq	.L9
+ 129:Core/Src/ESP_DATA_HANDLER.c **** 
+ 130:Core/Src/ESP_DATA_HANDLER.c **** 	/********* AT+CIPMUX **********/
+ 131:Core/Src/ESP_DATA_HANDLER.c **** 	Uart_flush();
+ 228              		.loc 1 131 2 is_stmt 1 view .LVU58
+ 229              		.loc 1 131 12 is_stmt 0 view .LVU59
+ 230 0082 FFF7FEFF 		bl	_Z10Uart_flushv
+ 231              	.LVL22:
+ 132:Core/Src/ESP_DATA_HANDLER.c **** 	Uart_sendstring("AT+CIPMUX=1\r\n");
+ 232              		.loc 1 132 2 is_stmt 1 view .LVU60
+ 233              		.loc 1 132 17 is_stmt 0 view .LVU61
+ 234 0086 1048     		ldr	r0, .L13+24
+ 235 0088 FFF7FEFF 		bl	_Z15Uart_sendstringPKc
+ 236              	.LVL23:
+ 237              	.L10:
+ 133:Core/Src/ESP_DATA_HANDLER.c **** 	while (!(Wait_for("OK\r\n")));
+ 238              		.loc 1 133 2 is_stmt 1 view .LVU62
+ 239              		.loc 1 133 9 view .LVU63
+ 240              		.loc 1 133 19 is_stmt 0 view .LVU64
+ 241 008c 0A48     		ldr	r0, .L13+8
+ 242 008e FFF7FEFF 		bl	_Z8Wait_forPc
+ 243              	.LVL24:
+ 244              		.loc 1 133 9 view .LVU65
+ 245 0092 0028     		cmp	r0, #0
+ 246 0094 FAD0     		beq	.L10
+ 134:Core/Src/ESP_DATA_HANDLER.c **** 
+ARM GAS  C:\Users\POLZOV~1\AppData\Local\Temp\ccInkQf5.s 			page 8
+
+
+ 135:Core/Src/ESP_DATA_HANDLER.c **** 	/********* AT+CIPSERVER **********/
+ 136:Core/Src/ESP_DATA_HANDLER.c **** 	Uart_flush();
+ 247              		.loc 1 136 2 is_stmt 1 view .LVU66
+ 248              		.loc 1 136 12 is_stmt 0 view .LVU67
+ 249 0096 FFF7FEFF 		bl	_Z10Uart_flushv
+ 250              	.LVL25:
+ 137:Core/Src/ESP_DATA_HANDLER.c **** 	Uart_sendstring("AT+CIPSERVER=1,80\r\n");
+ 251              		.loc 1 137 2 is_stmt 1 view .LVU68
+ 252              		.loc 1 137 17 is_stmt 0 view .LVU69
+ 253 009a 0C48     		ldr	r0, .L13+28
+ 254 009c FFF7FEFF 		bl	_Z15Uart_sendstringPKc
+ 255              	.LVL26:
+ 256              	.L11:
+ 138:Core/Src/ESP_DATA_HANDLER.c **** 	while (!(Wait_for("OK\r\n")));
+ 257              		.loc 1 138 2 is_stmt 1 view .LVU70
+ 258              		.loc 1 138 9 view .LVU71
+ 259              		.loc 1 138 19 is_stmt 0 view .LVU72
+ 260 00a0 0548     		ldr	r0, .L13+8
+ 261 00a2 FFF7FEFF 		bl	_Z8Wait_forPc
+ 262              	.LVL27:
+ 263              		.loc 1 138 9 view .LVU73
+ 264 00a6 0028     		cmp	r0, #0
+ 265 00a8 FAD0     		beq	.L11
+ 139:Core/Src/ESP_DATA_HANDLER.c **** 
+ 140:Core/Src/ESP_DATA_HANDLER.c **** }
+ 266              		.loc 1 140 1 view .LVU74
+ 267 00aa 14B0     		add	sp, sp, #80
+ 268              	.LCFI2:
+ 269              		.cfi_def_cfa_offset 16
+ 270              		@ sp needed
+ 271 00ac 70BD     		pop	{r4, r5, r6, pc}
+ 272              	.LVL28:
+ 273              	.L14:
+ 274              		.loc 1 140 1 view .LVU75
+ 275 00ae 00BF     		.align	2
+ 276              	.L13:
+ 277 00b0 00000000 		.word	.LC0
+ 278 00b4 0C000000 		.word	.LC1
+ 279 00b8 14000000 		.word	.LC2
+ 280 00bc 1C000000 		.word	.LC3
+ 281 00c0 2C000000 		.word	.LC4
+ 282 00c4 40000000 		.word	.LC5
+ 283 00c8 58000000 		.word	.LC6
+ 284 00cc 68000000 		.word	.LC7
+ 285              		.cfi_endproc
+ 286              	.LFE67:
+ 287              		.fnend
+ 289              		.section	.rodata._Z11Server_SendPci.str1.4,"aMS",%progbits,1
+ 290              		.align	2
+ 291              	.LC8:
+ 292 0000 41542B43 		.ascii	"AT+CIPSEND=%d,%d\015\012\000"
+ 292      49505345 
+ 292      4E443D25 
+ 292      642C2564 
+ 292      0D0A00
+ 293 0013 00       		.align	2
+ 294              	.LC9:
+ARM GAS  C:\Users\POLZOV~1\AppData\Local\Temp\ccInkQf5.s 			page 9
+
+
+ 295 0014 3E00     		.ascii	">\000"
+ 296 0016 0000     		.align	2
+ 297              	.LC10:
+ 298 0018 53454E44 		.ascii	"SEND OK\000"
+ 298      204F4B00 
+ 299              		.align	2
+ 300              	.LC11:
+ 301 0020 41542B43 		.ascii	"AT+CIPCLOSE=%d\015\012\000"
+ 301      4950434C 
+ 301      4F53453D 
+ 301      25640D0A 
+ 301      00
+ 302              		.section	.text._Z11Server_SendPci,"ax",%progbits
+ 303              		.align	1
+ 304              		.global	_Z11Server_SendPci
+ 305              		.syntax unified
+ 306              		.thumb
+ 307              		.thumb_func
+ 308              		.fpu softvfp
+ 310              	_Z11Server_SendPci:
+ 311              		.fnstart
+ 312              	.LVL29:
+ 313              	.LFB68:
+ 141:Core/Src/ESP_DATA_HANDLER.c **** 
+ 142:Core/Src/ESP_DATA_HANDLER.c **** 
+ 143:Core/Src/ESP_DATA_HANDLER.c **** 
+ 144:Core/Src/ESP_DATA_HANDLER.c **** 
+ 145:Core/Src/ESP_DATA_HANDLER.c **** int Server_Send (char *str, int Link_ID)
+ 146:Core/Src/ESP_DATA_HANDLER.c **** {
+ 314              		.loc 1 146 1 is_stmt 1 view -0
+ 315              		.cfi_startproc
+ 316              		@ args = 0, pretend = 0, frame = 80
+ 317              		@ frame_needed = 0, uses_anonymous_args = 0
+ 318              		.loc 1 146 1 is_stmt 0 view .LVU77
+ 319 0000 70B5     		push	{r4, r5, r6, lr}
+ 320              		.save {r4, r5, r6, lr}
+ 321              	.LCFI3:
+ 322              		.cfi_def_cfa_offset 16
+ 323              		.cfi_offset 4, -16
+ 324              		.cfi_offset 5, -12
+ 325              		.cfi_offset 6, -8
+ 326              		.cfi_offset 14, -4
+ 327              		.pad #80
+ 328 0002 94B0     		sub	sp, sp, #80
+ 329              	.LCFI4:
+ 330              		.cfi_def_cfa_offset 96
+ 331 0004 0546     		mov	r5, r0
+ 332 0006 0C46     		mov	r4, r1
+ 147:Core/Src/ESP_DATA_HANDLER.c **** 	int len = strlen (str);
+ 333              		.loc 1 147 2 is_stmt 1 view .LVU78
+ 334              		.loc 1 147 19 is_stmt 0 view .LVU79
+ 335 0008 FFF7FEFF 		bl	strlen
+ 336              	.LVL30:
+ 337              		.loc 1 147 19 view .LVU80
+ 338 000c 0646     		mov	r6, r0
+ 339              	.LVL31:
+ 148:Core/Src/ESP_DATA_HANDLER.c **** 	char data[80];
+ARM GAS  C:\Users\POLZOV~1\AppData\Local\Temp\ccInkQf5.s 			page 10
+
+
+ 340              		.loc 1 148 2 is_stmt 1 view .LVU81
+ 149:Core/Src/ESP_DATA_HANDLER.c **** 	Uart_flush();
+ 341              		.loc 1 149 2 view .LVU82
+ 342              		.loc 1 149 12 is_stmt 0 view .LVU83
+ 343 000e FFF7FEFF 		bl	_Z10Uart_flushv
+ 344              	.LVL32:
+ 150:Core/Src/ESP_DATA_HANDLER.c **** 	sprintf (data, "AT+CIPSEND=%d,%d\r\n", Link_ID, len);
+ 345              		.loc 1 150 2 is_stmt 1 view .LVU84
+ 346              		.loc 1 150 10 is_stmt 0 view .LVU85
+ 347 0012 3346     		mov	r3, r6
+ 348 0014 2246     		mov	r2, r4
+ 349 0016 1349     		ldr	r1, .L20
+ 350 0018 6846     		mov	r0, sp
+ 351 001a FFF7FEFF 		bl	sprintf
+ 352              	.LVL33:
+ 151:Core/Src/ESP_DATA_HANDLER.c **** 	Uart_sendstring(data);
+ 353              		.loc 1 151 2 is_stmt 1 view .LVU86
+ 354              		.loc 1 151 17 is_stmt 0 view .LVU87
+ 355 001e 6846     		mov	r0, sp
+ 356 0020 FFF7FEFF 		bl	_Z15Uart_sendstringPKc
+ 357              	.LVL34:
+ 358              	.L16:
+ 152:Core/Src/ESP_DATA_HANDLER.c **** 	while (!(Wait_for(">")));
+ 359              		.loc 1 152 2 is_stmt 1 view .LVU88
+ 360              		.loc 1 152 9 view .LVU89
+ 361              		.loc 1 152 19 is_stmt 0 view .LVU90
+ 362 0024 1048     		ldr	r0, .L20+4
+ 363 0026 FFF7FEFF 		bl	_Z8Wait_forPc
+ 364              	.LVL35:
+ 365              		.loc 1 152 9 view .LVU91
+ 366 002a 0028     		cmp	r0, #0
+ 367 002c FAD0     		beq	.L16
+ 153:Core/Src/ESP_DATA_HANDLER.c **** 	Uart_sendstring (str);
+ 368              		.loc 1 153 2 is_stmt 1 view .LVU92
+ 369              		.loc 1 153 18 is_stmt 0 view .LVU93
+ 370 002e 2846     		mov	r0, r5
+ 371 0030 FFF7FEFF 		bl	_Z15Uart_sendstringPKc
+ 372              	.LVL36:
+ 373              	.L17:
+ 154:Core/Src/ESP_DATA_HANDLER.c **** 	while (!(Wait_for("SEND OK")));
+ 374              		.loc 1 154 2 is_stmt 1 view .LVU94
+ 375              		.loc 1 154 9 view .LVU95
+ 376              		.loc 1 154 19 is_stmt 0 view .LVU96
+ 377 0034 0D48     		ldr	r0, .L20+8
+ 378 0036 FFF7FEFF 		bl	_Z8Wait_forPc
+ 379              	.LVL37:
+ 380              		.loc 1 154 9 view .LVU97
+ 381 003a 0028     		cmp	r0, #0
+ 382 003c FAD0     		beq	.L17
+ 155:Core/Src/ESP_DATA_HANDLER.c **** 	Uart_flush();
+ 383              		.loc 1 155 2 is_stmt 1 view .LVU98
+ 384              		.loc 1 155 12 is_stmt 0 view .LVU99
+ 385 003e FFF7FEFF 		bl	_Z10Uart_flushv
+ 386              	.LVL38:
+ 156:Core/Src/ESP_DATA_HANDLER.c **** 	sprintf (data, "AT+CIPCLOSE=%d\r\n",Link_ID);
+ 387              		.loc 1 156 2 is_stmt 1 view .LVU100
+ 388              		.loc 1 156 10 is_stmt 0 view .LVU101
+ARM GAS  C:\Users\POLZOV~1\AppData\Local\Temp\ccInkQf5.s 			page 11
+
+
+ 389 0042 2246     		mov	r2, r4
+ 390 0044 0A49     		ldr	r1, .L20+12
+ 391 0046 6846     		mov	r0, sp
+ 392 0048 FFF7FEFF 		bl	sprintf
+ 393              	.LVL39:
+ 157:Core/Src/ESP_DATA_HANDLER.c **** 	Uart_sendstring(data);
+ 394              		.loc 1 157 2 is_stmt 1 view .LVU102
+ 395              		.loc 1 157 17 is_stmt 0 view .LVU103
+ 396 004c 6846     		mov	r0, sp
+ 397 004e FFF7FEFF 		bl	_Z15Uart_sendstringPKc
+ 398              	.LVL40:
+ 399              	.L18:
+ 158:Core/Src/ESP_DATA_HANDLER.c **** 	while (!(Wait_for("OK\r\n")));
+ 400              		.loc 1 158 2 is_stmt 1 view .LVU104
+ 401              		.loc 1 158 9 view .LVU105
+ 402              		.loc 1 158 19 is_stmt 0 view .LVU106
+ 403 0052 0848     		ldr	r0, .L20+16
+ 404 0054 FFF7FEFF 		bl	_Z8Wait_forPc
+ 405              	.LVL41:
+ 406              		.loc 1 158 9 view .LVU107
+ 407 0058 0028     		cmp	r0, #0
+ 408 005a FAD0     		beq	.L18
+ 159:Core/Src/ESP_DATA_HANDLER.c **** 	return 1;
+ 409              		.loc 1 159 2 is_stmt 1 view .LVU108
+ 160:Core/Src/ESP_DATA_HANDLER.c **** }
+ 410              		.loc 1 160 1 is_stmt 0 view .LVU109
+ 411 005c 0120     		movs	r0, #1
+ 412 005e 14B0     		add	sp, sp, #80
+ 413              	.LCFI5:
+ 414              		.cfi_def_cfa_offset 16
+ 415              		@ sp needed
+ 416 0060 70BD     		pop	{r4, r5, r6, pc}
+ 417              	.LVL42:
+ 418              	.L21:
+ 419              		.loc 1 160 1 view .LVU110
+ 420 0062 00BF     		.align	2
+ 421              	.L20:
+ 422 0064 00000000 		.word	.LC8
+ 423 0068 14000000 		.word	.LC9
+ 424 006c 18000000 		.word	.LC10
+ 425 0070 20000000 		.word	.LC11
+ 426 0074 14000000 		.word	.LC2
+ 427              		.cfi_endproc
+ 428              	.LFE68:
+ 429              		.fnend
+ 431              		.section	.rodata._Z13Server_HandlePci.str1.4,"aMS",%progbits,1
+ 432              		.align	2
+ 433              	.LC12:
+ 434 0000 2F706167 		.ascii	"/page1\000"
+ 434      653100
+ 435 0007 00       		.align	2
+ 436              	.LC13:
+ 437 0008 2F706167 		.ascii	"/page2\000"
+ 437      653200
+ 438 000f 00       		.align	2
+ 439              	.LC14:
+ 440 0010 3C74723E 		.ascii	"<tr><td>%s %s</td>\011<td>%s</td></tr>\000"
+ARM GAS  C:\Users\POLZOV~1\AppData\Local\Temp\ccInkQf5.s 			page 12
+
+
+ 440      3C74643E 
+ 440      25732025 
+ 440      733C2F74 
+ 440      643E093C 
+ 441              		.align	2
+ 442              	.LC15:
+ 443 0034 3C2F7461 		.ascii	"</table>\000"
+ 443      626C653E 
+ 443      00
+ 444              		.section	.text._Z13Server_HandlePci,"ax",%progbits
+ 445              		.align	1
+ 446              		.global	_Z13Server_HandlePci
+ 447              		.syntax unified
+ 448              		.thumb
+ 449              		.thumb_func
+ 450              		.fpu softvfp
+ 452              	_Z13Server_HandlePci:
+ 453              		.fnstart
+ 454              	.LVL43:
+ 455              	.LFB69:
+ 161:Core/Src/ESP_DATA_HANDLER.c **** 
+ 162:Core/Src/ESP_DATA_HANDLER.c **** void Server_Handle (char *str, int Link_ID)
+ 163:Core/Src/ESP_DATA_HANDLER.c **** {
+ 456              		.loc 1 163 1 is_stmt 1 view -0
+ 457              		.cfi_startproc
+ 458              		@ args = 0, pretend = 0, frame = 6144
+ 459              		@ frame_needed = 0, uses_anonymous_args = 0
+ 460              		.loc 1 163 1 is_stmt 0 view .LVU112
+ 461 0000 2DE9F041 		push	{r4, r5, r6, r7, r8, lr}
+ 462              		.save {r4, r5, r6, r7, r8, lr}
+ 463              	.LCFI6:
+ 464              		.cfi_def_cfa_offset 24
+ 465              		.cfi_offset 4, -24
+ 466              		.cfi_offset 5, -20
+ 467              		.cfi_offset 6, -16
+ 468              		.cfi_offset 7, -12
+ 469              		.cfi_offset 8, -8
+ 470              		.cfi_offset 14, -4
+ 471              		.pad #6144
+ 472 0004 ADF5C05D 		sub	sp, sp, #6144
+ 473              	.LCFI7:
+ 474              		.cfi_def_cfa_offset 6168
+ 475              		.pad #8
+ 476 0008 82B0     		sub	sp, sp, #8
+ 477              	.LCFI8:
+ 478              		.cfi_def_cfa_offset 6176
+ 479 000a 0446     		mov	r4, r0
+ 480 000c 8846     		mov	r8, r1
+ 164:Core/Src/ESP_DATA_HANDLER.c **** 	char datatosend[4096] = {0};
+ 481              		.loc 1 164 2 is_stmt 1 view .LVU113
+ 482              		.loc 1 164 7 is_stmt 0 view .LVU114
+ 483 000e 0021     		movs	r1, #0
+ 484              	.LVL44:
+ 485              		.loc 1 164 7 view .LVU115
+ 486 0010 CDF80818 		str	r1, [sp, #2056]
+ 487 0014 40F6FC72 		movw	r2, #4092
+ 488 0018 0DF60C00 		addw	r0, sp, #2060
+ARM GAS  C:\Users\POLZOV~1\AppData\Local\Temp\ccInkQf5.s 			page 13
+
+
+ 489              	.LVL45:
+ 490              		.loc 1 164 7 view .LVU116
+ 491 001c FFF7FEFF 		bl	memset
+ 492              	.LVL46:
+ 165:Core/Src/ESP_DATA_HANDLER.c **** 	if (!(strcmp (str, "/page1")))
+ 493              		.loc 1 165 2 is_stmt 1 view .LVU117
+ 494              	.LBB2:
+ 495              		.loc 1 165 15 is_stmt 0 view .LVU118
+ 496 0020 3449     		ldr	r1, .L31
+ 497 0022 2046     		mov	r0, r4
+ 498 0024 FFF7FEFF 		bl	strcmp
+ 499              	.LVL47:
+ 500              		.loc 1 165 2 view .LVU119
+ 501 0028 B8B1     		cbz	r0, .L29
+ 502              	.LBE2:
+ 166:Core/Src/ESP_DATA_HANDLER.c **** 	{
+ 167:Core/Src/ESP_DATA_HANDLER.c **** 		sprintf(datatosend, page1);
+ 168:Core/Src/ESP_DATA_HANDLER.c **** 		Server_Send(datatosend, Link_ID);
+ 169:Core/Src/ESP_DATA_HANDLER.c **** 	}
+ 170:Core/Src/ESP_DATA_HANDLER.c **** 
+ 171:Core/Src/ESP_DATA_HANDLER.c **** 	else if (!(strcmp (str, "/page2")))
+ 503              		.loc 1 171 7 is_stmt 1 view .LVU120
+ 504              	.LBB9:
+ 505              	.LBB3:
+ 506              		.loc 1 171 20 is_stmt 0 view .LVU121
+ 507 002a 3349     		ldr	r1, .L31+4
+ 508 002c 2046     		mov	r0, r4
+ 509 002e FFF7FEFF 		bl	strcmp
+ 510              	.LVL48:
+ 511              		.loc 1 171 7 view .LVU122
+ 512 0032 0546     		mov	r5, r0
+ 513 0034 0028     		cmp	r0, #0
+ 514 0036 50D1     		bne	.L25
+ 515              	.LBB4:
+ 172:Core/Src/ESP_DATA_HANDLER.c **** 	{
+ 173:Core/Src/ESP_DATA_HANDLER.c **** 		char localbuf[2048];
+ 516              		.loc 1 173 3 is_stmt 1 view .LVU123
+ 174:Core/Src/ESP_DATA_HANDLER.c **** 		sprintf(datatosend, page2_Top);
+ 517              		.loc 1 174 3 view .LVU124
+ 518              		.loc 1 174 10 is_stmt 0 view .LVU125
+ 519 0038 304B     		ldr	r3, .L31+8
+ 520 003a 1968     		ldr	r1, [r3]
+ 521 003c 0DF60800 		addw	r0, sp, #2056
+ 522 0040 FFF7FEFF 		bl	sprintf
+ 523              	.LVL49:
+ 175:Core/Src/ESP_DATA_HANDLER.c **** 		strcat (datatosend, table);
+ 524              		.loc 1 175 3 is_stmt 1 view .LVU126
+ 525              		.loc 1 175 10 is_stmt 0 view .LVU127
+ 526 0044 2E4B     		ldr	r3, .L31+12
+ 527 0046 1968     		ldr	r1, [r3]
+ 528 0048 0DF60800 		addw	r0, sp, #2056
+ 529 004c FFF7FEFF 		bl	strcat
+ 530              	.LVL50:
+ 176:Core/Src/ESP_DATA_HANDLER.c **** 		int bufsize = (sizeofuser (user));
+ 531              		.loc 1 176 3 is_stmt 1 view .LVU128
+ 532              		.loc 1 176 29 is_stmt 0 view .LVU129
+ 533 0050 2C48     		ldr	r0, .L31+16
+ARM GAS  C:\Users\POLZOV~1\AppData\Local\Temp\ccInkQf5.s 			page 14
+
+
+ 534 0052 FFF7FEFF 		bl	_Z10sizeofuserP11userDetails
+ 535              	.LVL51:
+ 536 0056 0746     		mov	r7, r0
+ 537              	.LVL52:
+ 177:Core/Src/ESP_DATA_HANDLER.c **** 		for (int i=0; i<bufsize; i++)
+ 538              		.loc 1 177 3 is_stmt 1 view .LVU130
+ 539              		.loc 1 177 3 is_stmt 0 view .LVU131
+ 540 0058 22E0     		b	.L27
+ 541              	.LVL53:
+ 542              	.L29:
+ 543              		.loc 1 177 3 view .LVU132
+ 544              	.LBE4:
+ 545              	.LBE3:
+ 167:Core/Src/ESP_DATA_HANDLER.c **** 		Server_Send(datatosend, Link_ID);
+ 546              		.loc 1 167 3 is_stmt 1 view .LVU133
+ 167:Core/Src/ESP_DATA_HANDLER.c **** 		Server_Send(datatosend, Link_ID);
+ 547              		.loc 1 167 10 is_stmt 0 view .LVU134
+ 548 005a 2B4B     		ldr	r3, .L31+20
+ 549 005c 1968     		ldr	r1, [r3]
+ 550 005e 0DF60800 		addw	r0, sp, #2056
+ 551 0062 FFF7FEFF 		bl	sprintf
+ 552              	.LVL54:
+ 168:Core/Src/ESP_DATA_HANDLER.c **** 	}
+ 553              		.loc 1 168 3 is_stmt 1 view .LVU135
+ 168:Core/Src/ESP_DATA_HANDLER.c **** 	}
+ 554              		.loc 1 168 14 is_stmt 0 view .LVU136
+ 555 0066 4146     		mov	r1, r8
+ 556 0068 0DF60800 		addw	r0, sp, #2056
+ 557 006c FFF7FEFF 		bl	_Z11Server_SendPci
+ 558              	.LVL55:
+ 559 0070 2EE0     		b	.L22
+ 560              	.LVL56:
+ 561              	.L30:
+ 562              	.LBB7:
+ 563              	.LBB6:
+ 564              	.LBB5:
+ 178:Core/Src/ESP_DATA_HANDLER.c **** 		{
+ 179:Core/Src/ESP_DATA_HANDLER.c **** 			sprintf (localbuf, "<tr><td>%s %s</td>	<td>%s</td></tr>",user[i].firstname,user[i].lastname,user
+ 565              		.loc 1 179 4 is_stmt 1 discriminator 2 view .LVU137
+ 566              		.loc 1 179 69 is_stmt 0 discriminator 2 view .LVU138
+ 567 0072 244E     		ldr	r6, .L31+16
+ 568 0074 05EB4512 		add	r2, r5, r5, lsl #5
+ 569              		.loc 1 179 87 discriminator 2 view .LVU139
+ 570 0078 02F10803 		add	r3, r2, #8
+ 571 007c 3344     		add	r3, r3, r6
+ 572              		.loc 1 179 104 discriminator 2 view .LVU140
+ 573 007e 02F11804 		add	r4, r2, #24
+ 574 0082 3444     		add	r4, r4, r6
+ 575 0084 0634     		adds	r4, r4, #6
+ 576              		.loc 1 179 12 discriminator 2 view .LVU141
+ 577 0086 0094     		str	r4, [sp]
+ 578 0088 0733     		adds	r3, r3, #7
+ 579 008a 3244     		add	r2, r2, r6
+ 580 008c 1F49     		ldr	r1, .L31+24
+ 581 008e 02A8     		add	r0, sp, #8
+ 582 0090 FFF7FEFF 		bl	sprintf
+ 583              	.LVL57:
+ARM GAS  C:\Users\POLZOV~1\AppData\Local\Temp\ccInkQf5.s 			page 15
+
+
+ 180:Core/Src/ESP_DATA_HANDLER.c **** 			strcat (datatosend, localbuf);
+ 584              		.loc 1 180 4 is_stmt 1 discriminator 2 view .LVU142
+ 585              		.loc 1 180 11 is_stmt 0 discriminator 2 view .LVU143
+ 586 0094 02A9     		add	r1, sp, #8
+ 587 0096 0DF60800 		addw	r0, sp, #2056
+ 588 009a FFF7FEFF 		bl	strcat
+ 589              	.LVL58:
+ 177:Core/Src/ESP_DATA_HANDLER.c **** 		{
+ 590              		.loc 1 177 3 is_stmt 1 discriminator 2 view .LVU144
+ 591 009e 0135     		adds	r5, r5, #1
+ 592              	.LVL59:
+ 593              	.L27:
+ 177:Core/Src/ESP_DATA_HANDLER.c **** 		{
+ 594              		.loc 1 177 18 discriminator 3 view .LVU145
+ 595 00a0 BD42     		cmp	r5, r7
+ 596 00a2 E6DB     		blt	.L30
+ 597              	.LBE5:
+ 181:Core/Src/ESP_DATA_HANDLER.c **** 		}
+ 182:Core/Src/ESP_DATA_HANDLER.c **** 		strcat (datatosend, "</table>");
+ 598              		.loc 1 182 3 view .LVU146
+ 599              		.loc 1 182 10 is_stmt 0 view .LVU147
+ 600 00a4 0DF60804 		addw	r4, sp, #2056
+ 601 00a8 2046     		mov	r0, r4
+ 602 00aa FFF7FEFF 		bl	strlen
+ 603              	.LVL60:
+ 604 00ae 0246     		mov	r2, r0
+ 605 00b0 2518     		adds	r5, r4, r0
+ 606              	.LVL61:
+ 607              		.loc 1 182 10 view .LVU148
+ 608 00b2 174B     		ldr	r3, .L31+28
+ 609 00b4 03CB     		ldmia	r3!, {r0, r1}
+ 610 00b6 A050     		str	r0, [r4, r2]	@ unaligned
+ 611 00b8 6960     		str	r1, [r5, #4]	@ unaligned
+ 612 00ba 1B78     		ldrb	r3, [r3]	@ zero_extendqisi2
+ 613 00bc 2B72     		strb	r3, [r5, #8]
+ 183:Core/Src/ESP_DATA_HANDLER.c **** 		strcat(datatosend, page2_end);
+ 614              		.loc 1 183 3 is_stmt 1 view .LVU149
+ 615              		.loc 1 183 9 is_stmt 0 view .LVU150
+ 616 00be 154B     		ldr	r3, .L31+32
+ 617 00c0 1968     		ldr	r1, [r3]
+ 618 00c2 2046     		mov	r0, r4
+ 619 00c4 FFF7FEFF 		bl	strcat
+ 620              	.LVL62:
+ 184:Core/Src/ESP_DATA_HANDLER.c **** 		Server_Send(datatosend, Link_ID);
+ 621              		.loc 1 184 3 is_stmt 1 view .LVU151
+ 622              		.loc 1 184 14 is_stmt 0 view .LVU152
+ 623 00c8 4146     		mov	r1, r8
+ 624 00ca 2046     		mov	r0, r4
+ 625 00cc FFF7FEFF 		bl	_Z11Server_SendPci
+ 626              	.LVL63:
+ 627              	.L22:
+ 628              		.loc 1 184 14 view .LVU153
+ 629              	.LBE6:
+ 630              	.LBE7:
+ 631              	.LBE9:
+ 185:Core/Src/ESP_DATA_HANDLER.c **** 	}
+ 186:Core/Src/ESP_DATA_HANDLER.c **** 	else
+ARM GAS  C:\Users\POLZOV~1\AppData\Local\Temp\ccInkQf5.s 			page 16
+
+
+ 187:Core/Src/ESP_DATA_HANDLER.c **** 	{
+ 188:Core/Src/ESP_DATA_HANDLER.c **** 		sprintf (datatosend, home);
+ 189:Core/Src/ESP_DATA_HANDLER.c **** 		Server_Send(datatosend, Link_ID);
+ 190:Core/Src/ESP_DATA_HANDLER.c **** 	}
+ 191:Core/Src/ESP_DATA_HANDLER.c **** 
+ 192:Core/Src/ESP_DATA_HANDLER.c **** }
+ 632              		.loc 1 192 1 view .LVU154
+ 633 00d0 0DF5C05D 		add	sp, sp, #6144
+ 634 00d4 02B0     		add	sp, sp, #8
+ 635              	.LCFI9:
+ 636              		.cfi_remember_state
+ 637              		.cfi_def_cfa_offset 24
+ 638              		@ sp needed
+ 639 00d6 BDE8F081 		pop	{r4, r5, r6, r7, r8, pc}
+ 640              	.LVL64:
+ 641              	.L25:
+ 642              	.LCFI10:
+ 643              		.cfi_restore_state
+ 644              	.LBB10:
+ 645              	.LBB8:
+ 188:Core/Src/ESP_DATA_HANDLER.c **** 		Server_Send(datatosend, Link_ID);
+ 646              		.loc 1 188 3 is_stmt 1 view .LVU155
+ 188:Core/Src/ESP_DATA_HANDLER.c **** 		Server_Send(datatosend, Link_ID);
+ 647              		.loc 1 188 11 is_stmt 0 view .LVU156
+ 648 00da 0F4B     		ldr	r3, .L31+36
+ 649 00dc 1968     		ldr	r1, [r3]
+ 650 00de 0DF60800 		addw	r0, sp, #2056
+ 651 00e2 FFF7FEFF 		bl	sprintf
+ 652              	.LVL65:
+ 189:Core/Src/ESP_DATA_HANDLER.c **** 	}
+ 653              		.loc 1 189 3 is_stmt 1 view .LVU157
+ 189:Core/Src/ESP_DATA_HANDLER.c **** 	}
+ 654              		.loc 1 189 14 is_stmt 0 view .LVU158
+ 655 00e6 4146     		mov	r1, r8
+ 656 00e8 0DF60800 		addw	r0, sp, #2056
+ 657 00ec FFF7FEFF 		bl	_Z11Server_SendPci
+ 658              	.LVL66:
+ 659              	.LBE8:
+ 660              	.LBE10:
+ 661              		.loc 1 192 1 view .LVU159
+ 662 00f0 EEE7     		b	.L22
+ 663              	.L32:
+ 664 00f2 00BF     		.align	2
+ 665              	.L31:
+ 666 00f4 00000000 		.word	.LC12
+ 667 00f8 08000000 		.word	.LC13
+ 668 00fc 00000000 		.word	.LANCHOR1
+ 669 0100 00000000 		.word	.LANCHOR2
+ 670 0104 00000000 		.word	.LANCHOR3
+ 671 0108 00000000 		.word	.LANCHOR0
+ 672 010c 10000000 		.word	.LC14
+ 673 0110 34000000 		.word	.LC15
+ 674 0114 00000000 		.word	.LANCHOR4
+ 675 0118 00000000 		.word	.LANCHOR5
+ 676              		.cfi_endproc
+ 677              	.LFE69:
+ 678              		.fnend
+ARM GAS  C:\Users\POLZOV~1\AppData\Local\Temp\ccInkQf5.s 			page 17
+
+
+ 680              		.section	.rodata._Z12Server_Startv.str1.4,"aMS",%progbits,1
+ 681              		.align	2
+ 682              	.LC16:
+ 683 0000 2B495044 		.ascii	"+IPD,\000"
+ 683      2C00
+ 684 0006 0000     		.align	2
+ 685              	.LC17:
+ 686 0008 20485454 		.ascii	" HTTP/1.1\000"
+ 686      502F312E 
+ 686      3100
+ 687 0012 0000     		.align	2
+ 688              	.LC18:
+ 689 0014 2600     		.ascii	"&\000"
+ 690 0016 0000     		.align	2
+ 691              	.LC19:
+ 692 0018 666E616D 		.ascii	"fname=\000"
+ 692      653D00
+ 693 001f 00       		.align	2
+ 694              	.LC20:
+ 695 0020 6C6E616D 		.ascii	"lname=\000"
+ 695      653D00
+ 696 0027 00       		.align	2
+ 697              	.LC21:
+ 698 0028 20485454 		.ascii	" HTTP\000"
+ 698      5000
+ 699 002e 0000     		.align	2
+ 700              	.LC22:
+ 701 0030 6167653D 		.ascii	"age=\000"
+ 701      00
+ 702 0035 000000   		.align	2
+ 703              	.LC23:
+ 704 0038 2F686F6D 		.ascii	"/home\000"
+ 704      6500
+ 705 003e 0000     		.align	2
+ 706              	.LC24:
+ 707 0040 2F666176 		.ascii	"/favicon.ico\000"
+ 707      69636F6E 
+ 707      2E69636F 
+ 707      00
+ 708 004d 000000   		.align	2
+ 709              	.LC25:
+ 710 0050 2F2000   		.ascii	"/ \000"
+ 711              		.section	.text._Z12Server_Startv,"ax",%progbits
+ 712              		.align	1
+ 713              		.global	_Z12Server_Startv
+ 714              		.syntax unified
+ 715              		.thumb
+ 716              		.thumb_func
+ 717              		.fpu softvfp
+ 719              	_Z12Server_Startv:
+ 720              		.fnstart
+ 721              	.LFB70:
+ 193:Core/Src/ESP_DATA_HANDLER.c **** 
+ 194:Core/Src/ESP_DATA_HANDLER.c **** void Server_Start (void)
+ 195:Core/Src/ESP_DATA_HANDLER.c **** {
+ 722              		.loc 1 195 1 is_stmt 1 view -0
+ 723              		.cfi_startproc
+ARM GAS  C:\Users\POLZOV~1\AppData\Local\Temp\ccInkQf5.s 			page 18
+
+
+ 724              		@ args = 0, pretend = 0, frame = 136
+ 725              		@ frame_needed = 0, uses_anonymous_args = 0
+ 726 0000 70B5     		push	{r4, r5, r6, lr}
+ 727              		.save {r4, r5, r6, lr}
+ 728              	.LCFI11:
+ 729              		.cfi_def_cfa_offset 16
+ 730              		.cfi_offset 4, -16
+ 731              		.cfi_offset 5, -12
+ 732              		.cfi_offset 6, -8
+ 733              		.cfi_offset 14, -4
+ 734              		.pad #136
+ 735 0002 A2B0     		sub	sp, sp, #136
+ 736              	.LCFI12:
+ 737              		.cfi_def_cfa_offset 152
+ 196:Core/Src/ESP_DATA_HANDLER.c **** 	char buftostoreheader[128] = {0};
+ 738              		.loc 1 196 2 view .LVU161
+ 739              		.loc 1 196 7 is_stmt 0 view .LVU162
+ 740 0004 0021     		movs	r1, #0
+ 741 0006 0291     		str	r1, [sp, #8]
+ 742 0008 7C22     		movs	r2, #124
+ 743 000a 03A8     		add	r0, sp, #12
+ 744 000c FFF7FEFF 		bl	memset
+ 745              	.LVL67:
+ 746              	.L34:
+ 197:Core/Src/ESP_DATA_HANDLER.c **** 	char Link_ID;
+ 747              		.loc 1 197 2 is_stmt 1 view .LVU163
+ 198:Core/Src/ESP_DATA_HANDLER.c **** 	while (!(Get_after("+IPD,", 1, &Link_ID)));
+ 748              		.loc 1 198 2 view .LVU164
+ 749              		.loc 1 198 9 view .LVU165
+ 750              		.loc 1 198 20 is_stmt 0 view .LVU166
+ 751 0010 0DF10702 		add	r2, sp, #7
+ 752 0014 0121     		movs	r1, #1
+ 753 0016 3548     		ldr	r0, .L45
+ 754 0018 FFF7FEFF 		bl	_Z9Get_afterPchS_
+ 755              	.LVL68:
+ 756              		.loc 1 198 9 view .LVU167
+ 757 001c 0028     		cmp	r0, #0
+ 758 001e F7D0     		beq	.L34
+ 199:Core/Src/ESP_DATA_HANDLER.c **** 
+ 200:Core/Src/ESP_DATA_HANDLER.c **** 	Link_ID -= 48;
+ 759              		.loc 1 200 2 is_stmt 1 view .LVU168
+ 760              		.loc 1 200 10 is_stmt 0 view .LVU169
+ 761 0020 9DF80730 		ldrb	r3, [sp, #7]	@ zero_extendqisi2
+ 762 0024 303B     		subs	r3, r3, #48
+ 763 0026 8DF80730 		strb	r3, [sp, #7]
+ 764              	.L35:
+ 201:Core/Src/ESP_DATA_HANDLER.c **** 	while (!(Copy_upto(" HTTP/1.1", buftostoreheader)));
+ 765              		.loc 1 201 2 is_stmt 1 view .LVU170
+ 766              		.loc 1 201 9 view .LVU171
+ 767              		.loc 1 201 20 is_stmt 0 view .LVU172
+ 768 002a 02A9     		add	r1, sp, #8
+ 769 002c 3048     		ldr	r0, .L45+4
+ 770 002e FFF7FEFF 		bl	_Z9Copy_uptoPcS_
+ 771              	.LVL69:
+ 772              		.loc 1 201 9 view .LVU173
+ 773 0032 0028     		cmp	r0, #0
+ 774 0034 F9D0     		beq	.L35
+ARM GAS  C:\Users\POLZOV~1\AppData\Local\Temp\ccInkQf5.s 			page 19
+
+
+ 202:Core/Src/ESP_DATA_HANDLER.c **** 	if (Look_for("/page1", buftostoreheader) == 1)
+ 775              		.loc 1 202 2 is_stmt 1 view .LVU174
+ 776              		.loc 1 202 14 is_stmt 0 view .LVU175
+ 777 0036 02A9     		add	r1, sp, #8
+ 778 0038 2E48     		ldr	r0, .L45+8
+ 779 003a FFF7FEFF 		bl	_Z8Look_forPcS_
+ 780              	.LVL70:
+ 781              		.loc 1 202 2 view .LVU176
+ 782 003e 0128     		cmp	r0, #1
+ 783 0040 17D0     		beq	.L42
+ 203:Core/Src/ESP_DATA_HANDLER.c **** 	{
+ 204:Core/Src/ESP_DATA_HANDLER.c **** 		GetDataFromBuffer("fname=", "&", buftostoreheader, user[usernumber].firstname);
+ 205:Core/Src/ESP_DATA_HANDLER.c **** 		GetDataFromBuffer("lname=", "&", buftostoreheader, user[usernumber].lastname);
+ 206:Core/Src/ESP_DATA_HANDLER.c **** 		GetDataFromBuffer("age=", " HTTP", buftostoreheader, user[usernumber].age);
+ 207:Core/Src/ESP_DATA_HANDLER.c **** 		usernumber++;
+ 208:Core/Src/ESP_DATA_HANDLER.c **** 		if (usernumber >9) usernumber = 0;
+ 209:Core/Src/ESP_DATA_HANDLER.c **** 		Server_Handle("/page1",Link_ID);
+ 210:Core/Src/ESP_DATA_HANDLER.c **** 	}
+ 211:Core/Src/ESP_DATA_HANDLER.c **** 
+ 212:Core/Src/ESP_DATA_HANDLER.c **** 	else if (Look_for("/page2", buftostoreheader) == 1)
+ 784              		.loc 1 212 7 is_stmt 1 view .LVU177
+ 785              		.loc 1 212 19 is_stmt 0 view .LVU178
+ 786 0042 02A9     		add	r1, sp, #8
+ 787 0044 2C48     		ldr	r0, .L45+12
+ 788 0046 FFF7FEFF 		bl	_Z8Look_forPcS_
+ 789              	.LVL71:
+ 790              		.loc 1 212 7 view .LVU179
+ 791 004a 0128     		cmp	r0, #1
+ 792 004c 41D0     		beq	.L43
+ 213:Core/Src/ESP_DATA_HANDLER.c **** 	{
+ 214:Core/Src/ESP_DATA_HANDLER.c **** 		Server_Handle("/page2",Link_ID);
+ 215:Core/Src/ESP_DATA_HANDLER.c **** 	}
+ 216:Core/Src/ESP_DATA_HANDLER.c **** 
+ 217:Core/Src/ESP_DATA_HANDLER.c **** 	else if (Look_for("/home", buftostoreheader) == 1)
+ 793              		.loc 1 217 7 is_stmt 1 view .LVU180
+ 794              		.loc 1 217 19 is_stmt 0 view .LVU181
+ 795 004e 02A9     		add	r1, sp, #8
+ 796 0050 2A48     		ldr	r0, .L45+16
+ 797 0052 FFF7FEFF 		bl	_Z8Look_forPcS_
+ 798              	.LVL72:
+ 799              		.loc 1 217 7 view .LVU182
+ 800 0056 0128     		cmp	r0, #1
+ 801 0058 41D0     		beq	.L44
+ 218:Core/Src/ESP_DATA_HANDLER.c **** 	{
+ 219:Core/Src/ESP_DATA_HANDLER.c **** 		Server_Handle("/home",Link_ID);
+ 220:Core/Src/ESP_DATA_HANDLER.c **** 	}
+ 221:Core/Src/ESP_DATA_HANDLER.c **** 
+ 222:Core/Src/ESP_DATA_HANDLER.c **** 	else if (Look_for("/favicon.ico", buftostoreheader) == 1);
+ 802              		.loc 1 222 7 is_stmt 1 view .LVU183
+ 803              		.loc 1 222 19 is_stmt 0 view .LVU184
+ 804 005a 02A9     		add	r1, sp, #8
+ 805 005c 2848     		ldr	r0, .L45+20
+ 806 005e FFF7FEFF 		bl	_Z8Look_forPcS_
+ 807              	.LVL73:
+ 808              		.loc 1 222 7 view .LVU185
+ 809 0062 0128     		cmp	r0, #1
+ 810 0064 33D0     		beq	.L33
+ARM GAS  C:\Users\POLZOV~1\AppData\Local\Temp\ccInkQf5.s 			page 20
+
+
+ 223:Core/Src/ESP_DATA_HANDLER.c **** 
+ 224:Core/Src/ESP_DATA_HANDLER.c **** 	else
+ 225:Core/Src/ESP_DATA_HANDLER.c **** 	{
+ 226:Core/Src/ESP_DATA_HANDLER.c **** 		Server_Handle("/ ", Link_ID);
+ 811              		.loc 1 226 3 is_stmt 1 view .LVU186
+ 812              		.loc 1 226 16 is_stmt 0 view .LVU187
+ 813 0066 9DF80710 		ldrb	r1, [sp, #7]	@ zero_extendqisi2
+ 814 006a 2648     		ldr	r0, .L45+24
+ 815 006c FFF7FEFF 		bl	_Z13Server_HandlePci
+ 816              	.LVL74:
+ 227:Core/Src/ESP_DATA_HANDLER.c **** 	}
+ 228:Core/Src/ESP_DATA_HANDLER.c **** }
+ 817              		.loc 1 228 1 view .LVU188
+ 818 0070 2DE0     		b	.L33
+ 819              	.L42:
+ 204:Core/Src/ESP_DATA_HANDLER.c **** 		GetDataFromBuffer("lname=", "&", buftostoreheader, user[usernumber].lastname);
+ 820              		.loc 1 204 3 is_stmt 1 view .LVU189
+ 204:Core/Src/ESP_DATA_HANDLER.c **** 		GetDataFromBuffer("lname=", "&", buftostoreheader, user[usernumber].lastname);
+ 821              		.loc 1 204 71 is_stmt 0 view .LVU190
+ 822 0072 254D     		ldr	r5, .L45+28
+ 823 0074 254C     		ldr	r4, .L45+32
+ 824 0076 2368     		ldr	r3, [r4]
+ 825 0078 03EB4313 		add	r3, r3, r3, lsl #5
+ 204:Core/Src/ESP_DATA_HANDLER.c **** 		GetDataFromBuffer("lname=", "&", buftostoreheader, user[usernumber].lastname);
+ 826              		.loc 1 204 20 view .LVU191
+ 827 007c 244E     		ldr	r6, .L45+36
+ 828 007e 2B44     		add	r3, r3, r5
+ 829 0080 02AA     		add	r2, sp, #8
+ 830 0082 3146     		mov	r1, r6
+ 831 0084 2348     		ldr	r0, .L45+40
+ 832 0086 FFF7FEFF 		bl	_Z17GetDataFromBufferPcS_S_S_
+ 833              	.LVL75:
+ 205:Core/Src/ESP_DATA_HANDLER.c **** 		GetDataFromBuffer("age=", " HTTP", buftostoreheader, user[usernumber].age);
+ 834              		.loc 1 205 3 is_stmt 1 view .LVU192
+ 205:Core/Src/ESP_DATA_HANDLER.c **** 		GetDataFromBuffer("age=", " HTTP", buftostoreheader, user[usernumber].age);
+ 835              		.loc 1 205 71 is_stmt 0 view .LVU193
+ 836 008a 2368     		ldr	r3, [r4]
+ 837 008c 03EB4313 		add	r3, r3, r3, lsl #5
+ 838 0090 0833     		adds	r3, r3, #8
+ 839 0092 2B44     		add	r3, r3, r5
+ 205:Core/Src/ESP_DATA_HANDLER.c **** 		GetDataFromBuffer("age=", " HTTP", buftostoreheader, user[usernumber].age);
+ 840              		.loc 1 205 20 view .LVU194
+ 841 0094 0733     		adds	r3, r3, #7
+ 842 0096 02AA     		add	r2, sp, #8
+ 843 0098 3146     		mov	r1, r6
+ 844 009a 1F48     		ldr	r0, .L45+44
+ 845 009c FFF7FEFF 		bl	_Z17GetDataFromBufferPcS_S_S_
+ 846              	.LVL76:
+ 206:Core/Src/ESP_DATA_HANDLER.c **** 		usernumber++;
+ 847              		.loc 1 206 3 is_stmt 1 view .LVU195
+ 206:Core/Src/ESP_DATA_HANDLER.c **** 		usernumber++;
+ 848              		.loc 1 206 73 is_stmt 0 view .LVU196
+ 849 00a0 2368     		ldr	r3, [r4]
+ 850 00a2 03EB4313 		add	r3, r3, r3, lsl #5
+ 851 00a6 1833     		adds	r3, r3, #24
+ 852 00a8 2B44     		add	r3, r3, r5
+ 206:Core/Src/ESP_DATA_HANDLER.c **** 		usernumber++;
+ARM GAS  C:\Users\POLZOV~1\AppData\Local\Temp\ccInkQf5.s 			page 21
+
+
+ 853              		.loc 1 206 20 view .LVU197
+ 854 00aa 0633     		adds	r3, r3, #6
+ 855 00ac 02AA     		add	r2, sp, #8
+ 856 00ae 1B49     		ldr	r1, .L45+48
+ 857 00b0 1B48     		ldr	r0, .L45+52
+ 858 00b2 FFF7FEFF 		bl	_Z17GetDataFromBufferPcS_S_S_
+ 859              	.LVL77:
+ 207:Core/Src/ESP_DATA_HANDLER.c **** 		if (usernumber >9) usernumber = 0;
+ 860              		.loc 1 207 3 is_stmt 1 view .LVU198
+ 207:Core/Src/ESP_DATA_HANDLER.c **** 		if (usernumber >9) usernumber = 0;
+ 861              		.loc 1 207 13 is_stmt 0 view .LVU199
+ 862 00b6 2368     		ldr	r3, [r4]
+ 863 00b8 0133     		adds	r3, r3, #1
+ 864 00ba 2360     		str	r3, [r4]
+ 208:Core/Src/ESP_DATA_HANDLER.c **** 		Server_Handle("/page1",Link_ID);
+ 865              		.loc 1 208 3 is_stmt 1 view .LVU200
+ 866 00bc 092B     		cmp	r3, #9
+ 867 00be 01DD     		ble	.L37
+ 208:Core/Src/ESP_DATA_HANDLER.c **** 		Server_Handle("/page1",Link_ID);
+ 868              		.loc 1 208 22 discriminator 1 view .LVU201
+ 208:Core/Src/ESP_DATA_HANDLER.c **** 		Server_Handle("/page1",Link_ID);
+ 869              		.loc 1 208 33 is_stmt 0 discriminator 1 view .LVU202
+ 870 00c0 0022     		movs	r2, #0
+ 871 00c2 2260     		str	r2, [r4]
+ 872              	.L37:
+ 209:Core/Src/ESP_DATA_HANDLER.c **** 	}
+ 873              		.loc 1 209 3 is_stmt 1 view .LVU203
+ 209:Core/Src/ESP_DATA_HANDLER.c **** 	}
+ 874              		.loc 1 209 16 is_stmt 0 view .LVU204
+ 875 00c4 9DF80710 		ldrb	r1, [sp, #7]	@ zero_extendqisi2
+ 876 00c8 0A48     		ldr	r0, .L45+8
+ 877 00ca FFF7FEFF 		bl	_Z13Server_HandlePci
+ 878              	.LVL78:
+ 879              	.L33:
+ 880              		.loc 1 228 1 view .LVU205
+ 881 00ce 22B0     		add	sp, sp, #136
+ 882              	.LCFI13:
+ 883              		.cfi_remember_state
+ 884              		.cfi_def_cfa_offset 16
+ 885              		@ sp needed
+ 886 00d0 70BD     		pop	{r4, r5, r6, pc}
+ 887              	.L43:
+ 888              	.LCFI14:
+ 889              		.cfi_restore_state
+ 214:Core/Src/ESP_DATA_HANDLER.c **** 	}
+ 890              		.loc 1 214 3 is_stmt 1 view .LVU206
+ 214:Core/Src/ESP_DATA_HANDLER.c **** 	}
+ 891              		.loc 1 214 16 is_stmt 0 view .LVU207
+ 892 00d2 9DF80710 		ldrb	r1, [sp, #7]	@ zero_extendqisi2
+ 893 00d6 0848     		ldr	r0, .L45+12
+ 894 00d8 FFF7FEFF 		bl	_Z13Server_HandlePci
+ 895              	.LVL79:
+ 896 00dc F7E7     		b	.L33
+ 897              	.L44:
+ 219:Core/Src/ESP_DATA_HANDLER.c **** 	}
+ 898              		.loc 1 219 3 is_stmt 1 view .LVU208
+ 219:Core/Src/ESP_DATA_HANDLER.c **** 	}
+ARM GAS  C:\Users\POLZOV~1\AppData\Local\Temp\ccInkQf5.s 			page 22
+
+
+ 899              		.loc 1 219 16 is_stmt 0 view .LVU209
+ 900 00de 9DF80710 		ldrb	r1, [sp, #7]	@ zero_extendqisi2
+ 901 00e2 0648     		ldr	r0, .L45+16
+ 902 00e4 FFF7FEFF 		bl	_Z13Server_HandlePci
+ 903              	.LVL80:
+ 904 00e8 F1E7     		b	.L33
+ 905              	.L46:
+ 906 00ea 00BF     		.align	2
+ 907              	.L45:
+ 908 00ec 00000000 		.word	.LC16
+ 909 00f0 08000000 		.word	.LC17
+ 910 00f4 00000000 		.word	.LC12
+ 911 00f8 08000000 		.word	.LC13
+ 912 00fc 38000000 		.word	.LC23
+ 913 0100 40000000 		.word	.LC24
+ 914 0104 50000000 		.word	.LC25
+ 915 0108 00000000 		.word	.LANCHOR3
+ 916 010c 00000000 		.word	.LANCHOR6
+ 917 0110 14000000 		.word	.LC18
+ 918 0114 18000000 		.word	.LC19
+ 919 0118 20000000 		.word	.LC20
+ 920 011c 28000000 		.word	.LC21
+ 921 0120 30000000 		.word	.LC22
+ 922              		.cfi_endproc
+ 923              	.LFE70:
+ 924              		.fnend
+ 926              		.global	table
+ 927              		.section	.rodata.str1.4,"aMS",%progbits,1
+ 928              		.align	2
+ 929              	.LC26:
+ 930 0000 3C737479 		.ascii	"<style>table {  font-family: arial, sans-serif;\011"
+ 930      6C653E74 
+ 930      61626C65 
+ 930      207B2020 
+ 930      666F6E74 
+ 931 0030 09626F72 		.ascii	"\011border-collapse: collapse;  width: 50%;}\011\011"
+ 931      6465722D 
+ 931      636F6C6C 
+ 931      61707365 
+ 931      3A20636F 
+ 932 005b 74642C20 		.ascii	"td, th {  border: 1px solid #dddddd;\011\011text-al"
+ 932      7468207B 
+ 932      2020626F 
+ 932      72646572 
+ 932      3A203170 
+ 933 0088 69676E3A 		.ascii	"ign: left;  padding: 8px;}tr:nth-child(even)\011\011"
+ 933      206C6566 
+ 933      743B2020 
+ 933      70616464 
+ 933      696E673A 
+ 934 00b6 7B202062 		.ascii	"{  background-color: #dddddd;}</style><table><tr><t"
+ 934      61636B67 
+ 934      726F756E 
+ 934      642D636F 
+ 934      6C6F723A 
+ 935 00e9 683E4E61 		.ascii	"h>Name</th><th>Age</th></tr>\000"
+ 935      6D653C2F 
+ARM GAS  C:\Users\POLZOV~1\AppData\Local\Temp\ccInkQf5.s 			page 23
+
+
+ 935      74683E3C 
+ 935      74683E41 
+ 935      67653C2F 
+ 936              		.global	page2_end
+ 937 0106 0000     		.align	2
+ 938              	.LC27:
+ 939 0108 3C703E20 		.ascii	"<p> Click Below to Submit again </p>\012\011\011<fo"
+ 939      436C6963 
+ 939      6B204265 
+ 939      6C6F7720 
+ 939      746F2053 
+ 940 0132 726D2061 		.ascii	"rm action=\"/home\">\012\011\011<input type=\"submi"
+ 940      6374696F 
+ 940      6E3D222F 
+ 940      686F6D65 
+ 940      223E0A09 
+ 941 0159 74222076 		.ascii	"t\" value=\"Submit again\">\012\011\011</body></htm"
+ 941      616C7565 
+ 941      3D225375 
+ 941      626D6974 
+ 941      20616761 
+ 942 0180 6C3E00   		.ascii	"l>\000"
+ 943              		.global	page2_Top
+ 944 0183 00       		.align	2
+ 945              	.LC28:
+ 946 0184 3C21444F 		.ascii	"<!DOCTYPE html>\012\011\011<html>\012\011\011<body>"
+ 946      43545950 
+ 946      45206874 
+ 946      6D6C3E0A 
+ 946      09093C68 
+ 947 01a5 0A09093C 		.ascii	"\012\011\011<h1>ESP8266 USER DATA COLLECTION</h1>\012"
+ 947      68313E45 
+ 947      53503832 
+ 947      36362055 
+ 947      53455220 
+ 948 01ce 09093C68 		.ascii	"\011\011<h2> DATA CCOLLECTED is Shown BELOW </h2>\012"
+ 948      323E2044 
+ 948      41544120 
+ 948      43434F4C 
+ 948      4C454354 
+ 949 01fa 00       		.ascii	"\000"
+ 950              		.global	page1
+ 951 01fb 00       		.align	2
+ 952              	.LC29:
+ 953 01fc 3C21444F 		.ascii	"<!DOCTYPE html>\012\011\011<html>\012\011\011<body>"
+ 953      43545950 
+ 953      45206874 
+ 953      6D6C3E0A 
+ 953      09093C68 
+ 954 021d 0A09093C 		.ascii	"\012\011\011<h1>ESP8266 USER DATA COLLECTION</h1>\012"
+ 954      68313E45 
+ 954      53503832 
+ 954      36362055 
+ 954      53455220 
+ 955 0246 09093C68 		.ascii	"\011\011<h2> DATA STORED Successfully </h2>\012\011"
+ 955      323E2044 
+ 955      41544120 
+ARM GAS  C:\Users\POLZOV~1\AppData\Local\Temp\ccInkQf5.s 			page 24
+
+
+ 955      53544F52 
+ 955      45442053 
+ 956 026d 093C703E 		.ascii	"\011<p> Click Below to Submit again </p>\012\011\011"
+ 956      20436C69 
+ 956      636B2042 
+ 956      656C6F77 
+ 956      20746F20 
+ 957 0295 3C666F72 		.ascii	"<form action=\"/home\">\012\011\011<input type=\"su"
+ 957      6D206163 
+ 957      74696F6E 
+ 957      3D222F68 
+ 957      6F6D6522 
+ 958 02bc 626D6974 		.ascii	"bmit\" value=\"Submit Again\">\012\011\011</form><b"
+ 958      22207661 
+ 958      6C75653D 
+ 958      22537562 
+ 958      6D697420 
+ 959 02e3 723E3C62 		.ascii	"r><br>\012\011\011<form action=\"/page2\">\012\011\011"
+ 959      723E0A09 
+ 959      093C666F 
+ 959      726D2061 
+ 959      6374696F 
+ 960 0305 3C696E70 		.ascii	"<input type=\"submit\" value=\"View Data\">\012\011"
+ 960      75742074 
+ 960      7970653D 
+ 960      22737562 
+ 960      6D697422 
+ 961 032e 093C2F66 		.ascii	"\011</form>\012\011\011</body></html>\000"
+ 961      6F726D3E 
+ 961      0A09093C 
+ 961      2F626F64 
+ 961      793E3C2F 
+ 962              		.global	home
+ 963              		.align	2
+ 964              	.LC30:
+ 965 0348 3C21444F 		.ascii	"<!DOCTYPE html>\012\011\011<html>\012\011\011<body>"
+ 965      43545950 
+ 965      45206874 
+ 965      6D6C3E0A 
+ 965      09093C68 
+ 966 0369 0A09093C 		.ascii	"\012\011\011<h1>ESP8266 USER DATA COLLECTION</h1>\012"
+ 966      68313E45 
+ 966      53503832 
+ 966      36362055 
+ 966      53455220 
+ 967 0392 09093C70 		.ascii	"\011\011<p>Enter the Details in the form below: </p"
+ 967      3E456E74 
+ 967      65722074 
+ 967      68652044 
+ 967      65746169 
+ 968 03bf 3E0A0909 		.ascii	">\012\011\011<form action=\"/page1\">\012\011\011<l"
+ 968      3C666F72 
+ 968      6D206163 
+ 968      74696F6E 
+ 968      3D222F70 
+ 969 03de 6162656C 		.ascii	"abel for=\"fname\">First Name:</label><br>\012\011\011"
+ 969      20666F72 
+ARM GAS  C:\Users\POLZOV~1\AppData\Local\Temp\ccInkQf5.s 			page 25
+
+
+ 969      3D22666E 
+ 969      616D6522 
+ 969      3E466972 
+ 970 0409 3C696E70 		.ascii	"<input type=\"text\" id=\"fname\" name=\"fname\" va"
+ 970      75742074 
+ 970      7970653D 
+ 970      22746578 
+ 970      74222069 
+ 971 0436 6C75653D 		.ascii	"lue=\"\"><br><br>\012\011\011<label for=\"lname\">L"
+ 971      22223E3C 
+ 971      62723E3C 
+ 971      62723E0A 
+ 971      09093C6C 
+ 972 045c 61737420 		.ascii	"ast Name:</label><br>\012\011\011<input type=\"text"
+ 972      4E616D65 
+ 972      3A3C2F6C 
+ 972      6162656C 
+ 972      3E3C6272 
+ 973 0485 22206964 		.ascii	"\" id=\"lname\" name=\"lname\" value=\"\"><br><br>\012"
+ 973      3D226C6E 
+ 973      616D6522 
+ 973      206E616D 
+ 973      653D226C 
+ 974 04b1 09093C6C 		.ascii	"\011\011<label for=\"age\">Age:</label><br>\012\011"
+ 974      6162656C 
+ 974      20666F72 
+ 974      3D226167 
+ 974      65223E41 
+ 975 04d6 093C696E 		.ascii	"\011<input type=\"number\" id=\"age\" name=\"age\" "
+ 975      70757420 
+ 975      74797065 
+ 975      3D226E75 
+ 975      6D626572 
+ 976 0500 76616C75 		.ascii	"value=\"\"><br><br>\012\011\011<input type=\"submit"
+ 976      653D2222 
+ 976      3E3C6272 
+ 976      3E3C6272 
+ 976      3E0A0909 
+ 977 0527 22207661 		.ascii	"\" value=\"Submit\">\012\011\011</form><br><br>\012"
+ 977      6C75653D 
+ 977      22537562 
+ 977      6D697422 
+ 977      3E0A0909 
+ 978 054b 09093C66 		.ascii	"\011\011<form action=\"/page2\">\012\011\011<input "
+ 978      6F726D20 
+ 978      61637469 
+ 978      6F6E3D22 
+ 978      2F706167 
+ 979 056d 74797065 		.ascii	"type=\"submit\" value=\"View Data\">\012\011\011</f"
+ 979      3D227375 
+ 979      626D6974 
+ 979      22207661 
+ 979      6C75653D 
+ 980 0593 6F726D3E 		.ascii	"orm>\012\011\011</body></html>\000"
+ 980      0A09093C 
+ 980      2F626F64 
+ 980      793E3C2F 
+ARM GAS  C:\Users\POLZOV~1\AppData\Local\Temp\ccInkQf5.s 			page 26
+
+
+ 980      68746D6C 
+ 981              		.global	usernumber
+ 982              		.global	user
+ 983              		.global	buffer
+ 984              		.section	.bss.buffer,"aw",%nobits
+ 985              		.align	2
+ 988              	buffer:
+ 989 0000 00000000 		.space	20
+ 989      00000000 
+ 989      00000000 
+ 989      00000000 
+ 989      00000000 
+ 990              		.section	.bss.user,"aw",%nobits
+ 991              		.align	2
+ 992              		.set	.LANCHOR3,. + 0
+ 995              	user:
+ 996 0000 00000000 		.space	330
+ 996      00000000 
+ 996      00000000 
+ 996      00000000 
+ 996      00000000 
+ 997              		.section	.bss.usernumber,"aw",%nobits
+ 998              		.align	2
+ 999              		.set	.LANCHOR6,. + 0
+ 1002              	usernumber:
+ 1003 0000 00000000 		.space	4
+ 1004              		.section	.data.home,"aw"
+ 1005              		.align	2
+ 1006              		.set	.LANCHOR5,. + 0
+ 1009              	home:
+ 1010 0000 48030000 		.word	.LC30
+ 1011              		.section	.data.page1,"aw"
+ 1012              		.align	2
+ 1013              		.set	.LANCHOR0,. + 0
+ 1016              	page1:
+ 1017 0000 FC010000 		.word	.LC29
+ 1018              		.section	.data.page2_Top,"aw"
+ 1019              		.align	2
+ 1020              		.set	.LANCHOR1,. + 0
+ 1023              	page2_Top:
+ 1024 0000 84010000 		.word	.LC28
+ 1025              		.section	.data.page2_end,"aw"
+ 1026              		.align	2
+ 1027              		.set	.LANCHOR4,. + 0
+ 1030              	page2_end:
+ 1031 0000 08010000 		.word	.LC27
+ 1032              		.section	.data.table,"aw"
+ 1033              		.align	2
+ 1034              		.set	.LANCHOR2,. + 0
+ 1037              	table:
+ 1038 0000 00000000 		.word	.LC26
+ 1039              		.text
+ 1040              	.Letext0:
+ 1041              		.file 2 "Core/Inc/ESP_DATA_HANDLER.h"
+ 1042              		.file 3 "Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f1xx.h"
+ 1043              		.file 4 "Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h"
+ 1044              		.file 5 "Core/Inc/UartRingbuffer.h"
+ARM GAS  C:\Users\POLZOV~1\AppData\Local\Temp\ccInkQf5.s 			page 27
+
+
+ 1045              		.file 6 "c:\\users\\polzovatel\\appdata\\roaming\\gnu_mcu_eclipse\\xpack-arm-none-eabi-gcc-10.2.1-
+ 1046              		.file 7 "c:\\users\\polzovatel\\appdata\\roaming\\gnu_mcu_eclipse\\xpack-arm-none-eabi-gcc-10.2.1-
+ARM GAS  C:\Users\POLZOV~1\AppData\Local\Temp\ccInkQf5.s 			page 28
+
+
+DEFINED SYMBOLS
+                            *ABS*:0000000000000000 ESP_DATA_HANDLER.c
+C:\Users\POLZOV~1\AppData\Local\Temp\ccInkQf5.s:16     .text._Z10sizeofuserP11userDetails:0000000000000000 $t
+C:\Users\POLZOV~1\AppData\Local\Temp\ccInkQf5.s:24     .text._Z10sizeofuserP11userDetails:0000000000000000 _Z10sizeofuserP11userDetails
+.ARM.exidx.text._Z10sizeofuserP11userDetails:0000000000000000 $d
+C:\Users\POLZOV~1\AppData\Local\Temp\ccInkQf5.s:66     .rodata._Z8ESP_InitPcS_S_.str1.4:0000000000000000 $d
+C:\Users\POLZOV~1\AppData\Local\Temp\ccInkQf5.s:91     .text._Z8ESP_InitPcS_S_:0000000000000000 $t
+C:\Users\POLZOV~1\AppData\Local\Temp\ccInkQf5.s:98     .text._Z8ESP_InitPcS_S_:0000000000000000 _Z8ESP_InitPcS_S_
+C:\Users\POLZOV~1\AppData\Local\Temp\ccInkQf5.s:277    .text._Z8ESP_InitPcS_S_:00000000000000b0 $d
+.ARM.exidx.text._Z8ESP_InitPcS_S_:0000000000000000 $d
+C:\Users\POLZOV~1\AppData\Local\Temp\ccInkQf5.s:290    .rodata._Z11Server_SendPci.str1.4:0000000000000000 $d
+C:\Users\POLZOV~1\AppData\Local\Temp\ccInkQf5.s:303    .text._Z11Server_SendPci:0000000000000000 $t
+C:\Users\POLZOV~1\AppData\Local\Temp\ccInkQf5.s:310    .text._Z11Server_SendPci:0000000000000000 _Z11Server_SendPci
+C:\Users\POLZOV~1\AppData\Local\Temp\ccInkQf5.s:422    .text._Z11Server_SendPci:0000000000000064 $d
+.ARM.exidx.text._Z11Server_SendPci:0000000000000000 $d
+C:\Users\POLZOV~1\AppData\Local\Temp\ccInkQf5.s:432    .rodata._Z13Server_HandlePci.str1.4:0000000000000000 $d
+C:\Users\POLZOV~1\AppData\Local\Temp\ccInkQf5.s:445    .text._Z13Server_HandlePci:0000000000000000 $t
+C:\Users\POLZOV~1\AppData\Local\Temp\ccInkQf5.s:452    .text._Z13Server_HandlePci:0000000000000000 _Z13Server_HandlePci
+C:\Users\POLZOV~1\AppData\Local\Temp\ccInkQf5.s:666    .text._Z13Server_HandlePci:00000000000000f4 $d
+.ARM.extab.text._Z13Server_HandlePci:0000000000000000 $d
+.ARM.exidx.text._Z13Server_HandlePci:0000000000000000 $d
+C:\Users\POLZOV~1\AppData\Local\Temp\ccInkQf5.s:681    .rodata._Z12Server_Startv.str1.4:0000000000000000 $d
+C:\Users\POLZOV~1\AppData\Local\Temp\ccInkQf5.s:712    .text._Z12Server_Startv:0000000000000000 $t
+C:\Users\POLZOV~1\AppData\Local\Temp\ccInkQf5.s:719    .text._Z12Server_Startv:0000000000000000 _Z12Server_Startv
+C:\Users\POLZOV~1\AppData\Local\Temp\ccInkQf5.s:908    .text._Z12Server_Startv:00000000000000ec $d
+.ARM.exidx.text._Z12Server_Startv:0000000000000000 $d
+C:\Users\POLZOV~1\AppData\Local\Temp\ccInkQf5.s:1037   .data.table:0000000000000000 table
+C:\Users\POLZOV~1\AppData\Local\Temp\ccInkQf5.s:928    .rodata.str1.4:0000000000000000 $d
+C:\Users\POLZOV~1\AppData\Local\Temp\ccInkQf5.s:1030   .data.page2_end:0000000000000000 page2_end
+C:\Users\POLZOV~1\AppData\Local\Temp\ccInkQf5.s:1023   .data.page2_Top:0000000000000000 page2_Top
+C:\Users\POLZOV~1\AppData\Local\Temp\ccInkQf5.s:1016   .data.page1:0000000000000000 page1
+C:\Users\POLZOV~1\AppData\Local\Temp\ccInkQf5.s:1009   .data.home:0000000000000000 home
+C:\Users\POLZOV~1\AppData\Local\Temp\ccInkQf5.s:1002   .bss.usernumber:0000000000000000 usernumber
+C:\Users\POLZOV~1\AppData\Local\Temp\ccInkQf5.s:995    .bss.user:0000000000000000 user
+C:\Users\POLZOV~1\AppData\Local\Temp\ccInkQf5.s:988    .bss.buffer:0000000000000000 buffer
+C:\Users\POLZOV~1\AppData\Local\Temp\ccInkQf5.s:985    .bss.buffer:0000000000000000 $d
+C:\Users\POLZOV~1\AppData\Local\Temp\ccInkQf5.s:991    .bss.user:0000000000000000 $d
+C:\Users\POLZOV~1\AppData\Local\Temp\ccInkQf5.s:998    .bss.usernumber:0000000000000000 $d
+C:\Users\POLZOV~1\AppData\Local\Temp\ccInkQf5.s:1005   .data.home:0000000000000000 $d
+C:\Users\POLZOV~1\AppData\Local\Temp\ccInkQf5.s:1012   .data.page1:0000000000000000 $d
+C:\Users\POLZOV~1\AppData\Local\Temp\ccInkQf5.s:1019   .data.page2_Top:0000000000000000 $d
+C:\Users\POLZOV~1\AppData\Local\Temp\ccInkQf5.s:1026   .data.page2_end:0000000000000000 $d
+C:\Users\POLZOV~1\AppData\Local\Temp\ccInkQf5.s:1033   .data.table:0000000000000000 $d
+
+UNDEFINED SYMBOLS
+_Z12Ringbuf_initv
+_Z15Uart_sendstringPKc
+HAL_Delay
+_Z10Uart_flushv
+_Z8Wait_forPc
+sprintf
+__aeabi_unwind_cpp_pr0
+strlen
+memset
+strcmp
+strcat
+__aeabi_unwind_cpp_pr1
+ARM GAS  C:\Users\POLZOV~1\AppData\Local\Temp\ccInkQf5.s 			page 29
+
+
+_Z9Get_afterPchS_
+_Z9Copy_uptoPcS_
+_Z8Look_forPcS_
+_Z17GetDataFromBufferPcS_S_S_

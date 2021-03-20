@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\POLZOV~1\AppData\Local\Temp\ccks8DRM.s 			page 1
+ARM GAS  C:\Users\POLZOV~1\AppData\Local\Temp\ccpxgoOc.s 			page 1
 
 
    1              		.cpu cortex-m3
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\POLZOV~1\AppData\Local\Temp\ccks8DRM.s 			page 1
   29:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.c ****   * License. You may obtain a copy of the License at:
   30:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.c ****   *                        opensource.org/licenses/BSD-3-Clause
   31:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.c ****   *
-ARM GAS  C:\Users\POLZOV~1\AppData\Local\Temp\ccks8DRM.s 			page 2
+ARM GAS  C:\Users\POLZOV~1\AppData\Local\Temp\ccpxgoOc.s 			page 2
 
 
   32:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.c ****   ******************************************************************************
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\POLZOV~1\AppData\Local\Temp\ccks8DRM.s 			page 1
   86:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.c **** /* Exported functions ---------------------------------------------------------*/
   87:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.c **** 
   88:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.c **** /** @defgroup HAL_Exported_Functions HAL Exported Functions
-ARM GAS  C:\Users\POLZOV~1\AppData\Local\Temp\ccks8DRM.s 			page 3
+ARM GAS  C:\Users\POLZOV~1\AppData\Local\Temp\ccpxgoOc.s 			page 3
 
 
   89:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.c ****   * @{
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\POLZOV~1\AppData\Local\Temp\ccks8DRM.s 			page 1
  143:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.c **** {
  144:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.c ****   /* Configure Flash prefetch */
  145:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.c **** #if (PREFETCH_ENABLE != 0)
-ARM GAS  C:\Users\POLZOV~1\AppData\Local\Temp\ccks8DRM.s 			page 4
+ARM GAS  C:\Users\POLZOV~1\AppData\Local\Temp\ccpxgoOc.s 			page 4
 
 
  146:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.c **** #if defined(STM32F101x6) || defined(STM32F101xB) || defined(STM32F101xE) || defined(STM32F101xG) ||
@@ -238,7 +238,7 @@ ARM GAS  C:\Users\POLZOV~1\AppData\Local\Temp\ccks8DRM.s 			page 1
  200:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.c **** __weak void HAL_MspInit(void)
  201:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.c **** {
   28              		.loc 1 201 1 view -0
-ARM GAS  C:\Users\POLZOV~1\AppData\Local\Temp\ccks8DRM.s 			page 5
+ARM GAS  C:\Users\POLZOV~1\AppData\Local\Temp\ccpxgoOc.s 			page 5
 
 
   29              		.cfi_startproc
@@ -298,7 +298,7 @@ ARM GAS  C:\Users\POLZOV~1\AppData\Local\Temp\ccks8DRM.s 			page 1
   72              		.fnstart
   73              	.LFB66:
  176:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.c ****   /* Reset of all peripherals */
-ARM GAS  C:\Users\POLZOV~1\AppData\Local\Temp\ccks8DRM.s 			page 6
+ARM GAS  C:\Users\POLZOV~1\AppData\Local\Temp\ccpxgoOc.s 			page 6
 
 
   74              		.loc 1 176 1 is_stmt 1 view -0
@@ -358,7 +358,7 @@ ARM GAS  C:\Users\POLZOV~1\AppData\Local\Temp\ccks8DRM.s 			page 1
  122              	.LFB69:
  217:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.c **** 
  218:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.c **** /**
-ARM GAS  C:\Users\POLZOV~1\AppData\Local\Temp\ccks8DRM.s 			page 7
+ARM GAS  C:\Users\POLZOV~1\AppData\Local\Temp\ccpxgoOc.s 			page 7
 
 
  219:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.c ****   * @brief This function configures the source of the time base.
@@ -418,7 +418,7 @@ ARM GAS  C:\Users\POLZOV~1\AppData\Local\Temp\ccks8DRM.s 			page 1
  152 001e 0F2C     		cmp	r4, #15
  153 0020 01D9     		bls	.L12
  244:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.c ****   {
-ARM GAS  C:\Users\POLZOV~1\AppData\Local\Temp\ccks8DRM.s 			page 8
+ARM GAS  C:\Users\POLZOV~1\AppData\Local\Temp\ccpxgoOc.s 			page 8
 
 
  245:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.c ****     HAL_NVIC_SetPriority(SysTick_IRQn, TickPriority, 0U);
@@ -478,7 +478,7 @@ ARM GAS  C:\Users\POLZOV~1\AppData\Local\Temp\ccks8DRM.s 			page 1
  193              		.global	HAL_Init
  194              		.syntax unified
  195              		.thumb
-ARM GAS  C:\Users\POLZOV~1\AppData\Local\Temp\ccks8DRM.s 			page 9
+ARM GAS  C:\Users\POLZOV~1\AppData\Local\Temp\ccpxgoOc.s 			page 9
 
 
  196              		.thumb_func
@@ -538,7 +538,7 @@ ARM GAS  C:\Users\POLZOV~1\AppData\Local\Temp\ccks8DRM.s 			page 1
  241              		.fnend
  243              		.section	.text.HAL_IncTick,"ax",%progbits
  244              		.align	1
-ARM GAS  C:\Users\POLZOV~1\AppData\Local\Temp\ccks8DRM.s 			page 10
+ARM GAS  C:\Users\POLZOV~1\AppData\Local\Temp\ccpxgoOc.s 			page 10
 
 
  245              		.weak	HAL_IncTick
@@ -598,7 +598,7 @@ ARM GAS  C:\Users\POLZOV~1\AppData\Local\Temp\ccks8DRM.s 			page 1
  260              		.loc 1 295 13 is_stmt 0 view .LVU43
  261 0000 034B     		ldr	r3, .L20
  262 0002 1B78     		ldrb	r3, [r3]	@ zero_extendqisi2
-ARM GAS  C:\Users\POLZOV~1\AppData\Local\Temp\ccks8DRM.s 			page 11
+ARM GAS  C:\Users\POLZOV~1\AppData\Local\Temp\ccpxgoOc.s 			page 11
 
 
  263              		.loc 1 295 10 view .LVU44
@@ -658,7 +658,7 @@ ARM GAS  C:\Users\POLZOV~1\AppData\Local\Temp\ccks8DRM.s 			page 1
  307              	.LFE71:
  308              		.cantunwind
  309              		.fnend
-ARM GAS  C:\Users\POLZOV~1\AppData\Local\Temp\ccks8DRM.s 			page 12
+ARM GAS  C:\Users\POLZOV~1\AppData\Local\Temp\ccpxgoOc.s 			page 12
 
 
  311              		.section	.text.HAL_GetTickPrio,"ax",%progbits
@@ -718,7 +718,7 @@ ARM GAS  C:\Users\POLZOV~1\AppData\Local\Temp\ccks8DRM.s 			page 1
  323:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.c **** {
  353              		.loc 1 323 1 is_stmt 1 view -0
  354              		.cfi_startproc
-ARM GAS  C:\Users\POLZOV~1\AppData\Local\Temp\ccks8DRM.s 			page 13
+ARM GAS  C:\Users\POLZOV~1\AppData\Local\Temp\ccpxgoOc.s 			page 13
 
 
  355              		@ args = 0, pretend = 0, frame = 0
@@ -778,7 +778,7 @@ ARM GAS  C:\Users\POLZOV~1\AppData\Local\Temp\ccks8DRM.s 			page 1
  383              	.L32:
  332:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.c **** 
  384              		.loc 1 332 5 is_stmt 1 view .LVU64
-ARM GAS  C:\Users\POLZOV~1\AppData\Local\Temp\ccks8DRM.s 			page 14
+ARM GAS  C:\Users\POLZOV~1\AppData\Local\Temp\ccpxgoOc.s 			page 14
 
 
  335:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.c **** 
@@ -838,7 +838,7 @@ ARM GAS  C:\Users\POLZOV~1\AppData\Local\Temp\ccks8DRM.s 			page 1
  426              		@ args = 0, pretend = 0, frame = 0
  427              		@ frame_needed = 0, uses_anonymous_args = 0
  428              		@ link register save eliminated.
-ARM GAS  C:\Users\POLZOV~1\AppData\Local\Temp\ccks8DRM.s 			page 15
+ARM GAS  C:\Users\POLZOV~1\AppData\Local\Temp\ccpxgoOc.s 			page 15
 
 
  356:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.c ****   return uwTickFreq;
@@ -898,7 +898,7 @@ ARM GAS  C:\Users\POLZOV~1\AppData\Local\Temp\ccks8DRM.s 			page 1
  372:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.c ****   uint32_t tickstart = HAL_GetTick();
  469              		.loc 1 372 3 is_stmt 1 view .LVU78
  470              		.loc 1 372 35 is_stmt 0 view .LVU79
-ARM GAS  C:\Users\POLZOV~1\AppData\Local\Temp\ccks8DRM.s 			page 16
+ARM GAS  C:\Users\POLZOV~1\AppData\Local\Temp\ccpxgoOc.s 			page 16
 
 
  471 0004 FFF7FEFF 		bl	HAL_GetTick
@@ -958,7 +958,7 @@ ARM GAS  C:\Users\POLZOV~1\AppData\Local\Temp\ccks8DRM.s 			page 1
  514              		.thumb
  515              		.thumb_func
  516              		.fpu softvfp
-ARM GAS  C:\Users\POLZOV~1\AppData\Local\Temp\ccks8DRM.s 			page 17
+ARM GAS  C:\Users\POLZOV~1\AppData\Local\Temp\ccpxgoOc.s 			page 17
 
 
  518              	HAL_SuspendTick:
@@ -1018,7 +1018,7 @@ ARM GAS  C:\Users\POLZOV~1\AppData\Local\Temp\ccks8DRM.s 			page 1
  410:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.c ****   * @retval None
  411:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.c ****   */
  412:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.c **** __weak void HAL_ResumeTick(void)
-ARM GAS  C:\Users\POLZOV~1\AppData\Local\Temp\ccks8DRM.s 			page 18
+ARM GAS  C:\Users\POLZOV~1\AppData\Local\Temp\ccpxgoOc.s 			page 18
 
 
  413:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.c **** {
@@ -1078,7 +1078,7 @@ ARM GAS  C:\Users\POLZOV~1\AppData\Local\Temp\ccks8DRM.s 			page 1
  592              		.cantunwind
  593              		.fnend
  595              		.section	.text.HAL_GetREVID,"ax",%progbits
-ARM GAS  C:\Users\POLZOV~1\AppData\Local\Temp\ccks8DRM.s 			page 19
+ARM GAS  C:\Users\POLZOV~1\AppData\Local\Temp\ccpxgoOc.s 			page 19
 
 
  596              		.align	1
@@ -1138,7 +1138,7 @@ ARM GAS  C:\Users\POLZOV~1\AppData\Local\Temp\ccks8DRM.s 			page 1
  637              	.LFB80:
  442:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.c **** 
  443:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.c **** /**
-ARM GAS  C:\Users\POLZOV~1\AppData\Local\Temp\ccks8DRM.s 			page 20
+ARM GAS  C:\Users\POLZOV~1\AppData\Local\Temp\ccpxgoOc.s 			page 20
 
 
  444:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.c ****   * @brief  Returns the device identifier.
@@ -1198,7 +1198,7 @@ ARM GAS  C:\Users\POLZOV~1\AppData\Local\Temp\ccks8DRM.s 			page 1
  673              		@ frame_needed = 0, uses_anonymous_args = 0
  674              		@ link register save eliminated.
  465:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.c ****    return(READ_REG(*((uint32_t *)UID_BASE)));
-ARM GAS  C:\Users\POLZOV~1\AppData\Local\Temp\ccks8DRM.s 			page 21
+ARM GAS  C:\Users\POLZOV~1\AppData\Local\Temp\ccpxgoOc.s 			page 21
 
 
  675              		.loc 1 465 4 view .LVU111
@@ -1258,7 +1258,7 @@ ARM GAS  C:\Users\POLZOV~1\AppData\Local\Temp\ccks8DRM.s 			page 1
  722              		.syntax unified
  723              		.thumb
  724              		.thumb_func
-ARM GAS  C:\Users\POLZOV~1\AppData\Local\Temp\ccks8DRM.s 			page 22
+ARM GAS  C:\Users\POLZOV~1\AppData\Local\Temp\ccpxgoOc.s 			page 22
 
 
  725              		.fpu softvfp
@@ -1318,7 +1318,7 @@ ARM GAS  C:\Users\POLZOV~1\AppData\Local\Temp\ccks8DRM.s 			page 1
  765              		.loc 1 492 3 view .LVU120
  766 0000 024A     		ldr	r2, .L65
  767 0002 5368     		ldr	r3, [r2, #4]
-ARM GAS  C:\Users\POLZOV~1\AppData\Local\Temp\ccks8DRM.s 			page 23
+ARM GAS  C:\Users\POLZOV~1\AppData\Local\Temp\ccpxgoOc.s 			page 23
 
 
  768 0004 43F00103 		orr	r3, r3, #1
@@ -1378,7 +1378,7 @@ ARM GAS  C:\Users\POLZOV~1\AppData\Local\Temp\ccks8DRM.s 			page 1
  807 000c 002004E0 		.word	-536600576
  808              		.cfi_endproc
  809              	.LFE85:
-ARM GAS  C:\Users\POLZOV~1\AppData\Local\Temp\ccks8DRM.s 			page 24
+ARM GAS  C:\Users\POLZOV~1\AppData\Local\Temp\ccpxgoOc.s 			page 24
 
 
  810              		.cantunwind
@@ -1438,7 +1438,7 @@ ARM GAS  C:\Users\POLZOV~1\AppData\Local\Temp\ccks8DRM.s 			page 1
  836              	.L72:
  837              		.align	2
  838              	.L71:
-ARM GAS  C:\Users\POLZOV~1\AppData\Local\Temp\ccks8DRM.s 			page 25
+ARM GAS  C:\Users\POLZOV~1\AppData\Local\Temp\ccpxgoOc.s 			page 25
 
 
  839 000c 002004E0 		.word	-536600576
@@ -1498,7 +1498,7 @@ ARM GAS  C:\Users\POLZOV~1\AppData\Local\Temp\ccks8DRM.s 			page 1
  880              		.syntax unified
  881              		.thumb
  882              		.thumb_func
-ARM GAS  C:\Users\POLZOV~1\AppData\Local\Temp\ccks8DRM.s 			page 26
+ARM GAS  C:\Users\POLZOV~1\AppData\Local\Temp\ccpxgoOc.s 			page 26
 
 
  883              		.fpu softvfp
@@ -1558,7 +1558,7 @@ ARM GAS  C:\Users\POLZOV~1\AppData\Local\Temp\ccks8DRM.s 			page 1
  576:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.c ****   *                  STM32F101xC/D/E and STM32F103xC/D/E,
  577:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.c ****   *                  STM32F101xF/G and STM32F103xF/G
  578:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.c ****   *                  STM32F10xx4 and STM32F10xx6
-ARM GAS  C:\Users\POLZOV~1\AppData\Local\Temp\ccks8DRM.s 			page 27
+ARM GAS  C:\Users\POLZOV~1\AppData\Local\Temp\ccpxgoOc.s 			page 27
 
 
  579:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.c ****   *       Debug registers DBGMCU_IDCODE and DBGMCU_CR are accessible only in
@@ -1610,127 +1610,127 @@ ARM GAS  C:\Users\POLZOV~1\AppData\Local\Temp\ccks8DRM.s 			page 1
  964              		.text
  965              	.Letext0:
  966              		.file 2 "Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f103xb.h"
- 967              		.file 3 "c:\\users\\polzovatel\\appdata\\roaming\\gnu mcu eclipse\\xpack-arm-none-eabi-gcc-10.2.1-
- 968              		.file 4 "c:\\users\\polzovatel\\appdata\\roaming\\gnu mcu eclipse\\xpack-arm-none-eabi-gcc-10.2.1-
+ 967              		.file 3 "c:\\users\\polzovatel\\appdata\\roaming\\gnu_mcu_eclipse\\xpack-arm-none-eabi-gcc-10.2.1-
+ 968              		.file 4 "c:\\users\\polzovatel\\appdata\\roaming\\gnu_mcu_eclipse\\xpack-arm-none-eabi-gcc-10.2.1-
  969              		.file 5 "Drivers/CMSIS/Include/core_cm3.h"
  970              		.file 6 "Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f1xx.h"
  971              		.file 7 "Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_def.h"
  972              		.file 8 "Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h"
  973              		.file 9 "Drivers/CMSIS/Device/ST/STM32F1xx/Include/system_stm32f1xx.h"
  974              		.file 10 "Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_cortex.h"
-ARM GAS  C:\Users\POLZOV~1\AppData\Local\Temp\ccks8DRM.s 			page 28
+ARM GAS  C:\Users\POLZOV~1\AppData\Local\Temp\ccpxgoOc.s 			page 28
 
 
-ARM GAS  C:\Users\POLZOV~1\AppData\Local\Temp\ccks8DRM.s 			page 29
+ARM GAS  C:\Users\POLZOV~1\AppData\Local\Temp\ccpxgoOc.s 			page 29
 
 
 DEFINED SYMBOLS
                             *ABS*:0000000000000000 stm32f1xx_hal.c
-C:\Users\POLZOV~1\AppData\Local\Temp\ccks8DRM.s:16     .text.HAL_MspInit:0000000000000000 $t
-C:\Users\POLZOV~1\AppData\Local\Temp\ccks8DRM.s:24     .text.HAL_MspInit:0000000000000000 HAL_MspInit
+C:\Users\POLZOV~1\AppData\Local\Temp\ccpxgoOc.s:16     .text.HAL_MspInit:0000000000000000 $t
+C:\Users\POLZOV~1\AppData\Local\Temp\ccpxgoOc.s:24     .text.HAL_MspInit:0000000000000000 HAL_MspInit
       .ARM.exidx.text.HAL_MspInit:0000000000000000 $d
-C:\Users\POLZOV~1\AppData\Local\Temp\ccks8DRM.s:41     .text.HAL_MspDeInit:0000000000000000 $t
-C:\Users\POLZOV~1\AppData\Local\Temp\ccks8DRM.s:48     .text.HAL_MspDeInit:0000000000000000 HAL_MspDeInit
+C:\Users\POLZOV~1\AppData\Local\Temp\ccpxgoOc.s:41     .text.HAL_MspDeInit:0000000000000000 $t
+C:\Users\POLZOV~1\AppData\Local\Temp\ccpxgoOc.s:48     .text.HAL_MspDeInit:0000000000000000 HAL_MspDeInit
     .ARM.exidx.text.HAL_MspDeInit:0000000000000000 $d
-C:\Users\POLZOV~1\AppData\Local\Temp\ccks8DRM.s:64     .text.HAL_DeInit:0000000000000000 $t
-C:\Users\POLZOV~1\AppData\Local\Temp\ccks8DRM.s:71     .text.HAL_DeInit:0000000000000000 HAL_DeInit
-C:\Users\POLZOV~1\AppData\Local\Temp\ccks8DRM.s:106    .text.HAL_DeInit:000000000000001c $d
+C:\Users\POLZOV~1\AppData\Local\Temp\ccpxgoOc.s:64     .text.HAL_DeInit:0000000000000000 $t
+C:\Users\POLZOV~1\AppData\Local\Temp\ccpxgoOc.s:71     .text.HAL_DeInit:0000000000000000 HAL_DeInit
+C:\Users\POLZOV~1\AppData\Local\Temp\ccpxgoOc.s:106    .text.HAL_DeInit:000000000000001c $d
        .ARM.exidx.text.HAL_DeInit:0000000000000000 $d
-C:\Users\POLZOV~1\AppData\Local\Temp\ccks8DRM.s:112    .text.HAL_InitTick:0000000000000000 $t
-C:\Users\POLZOV~1\AppData\Local\Temp\ccks8DRM.s:119    .text.HAL_InitTick:0000000000000000 HAL_InitTick
-C:\Users\POLZOV~1\AppData\Local\Temp\ccks8DRM.s:184    .text.HAL_InitTick:0000000000000040 $d
+C:\Users\POLZOV~1\AppData\Local\Temp\ccpxgoOc.s:112    .text.HAL_InitTick:0000000000000000 $t
+C:\Users\POLZOV~1\AppData\Local\Temp\ccpxgoOc.s:119    .text.HAL_InitTick:0000000000000000 HAL_InitTick
+C:\Users\POLZOV~1\AppData\Local\Temp\ccpxgoOc.s:184    .text.HAL_InitTick:0000000000000040 $d
      .ARM.exidx.text.HAL_InitTick:0000000000000000 $d
-C:\Users\POLZOV~1\AppData\Local\Temp\ccks8DRM.s:192    .text.HAL_Init:0000000000000000 $t
-C:\Users\POLZOV~1\AppData\Local\Temp\ccks8DRM.s:199    .text.HAL_Init:0000000000000000 HAL_Init
-C:\Users\POLZOV~1\AppData\Local\Temp\ccks8DRM.s:238    .text.HAL_Init:0000000000000020 $d
+C:\Users\POLZOV~1\AppData\Local\Temp\ccpxgoOc.s:192    .text.HAL_Init:0000000000000000 $t
+C:\Users\POLZOV~1\AppData\Local\Temp\ccpxgoOc.s:199    .text.HAL_Init:0000000000000000 HAL_Init
+C:\Users\POLZOV~1\AppData\Local\Temp\ccpxgoOc.s:238    .text.HAL_Init:0000000000000020 $d
          .ARM.extab.text.HAL_Init:0000000000000000 $d
          .ARM.exidx.text.HAL_Init:0000000000000000 $d
-C:\Users\POLZOV~1\AppData\Local\Temp\ccks8DRM.s:244    .text.HAL_IncTick:0000000000000000 $t
-C:\Users\POLZOV~1\AppData\Local\Temp\ccks8DRM.s:251    .text.HAL_IncTick:0000000000000000 HAL_IncTick
-C:\Users\POLZOV~1\AppData\Local\Temp\ccks8DRM.s:273    .text.HAL_IncTick:0000000000000010 $d
+C:\Users\POLZOV~1\AppData\Local\Temp\ccpxgoOc.s:244    .text.HAL_IncTick:0000000000000000 $t
+C:\Users\POLZOV~1\AppData\Local\Temp\ccpxgoOc.s:251    .text.HAL_IncTick:0000000000000000 HAL_IncTick
+C:\Users\POLZOV~1\AppData\Local\Temp\ccpxgoOc.s:273    .text.HAL_IncTick:0000000000000010 $d
       .ARM.exidx.text.HAL_IncTick:0000000000000000 $d
-C:\Users\POLZOV~1\AppData\Local\Temp\ccks8DRM.s:281    .text.HAL_GetTick:0000000000000000 $t
-C:\Users\POLZOV~1\AppData\Local\Temp\ccks8DRM.s:288    .text.HAL_GetTick:0000000000000000 HAL_GetTick
-C:\Users\POLZOV~1\AppData\Local\Temp\ccks8DRM.s:305    .text.HAL_GetTick:0000000000000008 $d
+C:\Users\POLZOV~1\AppData\Local\Temp\ccpxgoOc.s:281    .text.HAL_GetTick:0000000000000000 $t
+C:\Users\POLZOV~1\AppData\Local\Temp\ccpxgoOc.s:288    .text.HAL_GetTick:0000000000000000 HAL_GetTick
+C:\Users\POLZOV~1\AppData\Local\Temp\ccpxgoOc.s:305    .text.HAL_GetTick:0000000000000008 $d
       .ARM.exidx.text.HAL_GetTick:0000000000000000 $d
-C:\Users\POLZOV~1\AppData\Local\Temp\ccks8DRM.s:312    .text.HAL_GetTickPrio:0000000000000000 $t
-C:\Users\POLZOV~1\AppData\Local\Temp\ccks8DRM.s:319    .text.HAL_GetTickPrio:0000000000000000 HAL_GetTickPrio
-C:\Users\POLZOV~1\AppData\Local\Temp\ccks8DRM.s:335    .text.HAL_GetTickPrio:0000000000000008 $d
+C:\Users\POLZOV~1\AppData\Local\Temp\ccpxgoOc.s:312    .text.HAL_GetTickPrio:0000000000000000 $t
+C:\Users\POLZOV~1\AppData\Local\Temp\ccpxgoOc.s:319    .text.HAL_GetTickPrio:0000000000000000 HAL_GetTickPrio
+C:\Users\POLZOV~1\AppData\Local\Temp\ccpxgoOc.s:335    .text.HAL_GetTickPrio:0000000000000008 $d
   .ARM.exidx.text.HAL_GetTickPrio:0000000000000000 $d
-C:\Users\POLZOV~1\AppData\Local\Temp\ccks8DRM.s:342    .text.HAL_SetTickFreq:0000000000000000 $t
-C:\Users\POLZOV~1\AppData\Local\Temp\ccks8DRM.s:349    .text.HAL_SetTickFreq:0000000000000000 HAL_SetTickFreq
-C:\Users\POLZOV~1\AppData\Local\Temp\ccks8DRM.s:407    .text.HAL_SetTickFreq:0000000000000024 $d
+C:\Users\POLZOV~1\AppData\Local\Temp\ccpxgoOc.s:342    .text.HAL_SetTickFreq:0000000000000000 $t
+C:\Users\POLZOV~1\AppData\Local\Temp\ccpxgoOc.s:349    .text.HAL_SetTickFreq:0000000000000000 HAL_SetTickFreq
+C:\Users\POLZOV~1\AppData\Local\Temp\ccpxgoOc.s:407    .text.HAL_SetTickFreq:0000000000000024 $d
   .ARM.exidx.text.HAL_SetTickFreq:0000000000000000 $d
-C:\Users\POLZOV~1\AppData\Local\Temp\ccks8DRM.s:414    .text.HAL_GetTickFreq:0000000000000000 $t
-C:\Users\POLZOV~1\AppData\Local\Temp\ccks8DRM.s:421    .text.HAL_GetTickFreq:0000000000000000 HAL_GetTickFreq
-C:\Users\POLZOV~1\AppData\Local\Temp\ccks8DRM.s:437    .text.HAL_GetTickFreq:0000000000000008 $d
+C:\Users\POLZOV~1\AppData\Local\Temp\ccpxgoOc.s:414    .text.HAL_GetTickFreq:0000000000000000 $t
+C:\Users\POLZOV~1\AppData\Local\Temp\ccpxgoOc.s:421    .text.HAL_GetTickFreq:0000000000000000 HAL_GetTickFreq
+C:\Users\POLZOV~1\AppData\Local\Temp\ccpxgoOc.s:437    .text.HAL_GetTickFreq:0000000000000008 $d
   .ARM.exidx.text.HAL_GetTickFreq:0000000000000000 $d
-C:\Users\POLZOV~1\AppData\Local\Temp\ccks8DRM.s:444    .text.HAL_Delay:0000000000000000 $t
-C:\Users\POLZOV~1\AppData\Local\Temp\ccks8DRM.s:451    .text.HAL_Delay:0000000000000000 HAL_Delay
-C:\Users\POLZOV~1\AppData\Local\Temp\ccks8DRM.s:505    .text.HAL_Delay:0000000000000024 $d
+C:\Users\POLZOV~1\AppData\Local\Temp\ccpxgoOc.s:444    .text.HAL_Delay:0000000000000000 $t
+C:\Users\POLZOV~1\AppData\Local\Temp\ccpxgoOc.s:451    .text.HAL_Delay:0000000000000000 HAL_Delay
+C:\Users\POLZOV~1\AppData\Local\Temp\ccpxgoOc.s:505    .text.HAL_Delay:0000000000000024 $d
         .ARM.exidx.text.HAL_Delay:0000000000000000 $d
-C:\Users\POLZOV~1\AppData\Local\Temp\ccks8DRM.s:511    .text.HAL_SuspendTick:0000000000000000 $t
-C:\Users\POLZOV~1\AppData\Local\Temp\ccks8DRM.s:518    .text.HAL_SuspendTick:0000000000000000 HAL_SuspendTick
+C:\Users\POLZOV~1\AppData\Local\Temp\ccpxgoOc.s:511    .text.HAL_SuspendTick:0000000000000000 $t
+C:\Users\POLZOV~1\AppData\Local\Temp\ccpxgoOc.s:518    .text.HAL_SuspendTick:0000000000000000 HAL_SuspendTick
   .ARM.exidx.text.HAL_SuspendTick:0000000000000000 $d
-C:\Users\POLZOV~1\AppData\Local\Temp\ccks8DRM.s:539    .text.HAL_ResumeTick:0000000000000000 $t
-C:\Users\POLZOV~1\AppData\Local\Temp\ccks8DRM.s:546    .text.HAL_ResumeTick:0000000000000000 HAL_ResumeTick
+C:\Users\POLZOV~1\AppData\Local\Temp\ccpxgoOc.s:539    .text.HAL_ResumeTick:0000000000000000 $t
+C:\Users\POLZOV~1\AppData\Local\Temp\ccpxgoOc.s:546    .text.HAL_ResumeTick:0000000000000000 HAL_ResumeTick
    .ARM.exidx.text.HAL_ResumeTick:0000000000000000 $d
-C:\Users\POLZOV~1\AppData\Local\Temp\ccks8DRM.s:567    .text.HAL_GetHalVersion:0000000000000000 $t
-C:\Users\POLZOV~1\AppData\Local\Temp\ccks8DRM.s:574    .text.HAL_GetHalVersion:0000000000000000 HAL_GetHalVersion
-C:\Users\POLZOV~1\AppData\Local\Temp\ccks8DRM.s:589    .text.HAL_GetHalVersion:0000000000000004 $d
+C:\Users\POLZOV~1\AppData\Local\Temp\ccpxgoOc.s:567    .text.HAL_GetHalVersion:0000000000000000 $t
+C:\Users\POLZOV~1\AppData\Local\Temp\ccpxgoOc.s:574    .text.HAL_GetHalVersion:0000000000000000 HAL_GetHalVersion
+C:\Users\POLZOV~1\AppData\Local\Temp\ccpxgoOc.s:589    .text.HAL_GetHalVersion:0000000000000004 $d
 .ARM.exidx.text.HAL_GetHalVersion:0000000000000000 $d
-C:\Users\POLZOV~1\AppData\Local\Temp\ccks8DRM.s:596    .text.HAL_GetREVID:0000000000000000 $t
-C:\Users\POLZOV~1\AppData\Local\Temp\ccks8DRM.s:603    .text.HAL_GetREVID:0000000000000000 HAL_GetREVID
-ARM GAS  C:\Users\POLZOV~1\AppData\Local\Temp\ccks8DRM.s 			page 30
+C:\Users\POLZOV~1\AppData\Local\Temp\ccpxgoOc.s:596    .text.HAL_GetREVID:0000000000000000 $t
+C:\Users\POLZOV~1\AppData\Local\Temp\ccpxgoOc.s:603    .text.HAL_GetREVID:0000000000000000 HAL_GetREVID
+ARM GAS  C:\Users\POLZOV~1\AppData\Local\Temp\ccpxgoOc.s 			page 30
 
 
-C:\Users\POLZOV~1\AppData\Local\Temp\ccks8DRM.s:621    .text.HAL_GetREVID:0000000000000008 $d
+C:\Users\POLZOV~1\AppData\Local\Temp\ccpxgoOc.s:621    .text.HAL_GetREVID:0000000000000008 $d
      .ARM.exidx.text.HAL_GetREVID:0000000000000000 $d
-C:\Users\POLZOV~1\AppData\Local\Temp\ccks8DRM.s:628    .text.HAL_GetDEVID:0000000000000000 $t
-C:\Users\POLZOV~1\AppData\Local\Temp\ccks8DRM.s:635    .text.HAL_GetDEVID:0000000000000000 HAL_GetDEVID
-C:\Users\POLZOV~1\AppData\Local\Temp\ccks8DRM.s:653    .text.HAL_GetDEVID:000000000000000c $d
+C:\Users\POLZOV~1\AppData\Local\Temp\ccpxgoOc.s:628    .text.HAL_GetDEVID:0000000000000000 $t
+C:\Users\POLZOV~1\AppData\Local\Temp\ccpxgoOc.s:635    .text.HAL_GetDEVID:0000000000000000 HAL_GetDEVID
+C:\Users\POLZOV~1\AppData\Local\Temp\ccpxgoOc.s:653    .text.HAL_GetDEVID:000000000000000c $d
      .ARM.exidx.text.HAL_GetDEVID:0000000000000000 $d
-C:\Users\POLZOV~1\AppData\Local\Temp\ccks8DRM.s:660    .text.HAL_GetUIDw0:0000000000000000 $t
-C:\Users\POLZOV~1\AppData\Local\Temp\ccks8DRM.s:667    .text.HAL_GetUIDw0:0000000000000000 HAL_GetUIDw0
-C:\Users\POLZOV~1\AppData\Local\Temp\ccks8DRM.s:683    .text.HAL_GetUIDw0:0000000000000008 $d
+C:\Users\POLZOV~1\AppData\Local\Temp\ccpxgoOc.s:660    .text.HAL_GetUIDw0:0000000000000000 $t
+C:\Users\POLZOV~1\AppData\Local\Temp\ccpxgoOc.s:667    .text.HAL_GetUIDw0:0000000000000000 HAL_GetUIDw0
+C:\Users\POLZOV~1\AppData\Local\Temp\ccpxgoOc.s:683    .text.HAL_GetUIDw0:0000000000000008 $d
      .ARM.exidx.text.HAL_GetUIDw0:0000000000000000 $d
-C:\Users\POLZOV~1\AppData\Local\Temp\ccks8DRM.s:690    .text.HAL_GetUIDw1:0000000000000000 $t
-C:\Users\POLZOV~1\AppData\Local\Temp\ccks8DRM.s:697    .text.HAL_GetUIDw1:0000000000000000 HAL_GetUIDw1
-C:\Users\POLZOV~1\AppData\Local\Temp\ccks8DRM.s:713    .text.HAL_GetUIDw1:0000000000000008 $d
+C:\Users\POLZOV~1\AppData\Local\Temp\ccpxgoOc.s:690    .text.HAL_GetUIDw1:0000000000000000 $t
+C:\Users\POLZOV~1\AppData\Local\Temp\ccpxgoOc.s:697    .text.HAL_GetUIDw1:0000000000000000 HAL_GetUIDw1
+C:\Users\POLZOV~1\AppData\Local\Temp\ccpxgoOc.s:713    .text.HAL_GetUIDw1:0000000000000008 $d
      .ARM.exidx.text.HAL_GetUIDw1:0000000000000000 $d
-C:\Users\POLZOV~1\AppData\Local\Temp\ccks8DRM.s:720    .text.HAL_GetUIDw2:0000000000000000 $t
-C:\Users\POLZOV~1\AppData\Local\Temp\ccks8DRM.s:727    .text.HAL_GetUIDw2:0000000000000000 HAL_GetUIDw2
-C:\Users\POLZOV~1\AppData\Local\Temp\ccks8DRM.s:743    .text.HAL_GetUIDw2:0000000000000008 $d
+C:\Users\POLZOV~1\AppData\Local\Temp\ccpxgoOc.s:720    .text.HAL_GetUIDw2:0000000000000000 $t
+C:\Users\POLZOV~1\AppData\Local\Temp\ccpxgoOc.s:727    .text.HAL_GetUIDw2:0000000000000000 HAL_GetUIDw2
+C:\Users\POLZOV~1\AppData\Local\Temp\ccpxgoOc.s:743    .text.HAL_GetUIDw2:0000000000000008 $d
      .ARM.exidx.text.HAL_GetUIDw2:0000000000000000 $d
-C:\Users\POLZOV~1\AppData\Local\Temp\ccks8DRM.s:750    .text.HAL_DBGMCU_EnableDBGSleepMode:0000000000000000 $t
-C:\Users\POLZOV~1\AppData\Local\Temp\ccks8DRM.s:757    .text.HAL_DBGMCU_EnableDBGSleepMode:0000000000000000 HAL_DBGMCU_EnableDBGSleepMode
-C:\Users\POLZOV~1\AppData\Local\Temp\ccks8DRM.s:775    .text.HAL_DBGMCU_EnableDBGSleepMode:000000000000000c $d
+C:\Users\POLZOV~1\AppData\Local\Temp\ccpxgoOc.s:750    .text.HAL_DBGMCU_EnableDBGSleepMode:0000000000000000 $t
+C:\Users\POLZOV~1\AppData\Local\Temp\ccpxgoOc.s:757    .text.HAL_DBGMCU_EnableDBGSleepMode:0000000000000000 HAL_DBGMCU_EnableDBGSleepMode
+C:\Users\POLZOV~1\AppData\Local\Temp\ccpxgoOc.s:775    .text.HAL_DBGMCU_EnableDBGSleepMode:000000000000000c $d
 .ARM.exidx.text.HAL_DBGMCU_EnableDBGSleepMode:0000000000000000 $d
-C:\Users\POLZOV~1\AppData\Local\Temp\ccks8DRM.s:782    .text.HAL_DBGMCU_DisableDBGSleepMode:0000000000000000 $t
-C:\Users\POLZOV~1\AppData\Local\Temp\ccks8DRM.s:789    .text.HAL_DBGMCU_DisableDBGSleepMode:0000000000000000 HAL_DBGMCU_DisableDBGSleepMode
-C:\Users\POLZOV~1\AppData\Local\Temp\ccks8DRM.s:807    .text.HAL_DBGMCU_DisableDBGSleepMode:000000000000000c $d
+C:\Users\POLZOV~1\AppData\Local\Temp\ccpxgoOc.s:782    .text.HAL_DBGMCU_DisableDBGSleepMode:0000000000000000 $t
+C:\Users\POLZOV~1\AppData\Local\Temp\ccpxgoOc.s:789    .text.HAL_DBGMCU_DisableDBGSleepMode:0000000000000000 HAL_DBGMCU_DisableDBGSleepMode
+C:\Users\POLZOV~1\AppData\Local\Temp\ccpxgoOc.s:807    .text.HAL_DBGMCU_DisableDBGSleepMode:000000000000000c $d
 .ARM.exidx.text.HAL_DBGMCU_DisableDBGSleepMode:0000000000000000 $d
-C:\Users\POLZOV~1\AppData\Local\Temp\ccks8DRM.s:814    .text.HAL_DBGMCU_EnableDBGStopMode:0000000000000000 $t
-C:\Users\POLZOV~1\AppData\Local\Temp\ccks8DRM.s:821    .text.HAL_DBGMCU_EnableDBGStopMode:0000000000000000 HAL_DBGMCU_EnableDBGStopMode
-C:\Users\POLZOV~1\AppData\Local\Temp\ccks8DRM.s:839    .text.HAL_DBGMCU_EnableDBGStopMode:000000000000000c $d
+C:\Users\POLZOV~1\AppData\Local\Temp\ccpxgoOc.s:814    .text.HAL_DBGMCU_EnableDBGStopMode:0000000000000000 $t
+C:\Users\POLZOV~1\AppData\Local\Temp\ccpxgoOc.s:821    .text.HAL_DBGMCU_EnableDBGStopMode:0000000000000000 HAL_DBGMCU_EnableDBGStopMode
+C:\Users\POLZOV~1\AppData\Local\Temp\ccpxgoOc.s:839    .text.HAL_DBGMCU_EnableDBGStopMode:000000000000000c $d
 .ARM.exidx.text.HAL_DBGMCU_EnableDBGStopMode:0000000000000000 $d
-C:\Users\POLZOV~1\AppData\Local\Temp\ccks8DRM.s:846    .text.HAL_DBGMCU_DisableDBGStopMode:0000000000000000 $t
-C:\Users\POLZOV~1\AppData\Local\Temp\ccks8DRM.s:853    .text.HAL_DBGMCU_DisableDBGStopMode:0000000000000000 HAL_DBGMCU_DisableDBGStopMode
-C:\Users\POLZOV~1\AppData\Local\Temp\ccks8DRM.s:871    .text.HAL_DBGMCU_DisableDBGStopMode:000000000000000c $d
+C:\Users\POLZOV~1\AppData\Local\Temp\ccpxgoOc.s:846    .text.HAL_DBGMCU_DisableDBGStopMode:0000000000000000 $t
+C:\Users\POLZOV~1\AppData\Local\Temp\ccpxgoOc.s:853    .text.HAL_DBGMCU_DisableDBGStopMode:0000000000000000 HAL_DBGMCU_DisableDBGStopMode
+C:\Users\POLZOV~1\AppData\Local\Temp\ccpxgoOc.s:871    .text.HAL_DBGMCU_DisableDBGStopMode:000000000000000c $d
 .ARM.exidx.text.HAL_DBGMCU_DisableDBGStopMode:0000000000000000 $d
-C:\Users\POLZOV~1\AppData\Local\Temp\ccks8DRM.s:878    .text.HAL_DBGMCU_EnableDBGStandbyMode:0000000000000000 $t
-C:\Users\POLZOV~1\AppData\Local\Temp\ccks8DRM.s:885    .text.HAL_DBGMCU_EnableDBGStandbyMode:0000000000000000 HAL_DBGMCU_EnableDBGStandbyMode
-C:\Users\POLZOV~1\AppData\Local\Temp\ccks8DRM.s:903    .text.HAL_DBGMCU_EnableDBGStandbyMode:000000000000000c $d
+C:\Users\POLZOV~1\AppData\Local\Temp\ccpxgoOc.s:878    .text.HAL_DBGMCU_EnableDBGStandbyMode:0000000000000000 $t
+C:\Users\POLZOV~1\AppData\Local\Temp\ccpxgoOc.s:885    .text.HAL_DBGMCU_EnableDBGStandbyMode:0000000000000000 HAL_DBGMCU_EnableDBGStandbyMode
+C:\Users\POLZOV~1\AppData\Local\Temp\ccpxgoOc.s:903    .text.HAL_DBGMCU_EnableDBGStandbyMode:000000000000000c $d
 .ARM.exidx.text.HAL_DBGMCU_EnableDBGStandbyMode:0000000000000000 $d
-C:\Users\POLZOV~1\AppData\Local\Temp\ccks8DRM.s:910    .text.HAL_DBGMCU_DisableDBGStandbyMode:0000000000000000 $t
-C:\Users\POLZOV~1\AppData\Local\Temp\ccks8DRM.s:917    .text.HAL_DBGMCU_DisableDBGStandbyMode:0000000000000000 HAL_DBGMCU_DisableDBGStandbyMode
-C:\Users\POLZOV~1\AppData\Local\Temp\ccks8DRM.s:935    .text.HAL_DBGMCU_DisableDBGStandbyMode:000000000000000c $d
+C:\Users\POLZOV~1\AppData\Local\Temp\ccpxgoOc.s:910    .text.HAL_DBGMCU_DisableDBGStandbyMode:0000000000000000 $t
+C:\Users\POLZOV~1\AppData\Local\Temp\ccpxgoOc.s:917    .text.HAL_DBGMCU_DisableDBGStandbyMode:0000000000000000 HAL_DBGMCU_DisableDBGStandbyMode
+C:\Users\POLZOV~1\AppData\Local\Temp\ccpxgoOc.s:935    .text.HAL_DBGMCU_DisableDBGStandbyMode:000000000000000c $d
 .ARM.exidx.text.HAL_DBGMCU_DisableDBGStandbyMode:0000000000000000 $d
-C:\Users\POLZOV~1\AppData\Local\Temp\ccks8DRM.s:955    .data.uwTickFreq:0000000000000000 uwTickFreq
-C:\Users\POLZOV~1\AppData\Local\Temp\ccks8DRM.s:962    .data.uwTickPrio:0000000000000000 uwTickPrio
-C:\Users\POLZOV~1\AppData\Local\Temp\ccks8DRM.s:949    .bss.uwTick:0000000000000000 uwTick
-C:\Users\POLZOV~1\AppData\Local\Temp\ccks8DRM.s:945    .bss.uwTick:0000000000000000 $d
-C:\Users\POLZOV~1\AppData\Local\Temp\ccks8DRM.s:958    .data.uwTickPrio:0000000000000000 $d
+C:\Users\POLZOV~1\AppData\Local\Temp\ccpxgoOc.s:955    .data.uwTickFreq:0000000000000000 uwTickFreq
+C:\Users\POLZOV~1\AppData\Local\Temp\ccpxgoOc.s:962    .data.uwTickPrio:0000000000000000 uwTickPrio
+C:\Users\POLZOV~1\AppData\Local\Temp\ccpxgoOc.s:949    .bss.uwTick:0000000000000000 uwTick
+C:\Users\POLZOV~1\AppData\Local\Temp\ccpxgoOc.s:945    .bss.uwTick:0000000000000000 $d
+C:\Users\POLZOV~1\AppData\Local\Temp\ccpxgoOc.s:958    .data.uwTickPrio:0000000000000000 $d
 
 UNDEFINED SYMBOLS
 __aeabi_unwind_cpp_pr0

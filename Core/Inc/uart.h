@@ -18,15 +18,13 @@ public:
     {
         // Empty
     }
-    bool WaitForData(const char *  _Data, size_t _TimeoutMs) 
+    bool WaitForData(const char * _Data, size_t _TimeoutMs) 
     {
         int Size = strlen(_Data);
-        if (Size > static_cast<int>(m_Buffer.size()))
-            return false;
-            
-        if (ReceiveData(Size) == HAL_OK) 
+
+        if (ReceiveData(Size + 1, _TimeoutMs) == HAL_OK) 
         {
-            if (etl::equal(_Data,_Data+Size,m_Buffer.begin()))
+            if (etl::equal(_Data, _Data+Size ,m_Buffer.begin()))
             {
                 return true;
             }
@@ -68,21 +66,25 @@ public:
         HAL_UART_IRQHandler(m_UartHandle);
     }
     return_t WriteDataAsync(const char * _Data, uint32_t _TimeoutMs = 1000) {
-        return HAL_UART_Transmit(m_UartHandle,(uint8_t*)_Data,strlen(_Data),_TimeoutMs);
+        return HAL_UART_Transmit(m_UartHandle, (uint8_t*)_Data, strlen(_Data) + 1, _TimeoutMs);
     }
     return_t WriteData(const char * _Data)
     {
         return WriteDataAsync(_Data);
     }
     
-    return_t ReceiveData(size_t _Count, uint32_t _TimeoutMs = 1000)
+    return_t ReceiveData(int _Count, uint32_t _TimeoutMs = 1000)
     {
-        uint8_t buffer[_Count]{};
-        volatile return_t Status = HAL_UART_Receive(m_UartHandle,buffer,_Count,_TimeoutMs);
-
-        if (Status == HAL_OK)
-            m_Buffer.push(buffer,etl::find(buffer, buffer+_Count, '\0'));
-        return Status;
+        uint8_t Buffer = '\0';
+        for (int i = 0; i < _Count;++i) 
+        {
+            auto Status = HAL_UART_Receive(m_UartHandle, &Buffer, 1 ,_TimeoutMs);
+            if (Status == HAL_OK)
+                m_Buffer.push(Buffer);
+            else
+                return Status;
+        }
+        return HAL_OK;
     }
     return_t ReceiveDataAsync(size_t _Count)
     {
