@@ -1,0 +1,642 @@
+ARM GAS  C:\Users\POLZOV~1\AppData\Local\Temp\ccbHDPqK.s 			page 1
+
+
+   1              		.cpu cortex-m3
+   2              		.eabi_attribute 20, 1
+   3              		.eabi_attribute 21, 1
+   4              		.eabi_attribute 23, 3
+   5              		.eabi_attribute 24, 1
+   6              		.eabi_attribute 25, 1
+   7              		.eabi_attribute 26, 1
+   8              		.eabi_attribute 30, 1
+   9              		.eabi_attribute 34, 1
+  10              		.eabi_attribute 18, 4
+  11              		.file	"stm32f1xx_it.cpp"
+  12              		.text
+  13              	.Ltext0:
+  14              		.cfi_sections	.debug_frame
+  15              		.section	.text.NMI_Handler,"ax",%progbits
+  16              		.align	1
+  17              		.global	NMI_Handler
+  18              		.arch armv7-m
+  19              		.syntax unified
+  20              		.thumb
+  21              		.thumb_func
+  22              		.fpu softvfp
+  24              	NMI_Handler:
+  25              		.fnstart
+  26              	.LFB4365:
+  27              		.file 1 "Core/Src/stm32f1xx_it.cpp"
+   1:Core/Src/stm32f1xx_it.cpp **** 
+   2:Core/Src/stm32f1xx_it.cpp **** /**
+   3:Core/Src/stm32f1xx_it.cpp ****   ******************************************************************************
+   4:Core/Src/stm32f1xx_it.cpp ****   * @file    stm32f1xx_it.c
+   5:Core/Src/stm32f1xx_it.cpp ****   * @brief   Interrupt Service Routines.
+   6:Core/Src/stm32f1xx_it.cpp ****   ******************************************************************************
+   7:Core/Src/stm32f1xx_it.cpp ****   * @attention
+   8:Core/Src/stm32f1xx_it.cpp ****   *
+   9:Core/Src/stm32f1xx_it.cpp ****   * <h2><center>&copy; Copyright (c) 2021 STMicroelectronics.
+  10:Core/Src/stm32f1xx_it.cpp ****   * All rights reserved.</center></h2>
+  11:Core/Src/stm32f1xx_it.cpp ****   *
+  12:Core/Src/stm32f1xx_it.cpp ****   * This software component is licensed by ST under BSD 3-Clause license,
+  13:Core/Src/stm32f1xx_it.cpp ****   * the "License"; You may not use this file except in compliance with the
+  14:Core/Src/stm32f1xx_it.cpp ****   * License. You may obtain a copy of the License at:
+  15:Core/Src/stm32f1xx_it.cpp ****   *                        opensource.org/licenses/BSD-3-Clause
+  16:Core/Src/stm32f1xx_it.cpp ****   *
+  17:Core/Src/stm32f1xx_it.cpp ****   ******************************************************************************
+  18:Core/Src/stm32f1xx_it.cpp ****   */
+  19:Core/Src/stm32f1xx_it.cpp **** 
+  20:Core/Src/stm32f1xx_it.cpp **** #include "main.h"
+  21:Core/Src/stm32f1xx_it.cpp **** #include "stm32f1xx_it.h"
+  22:Core/Src/stm32f1xx_it.cpp **** 
+  23:Core/Src/stm32f1xx_it.cpp **** #include "uart.h"
+  24:Core/Src/stm32f1xx_it.cpp **** 
+  25:Core/Src/stm32f1xx_it.cpp **** extern Uart               ESP;
+  26:Core/Src/stm32f1xx_it.cpp **** extern UART_HandleTypeDef huart1;
+  27:Core/Src/stm32f1xx_it.cpp **** 
+  28:Core/Src/stm32f1xx_it.cpp **** /******************************************************************************/
+  29:Core/Src/stm32f1xx_it.cpp **** 
+  30:Core/Src/stm32f1xx_it.cpp **** /******************************************************************************/
+  31:Core/Src/stm32f1xx_it.cpp **** /**
+ARM GAS  C:\Users\POLZOV~1\AppData\Local\Temp\ccbHDPqK.s 			page 2
+
+
+  32:Core/Src/stm32f1xx_it.cpp ****   * @brief This function handles Non maskable interrupt.
+  33:Core/Src/stm32f1xx_it.cpp ****   */
+  34:Core/Src/stm32f1xx_it.cpp **** void NMI_Handler(void)
+  35:Core/Src/stm32f1xx_it.cpp **** {
+  28              		.loc 1 35 1 view -0
+  29              		.cfi_startproc
+  30              		@ Volatile: function does not return.
+  31              		@ args = 0, pretend = 0, frame = 0
+  32              		@ frame_needed = 0, uses_anonymous_args = 0
+  33              		@ link register save eliminated.
+  34              	.L2:
+  36:Core/Src/stm32f1xx_it.cpp **** 
+  37:Core/Src/stm32f1xx_it.cpp ****   while (1)
+  35              		.loc 1 37 3 discriminator 1 view .LVU1
+  36              		.loc 1 37 3 discriminator 1 view .LVU2
+  37 0000 FEE7     		b	.L2
+  38              		.cfi_endproc
+  39              	.LFE4365:
+  40              		.cantunwind
+  41              		.fnend
+  43              		.section	.text.HardFault_Handler,"ax",%progbits
+  44              		.align	1
+  45              		.global	HardFault_Handler
+  46              		.syntax unified
+  47              		.thumb
+  48              		.thumb_func
+  49              		.fpu softvfp
+  51              	HardFault_Handler:
+  52              		.fnstart
+  53              	.LFB4366:
+  38:Core/Src/stm32f1xx_it.cpp ****   {
+  39:Core/Src/stm32f1xx_it.cpp ****   }
+  40:Core/Src/stm32f1xx_it.cpp **** }
+  41:Core/Src/stm32f1xx_it.cpp **** 
+  42:Core/Src/stm32f1xx_it.cpp **** /**
+  43:Core/Src/stm32f1xx_it.cpp ****   * @brief This function handles Hard fault interrupt.
+  44:Core/Src/stm32f1xx_it.cpp ****   */
+  45:Core/Src/stm32f1xx_it.cpp **** void HardFault_Handler(void)
+  46:Core/Src/stm32f1xx_it.cpp **** {
+  54              		.loc 1 46 1 view -0
+  55              		.cfi_startproc
+  56              		@ Volatile: function does not return.
+  57              		@ args = 0, pretend = 0, frame = 0
+  58              		@ frame_needed = 0, uses_anonymous_args = 0
+  59              		@ link register save eliminated.
+  60              	.L4:
+  47:Core/Src/stm32f1xx_it.cpp **** 
+  48:Core/Src/stm32f1xx_it.cpp ****   while (1)
+  61              		.loc 1 48 3 discriminator 1 view .LVU4
+  62              		.loc 1 48 3 discriminator 1 view .LVU5
+  63 0000 FEE7     		b	.L4
+  64              		.cfi_endproc
+  65              	.LFE4366:
+  66              		.cantunwind
+  67              		.fnend
+  69              		.section	.text.MemManage_Handler,"ax",%progbits
+  70              		.align	1
+ARM GAS  C:\Users\POLZOV~1\AppData\Local\Temp\ccbHDPqK.s 			page 3
+
+
+  71              		.global	MemManage_Handler
+  72              		.syntax unified
+  73              		.thumb
+  74              		.thumb_func
+  75              		.fpu softvfp
+  77              	MemManage_Handler:
+  78              		.fnstart
+  79              	.LFB4367:
+  49:Core/Src/stm32f1xx_it.cpp ****   {
+  50:Core/Src/stm32f1xx_it.cpp ****   }
+  51:Core/Src/stm32f1xx_it.cpp **** }
+  52:Core/Src/stm32f1xx_it.cpp **** 
+  53:Core/Src/stm32f1xx_it.cpp **** /**
+  54:Core/Src/stm32f1xx_it.cpp ****   * @brief This function handles Memory management fault.
+  55:Core/Src/stm32f1xx_it.cpp ****   */
+  56:Core/Src/stm32f1xx_it.cpp **** void MemManage_Handler(void)
+  57:Core/Src/stm32f1xx_it.cpp **** {
+  80              		.loc 1 57 1 view -0
+  81              		.cfi_startproc
+  82              		@ Volatile: function does not return.
+  83              		@ args = 0, pretend = 0, frame = 0
+  84              		@ frame_needed = 0, uses_anonymous_args = 0
+  85              		@ link register save eliminated.
+  86              	.L6:
+  58:Core/Src/stm32f1xx_it.cpp **** 
+  59:Core/Src/stm32f1xx_it.cpp ****   while (1)
+  87              		.loc 1 59 3 discriminator 1 view .LVU7
+  88              		.loc 1 59 3 discriminator 1 view .LVU8
+  89 0000 FEE7     		b	.L6
+  90              		.cfi_endproc
+  91              	.LFE4367:
+  92              		.cantunwind
+  93              		.fnend
+  95              		.section	.text.BusFault_Handler,"ax",%progbits
+  96              		.align	1
+  97              		.global	BusFault_Handler
+  98              		.syntax unified
+  99              		.thumb
+ 100              		.thumb_func
+ 101              		.fpu softvfp
+ 103              	BusFault_Handler:
+ 104              		.fnstart
+ 105              	.LFB4368:
+  60:Core/Src/stm32f1xx_it.cpp ****   {
+  61:Core/Src/stm32f1xx_it.cpp ****   }
+  62:Core/Src/stm32f1xx_it.cpp **** }
+  63:Core/Src/stm32f1xx_it.cpp **** 
+  64:Core/Src/stm32f1xx_it.cpp **** /**
+  65:Core/Src/stm32f1xx_it.cpp ****   * @brief This function handles Prefetch fault, memory access fault.
+  66:Core/Src/stm32f1xx_it.cpp ****   */
+  67:Core/Src/stm32f1xx_it.cpp **** void BusFault_Handler(void)
+  68:Core/Src/stm32f1xx_it.cpp **** {
+ 106              		.loc 1 68 1 view -0
+ 107              		.cfi_startproc
+ 108              		@ Volatile: function does not return.
+ 109              		@ args = 0, pretend = 0, frame = 0
+ 110              		@ frame_needed = 0, uses_anonymous_args = 0
+ARM GAS  C:\Users\POLZOV~1\AppData\Local\Temp\ccbHDPqK.s 			page 4
+
+
+ 111              		@ link register save eliminated.
+ 112              	.L8:
+  69:Core/Src/stm32f1xx_it.cpp **** 
+  70:Core/Src/stm32f1xx_it.cpp ****   while (1)
+ 113              		.loc 1 70 3 discriminator 1 view .LVU10
+ 114              		.loc 1 70 3 discriminator 1 view .LVU11
+ 115 0000 FEE7     		b	.L8
+ 116              		.cfi_endproc
+ 117              	.LFE4368:
+ 118              		.cantunwind
+ 119              		.fnend
+ 121              		.section	.text.UsageFault_Handler,"ax",%progbits
+ 122              		.align	1
+ 123              		.global	UsageFault_Handler
+ 124              		.syntax unified
+ 125              		.thumb
+ 126              		.thumb_func
+ 127              		.fpu softvfp
+ 129              	UsageFault_Handler:
+ 130              		.fnstart
+ 131              	.LFB4369:
+  71:Core/Src/stm32f1xx_it.cpp ****   {
+  72:Core/Src/stm32f1xx_it.cpp ****   }
+  73:Core/Src/stm32f1xx_it.cpp **** }
+  74:Core/Src/stm32f1xx_it.cpp **** 
+  75:Core/Src/stm32f1xx_it.cpp **** /**
+  76:Core/Src/stm32f1xx_it.cpp ****   * @brief This function handles Undefined instruction or illegal state.
+  77:Core/Src/stm32f1xx_it.cpp ****   */
+  78:Core/Src/stm32f1xx_it.cpp **** void UsageFault_Handler(void)
+  79:Core/Src/stm32f1xx_it.cpp **** {
+ 132              		.loc 1 79 1 view -0
+ 133              		.cfi_startproc
+ 134              		@ Volatile: function does not return.
+ 135              		@ args = 0, pretend = 0, frame = 0
+ 136              		@ frame_needed = 0, uses_anonymous_args = 0
+ 137              		@ link register save eliminated.
+ 138              	.L10:
+  80:Core/Src/stm32f1xx_it.cpp **** 
+  81:Core/Src/stm32f1xx_it.cpp ****   while (1)
+ 139              		.loc 1 81 3 discriminator 1 view .LVU13
+ 140              		.loc 1 81 3 discriminator 1 view .LVU14
+ 141 0000 FEE7     		b	.L10
+ 142              		.cfi_endproc
+ 143              	.LFE4369:
+ 144              		.cantunwind
+ 145              		.fnend
+ 147              		.section	.text.SVC_Handler,"ax",%progbits
+ 148              		.align	1
+ 149              		.global	SVC_Handler
+ 150              		.syntax unified
+ 151              		.thumb
+ 152              		.thumb_func
+ 153              		.fpu softvfp
+ 155              	SVC_Handler:
+ 156              		.fnstart
+ 157              	.LFB4370:
+  82:Core/Src/stm32f1xx_it.cpp ****   {
+ARM GAS  C:\Users\POLZOV~1\AppData\Local\Temp\ccbHDPqK.s 			page 5
+
+
+  83:Core/Src/stm32f1xx_it.cpp ****   }
+  84:Core/Src/stm32f1xx_it.cpp **** }
+  85:Core/Src/stm32f1xx_it.cpp **** 
+  86:Core/Src/stm32f1xx_it.cpp **** /**
+  87:Core/Src/stm32f1xx_it.cpp ****   * @brief This function handles System service call via SWI instruction.
+  88:Core/Src/stm32f1xx_it.cpp ****   */
+  89:Core/Src/stm32f1xx_it.cpp **** void SVC_Handler(void)
+  90:Core/Src/stm32f1xx_it.cpp **** {
+ 158              		.loc 1 90 1 view -0
+ 159              		.cfi_startproc
+ 160              		@ args = 0, pretend = 0, frame = 0
+ 161              		@ frame_needed = 0, uses_anonymous_args = 0
+ 162              		@ link register save eliminated.
+  91:Core/Src/stm32f1xx_it.cpp **** }
+ 163              		.loc 1 91 1 is_stmt 0 view .LVU16
+ 164 0000 7047     		bx	lr
+ 165              		.cfi_endproc
+ 166              	.LFE4370:
+ 167              		.cantunwind
+ 168              		.fnend
+ 170              		.section	.text.DebugMon_Handler,"ax",%progbits
+ 171              		.align	1
+ 172              		.global	DebugMon_Handler
+ 173              		.syntax unified
+ 174              		.thumb
+ 175              		.thumb_func
+ 176              		.fpu softvfp
+ 178              	DebugMon_Handler:
+ 179              		.fnstart
+ 180              	.LFB4371:
+  92:Core/Src/stm32f1xx_it.cpp **** 
+  93:Core/Src/stm32f1xx_it.cpp **** /**
+  94:Core/Src/stm32f1xx_it.cpp ****   * @brief This function handles Debug monitor.
+  95:Core/Src/stm32f1xx_it.cpp ****   */
+  96:Core/Src/stm32f1xx_it.cpp **** void DebugMon_Handler(void)
+  97:Core/Src/stm32f1xx_it.cpp **** {
+ 181              		.loc 1 97 1 is_stmt 1 view -0
+ 182              		.cfi_startproc
+ 183              		@ args = 0, pretend = 0, frame = 0
+ 184              		@ frame_needed = 0, uses_anonymous_args = 0
+ 185              		@ link register save eliminated.
+  98:Core/Src/stm32f1xx_it.cpp **** }
+ 186              		.loc 1 98 1 is_stmt 0 view .LVU18
+ 187 0000 7047     		bx	lr
+ 188              		.cfi_endproc
+ 189              	.LFE4371:
+ 190              		.cantunwind
+ 191              		.fnend
+ 193              		.section	.text.PendSV_Handler,"ax",%progbits
+ 194              		.align	1
+ 195              		.global	PendSV_Handler
+ 196              		.syntax unified
+ 197              		.thumb
+ 198              		.thumb_func
+ 199              		.fpu softvfp
+ 201              	PendSV_Handler:
+ 202              		.fnstart
+ARM GAS  C:\Users\POLZOV~1\AppData\Local\Temp\ccbHDPqK.s 			page 6
+
+
+ 203              	.LFB4372:
+  99:Core/Src/stm32f1xx_it.cpp **** 
+ 100:Core/Src/stm32f1xx_it.cpp **** /**
+ 101:Core/Src/stm32f1xx_it.cpp ****   * @brief This function handles Pendable request for system service.
+ 102:Core/Src/stm32f1xx_it.cpp ****   */
+ 103:Core/Src/stm32f1xx_it.cpp **** void PendSV_Handler(void)
+ 104:Core/Src/stm32f1xx_it.cpp **** {
+ 204              		.loc 1 104 1 is_stmt 1 view -0
+ 205              		.cfi_startproc
+ 206              		@ args = 0, pretend = 0, frame = 0
+ 207              		@ frame_needed = 0, uses_anonymous_args = 0
+ 208              		@ link register save eliminated.
+ 105:Core/Src/stm32f1xx_it.cpp **** }
+ 209              		.loc 1 105 1 is_stmt 0 view .LVU20
+ 210 0000 7047     		bx	lr
+ 211              		.cfi_endproc
+ 212              	.LFE4372:
+ 213              		.cantunwind
+ 214              		.fnend
+ 216              		.section	.text.SysTick_Handler,"ax",%progbits
+ 217              		.align	1
+ 218              		.global	SysTick_Handler
+ 219              		.syntax unified
+ 220              		.thumb
+ 221              		.thumb_func
+ 222              		.fpu softvfp
+ 224              	SysTick_Handler:
+ 225              		.fnstart
+ 226              	.LFB4373:
+ 106:Core/Src/stm32f1xx_it.cpp **** 
+ 107:Core/Src/stm32f1xx_it.cpp **** /**
+ 108:Core/Src/stm32f1xx_it.cpp ****   * @brief This function handles System tick timer.
+ 109:Core/Src/stm32f1xx_it.cpp ****   */
+ 110:Core/Src/stm32f1xx_it.cpp **** void SysTick_Handler(void)
+ 111:Core/Src/stm32f1xx_it.cpp **** {
+ 227              		.loc 1 111 1 is_stmt 1 view -0
+ 228              		.cfi_startproc
+ 229              		@ args = 0, pretend = 0, frame = 0
+ 230              		@ frame_needed = 0, uses_anonymous_args = 0
+ 231 0000 08B5     		push	{r3, lr}
+ 232              		.save {r3, lr}
+ 233              	.LCFI0:
+ 234              		.cfi_def_cfa_offset 8
+ 235              		.cfi_offset 3, -8
+ 236              		.cfi_offset 14, -4
+ 112:Core/Src/stm32f1xx_it.cpp **** 
+ 113:Core/Src/stm32f1xx_it.cpp ****   HAL_IncTick();
+ 237              		.loc 1 113 3 view .LVU22
+ 238              		.loc 1 113 14 is_stmt 0 view .LVU23
+ 239 0002 FFF7FEFF 		bl	HAL_IncTick
+ 240              	.LVL0:
+ 114:Core/Src/stm32f1xx_it.cpp **** }
+ 241              		.loc 1 114 1 view .LVU24
+ 242 0006 08BD     		pop	{r3, pc}
+ 243              		.cfi_endproc
+ 244              	.LFE4373:
+ 245              		.fnend
+ARM GAS  C:\Users\POLZOV~1\AppData\Local\Temp\ccbHDPqK.s 			page 7
+
+
+ 247              		.section	.text.USART1_IRQHandler,"ax",%progbits
+ 248              		.align	1
+ 249              		.global	USART1_IRQHandler
+ 250              		.syntax unified
+ 251              		.thumb
+ 252              		.thumb_func
+ 253              		.fpu softvfp
+ 255              	USART1_IRQHandler:
+ 256              		.fnstart
+ 257              	.LFB4374:
+ 115:Core/Src/stm32f1xx_it.cpp **** 
+ 116:Core/Src/stm32f1xx_it.cpp **** /******************************************************************************/
+ 117:Core/Src/stm32f1xx_it.cpp **** 
+ 118:Core/Src/stm32f1xx_it.cpp **** /******************************************************************************/
+ 119:Core/Src/stm32f1xx_it.cpp **** 
+ 120:Core/Src/stm32f1xx_it.cpp **** /**
+ 121:Core/Src/stm32f1xx_it.cpp ****   * @brief This function handles USART1 global interrupt.
+ 122:Core/Src/stm32f1xx_it.cpp ****   */
+ 123:Core/Src/stm32f1xx_it.cpp **** void USART1_IRQHandler(void)
+ 124:Core/Src/stm32f1xx_it.cpp **** {
+ 258              		.loc 1 124 1 is_stmt 1 view -0
+ 259              		.cfi_startproc
+ 260              		@ args = 0, pretend = 0, frame = 0
+ 261              		@ frame_needed = 0, uses_anonymous_args = 0
+ 262 0000 08B5     		push	{r3, lr}
+ 263              		.save {r3, lr}
+ 264              	.LCFI1:
+ 265              		.cfi_def_cfa_offset 8
+ 266              		.cfi_offset 3, -8
+ 267              		.cfi_offset 14, -4
+ 125:Core/Src/stm32f1xx_it.cpp ****   ESP.HandleIRQ();
+ 268              		.loc 1 125 3 view .LVU26
+ 269              	.LVL1:
+ 270              	.LBB4:
+ 271              	.LBI4:
+ 272              		.file 2 "Core/Inc/uart.h"
+   1:Core/Inc/uart.h **** #pragma once
+   2:Core/Inc/uart.h **** #include <etl/circular_buffer.h>
+   3:Core/Inc/uart.h **** #include <etl/string.h>
+   4:Core/Inc/uart.h **** #include <etl/function.h>
+   5:Core/Inc/uart.h **** 
+   6:Core/Inc/uart.h **** class Uart final {
+   7:Core/Inc/uart.h ****     using handle_t = __UART_HandleTypeDef;
+   8:Core/Inc/uart.h ****     using return_t = HAL_StatusTypeDef;
+   9:Core/Inc/uart.h **** 
+  10:Core/Inc/uart.h ****     etl::circular_buffer<char,128> m_Buffer;
+  11:Core/Inc/uart.h ****     handle_t*                      m_UartHandle;
+  12:Core/Inc/uart.h ****     
+  13:Core/Inc/uart.h ****     bool m_IsReady { false };
+  14:Core/Inc/uart.h ****     bool m_HasData { false };
+  15:Core/Inc/uart.h **** public:
+  16:Core/Inc/uart.h ****     Uart() = default;
+  17:Core/Inc/uart.h ****     Uart(handle_t* _Handle) : m_UartHandle{_Handle} 
+  18:Core/Inc/uart.h ****     {
+  19:Core/Inc/uart.h ****         // Empty
+  20:Core/Inc/uart.h ****     }
+  21:Core/Inc/uart.h ****     bool WaitForData(const char *  _Data, size_t _TimeoutMs) 
+ARM GAS  C:\Users\POLZOV~1\AppData\Local\Temp\ccbHDPqK.s 			page 8
+
+
+  22:Core/Inc/uart.h ****     {
+  23:Core/Inc/uart.h ****         int Size = strlen(_Data);
+  24:Core/Inc/uart.h ****         if (Size > static_cast<int>(m_Buffer.size()))
+  25:Core/Inc/uart.h ****             return false;
+  26:Core/Inc/uart.h ****             
+  27:Core/Inc/uart.h ****         if (ReceiveData(Size) == HAL_OK) 
+  28:Core/Inc/uart.h ****         {
+  29:Core/Inc/uart.h ****             if (etl::equal(_Data,_Data+Size,m_Buffer.begin()))
+  30:Core/Inc/uart.h ****             {
+  31:Core/Inc/uart.h ****                 return true;
+  32:Core/Inc/uart.h ****             }
+  33:Core/Inc/uart.h ****         }
+  34:Core/Inc/uart.h ****         return false;
+  35:Core/Inc/uart.h ****     }
+  36:Core/Inc/uart.h ****     const auto& GetBuffer() const 
+  37:Core/Inc/uart.h ****     {
+  38:Core/Inc/uart.h ****         return m_Buffer; 
+  39:Core/Inc/uart.h ****     }
+  40:Core/Inc/uart.h **** 
+  41:Core/Inc/uart.h ****     void HandleIRQ() {
+ 273              		.loc 2 41 10 view .LVU27
+ 274              	.LBB5:
+  42:Core/Inc/uart.h ****         HAL_UART_StateTypeDef State = HAL_UART_GetState(m_UartHandle);   
+ 275              		.loc 2 42 9 view .LVU28
+ 276              		.loc 2 42 56 is_stmt 0 view .LVU29
+ 277 0002 0C4B     		ldr	r3, .L21
+ 278 0004 D3F89400 		ldr	r0, [r3, #148]
+ 279 0008 FFF7FEFF 		bl	HAL_UART_GetState
+ 280              	.LVL2:
+  43:Core/Inc/uart.h ****         switch (State)
+ 281              		.loc 2 43 9 is_stmt 1 view .LVU30
+ 282 000c 38B1     		cbz	r0, .L17
+ 283 000e 2028     		cmp	r0, #32
+ 284 0010 0AD0     		beq	.L18
+ 285              	.L19:
+  44:Core/Inc/uart.h ****         {
+  45:Core/Inc/uart.h ****             case HAL_UART_STATE_RESET: 
+  46:Core/Inc/uart.h ****             {
+  47:Core/Inc/uart.h ****                 m_IsReady = false;
+  48:Core/Inc/uart.h ****                 break;
+  49:Core/Inc/uart.h ****             }
+  50:Core/Inc/uart.h ****             case HAL_UART_STATE_READY:
+  51:Core/Inc/uart.h ****             {
+  52:Core/Inc/uart.h ****                 m_IsReady = true;
+  53:Core/Inc/uart.h ****                 break;
+  54:Core/Inc/uart.h ****             }
+  55:Core/Inc/uart.h ****             case HAL_UART_STATE_BUSY:
+  56:Core/Inc/uart.h ****             break;
+  57:Core/Inc/uart.h ****             case HAL_UART_STATE_BUSY_TX:
+  58:Core/Inc/uart.h ****             break;
+  59:Core/Inc/uart.h ****             case HAL_UART_STATE_BUSY_RX:
+  60:Core/Inc/uart.h ****             break;
+  61:Core/Inc/uart.h ****             case HAL_UART_STATE_BUSY_TX_RX:
+  62:Core/Inc/uart.h ****             break;
+  63:Core/Inc/uart.h ****             case HAL_UART_STATE_ERROR:
+  64:Core/Inc/uart.h ****             break;
+  65:Core/Inc/uart.h ****             default:
+ARM GAS  C:\Users\POLZOV~1\AppData\Local\Temp\ccbHDPqK.s 			page 9
+
+
+  66:Core/Inc/uart.h ****             break;
+  67:Core/Inc/uart.h ****         }
+  68:Core/Inc/uart.h ****         HAL_UART_IRQHandler(m_UartHandle);
+ 286              		.loc 2 68 9 view .LVU31
+ 287              		.loc 2 68 28 is_stmt 0 view .LVU32
+ 288 0012 084B     		ldr	r3, .L21
+ 289 0014 D3F89400 		ldr	r0, [r3, #148]
+ 290              	.LVL3:
+ 291              		.loc 2 68 28 view .LVU33
+ 292 0018 FFF7FEFF 		bl	HAL_UART_IRQHandler
+ 293              	.LVL4:
+ 294              		.loc 2 68 28 view .LVU34
+ 295              	.LBE5:
+ 296              	.LBE4:
+ 126:Core/Src/stm32f1xx_it.cpp **** }
+ 297              		.loc 1 126 1 view .LVU35
+ 298 001c 08BD     		pop	{r3, pc}
+ 299              	.LVL5:
+ 300              	.L17:
+ 301              	.LBB7:
+ 302              	.LBB6:
+  45:Core/Inc/uart.h ****             {
+ 303              		.loc 2 45 13 is_stmt 1 view .LVU36
+  46:Core/Inc/uart.h ****                 m_IsReady = false;
+ 304              		.loc 2 46 13 view .LVU37
+  47:Core/Inc/uart.h ****                 break;
+ 305              		.loc 2 47 17 view .LVU38
+  47:Core/Inc/uart.h ****                 break;
+ 306              		.loc 2 47 27 is_stmt 0 view .LVU39
+ 307 001e 054B     		ldr	r3, .L21
+ 308 0020 0022     		movs	r2, #0
+ 309 0022 83F89820 		strb	r2, [r3, #152]
+  48:Core/Inc/uart.h ****             }
+ 310              		.loc 2 48 17 is_stmt 1 view .LVU40
+ 311 0026 F4E7     		b	.L19
+ 312              	.L18:
+  50:Core/Inc/uart.h ****             {
+ 313              		.loc 2 50 13 view .LVU41
+  51:Core/Inc/uart.h ****                 m_IsReady = true;
+ 314              		.loc 2 51 13 view .LVU42
+  52:Core/Inc/uart.h ****                 break;
+ 315              		.loc 2 52 17 view .LVU43
+  52:Core/Inc/uart.h ****                 break;
+ 316              		.loc 2 52 27 is_stmt 0 view .LVU44
+ 317 0028 024B     		ldr	r3, .L21
+ 318 002a 0122     		movs	r2, #1
+ 319 002c 83F89820 		strb	r2, [r3, #152]
+  53:Core/Inc/uart.h ****             }
+ 320              		.loc 2 53 17 is_stmt 1 view .LVU45
+ 321 0030 EFE7     		b	.L19
+ 322              	.L22:
+ 323 0032 00BF     		.align	2
+ 324              	.L21:
+ 325 0034 00000000 		.word	ESP
+ 326              	.LBE6:
+ 327              	.LBE7:
+ 328              		.cfi_endproc
+ARM GAS  C:\Users\POLZOV~1\AppData\Local\Temp\ccbHDPqK.s 			page 10
+
+
+ 329              	.LFE4374:
+ 330              		.fnend
+ 332              		.text
+ 333              	.Letext0:
+ 334              		.file 3 "c:\\users\\polzovatel\\appdata\\roaming\\gnu mcu eclipse\\xpack-arm-none-eabi-gcc-10.2.1-
+ 335              		.file 4 "c:\\users\\polzovatel\\appdata\\roaming\\gnu mcu eclipse\\xpack-arm-none-eabi-gcc-10.2.1-
+ 336              		.file 5 "c:\\users\\polzovatel\\appdata\\roaming\\gnu mcu eclipse\\xpack-arm-none-eabi-gcc-10.2.1-
+ 337              		.file 6 "Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f103xb.h"
+ 338              		.file 7 "c:\\users\\polzovatel\\appdata\\roaming\\gnu mcu eclipse\\xpack-arm-none-eabi-gcc-10.2.1-
+ 339              		.file 8 "Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_def.h"
+ 340              		.file 9 "Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_dma.h"
+ 341              		.file 10 "Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_uart.h"
+ 342              		.file 11 "c:\\users\\polzovatel\\appdata\\roaming\\gnu mcu eclipse\\xpack-arm-none-eabi-gcc-10.2.1
+ 343              		.file 12 "c:\\users\\polzovatel\\appdata\\roaming\\gnu mcu eclipse\\xpack-arm-none-eabi-gcc-10.2.1
+ 344              		.file 13 "c:\\users\\polzovatel\\appdata\\roaming\\gnu mcu eclipse\\xpack-arm-none-eabi-gcc-10.2.1
+ 345              		.file 14 "c:\\users\\polzovatel\\appdata\\roaming\\gnu mcu eclipse\\xpack-arm-none-eabi-gcc-10.2.1
+ 346              		.file 15 "c:\\users\\polzovatel\\appdata\\roaming\\gnu mcu eclipse\\xpack-arm-none-eabi-gcc-10.2.1
+ 347              		.file 16 "c:\\users\\polzovatel\\appdata\\roaming\\gnu mcu eclipse\\xpack-arm-none-eabi-gcc-10.2.1
+ 348              		.file 17 "c:\\users\\polzovatel\\appdata\\roaming\\gnu mcu eclipse\\xpack-arm-none-eabi-gcc-10.2.1
+ 349              		.file 18 "c:\\users\\polzovatel\\appdata\\roaming\\gnu mcu eclipse\\xpack-arm-none-eabi-gcc-10.2.1
+ 350              		.file 19 "c:\\users\\polzovatel\\appdata\\roaming\\gnu mcu eclipse\\xpack-arm-none-eabi-gcc-10.2.1
+ 351              		.file 20 "c:\\users\\polzovatel\\appdata\\roaming\\gnu mcu eclipse\\xpack-arm-none-eabi-gcc-10.2.1
+ 352              		.file 21 "c:\\users\\polzovatel\\appdata\\roaming\\gnu mcu eclipse\\xpack-arm-none-eabi-gcc-10.2.1
+ 353              		.file 22 "c:\\users\\polzovatel\\appdata\\roaming\\gnu mcu eclipse\\xpack-arm-none-eabi-gcc-10.2.1
+ 354              		.file 23 "c:\\users\\polzovatel\\appdata\\roaming\\gnu mcu eclipse\\xpack-arm-none-eabi-gcc-10.2.1
+ 355              		.file 24 "c:\\users\\polzovatel\\appdata\\roaming\\gnu mcu eclipse\\xpack-arm-none-eabi-gcc-10.2.1
+ 356              		.file 25 "c:\\users\\polzovatel\\appdata\\roaming\\gnu mcu eclipse\\xpack-arm-none-eabi-gcc-10.2.1
+ 357              		.file 26 "c:\\users\\polzovatel\\appdata\\roaming\\gnu mcu eclipse\\xpack-arm-none-eabi-gcc-10.2.1
+ 358              		.file 27 "c:\\users\\polzovatel\\appdata\\roaming\\gnu mcu eclipse\\xpack-arm-none-eabi-gcc-10.2.1
+ 359              		.file 28 "c:\\users\\polzovatel\\appdata\\roaming\\gnu mcu eclipse\\xpack-arm-none-eabi-gcc-10.2.1
+ 360              		.file 29 "c:\\users\\polzovatel\\appdata\\roaming\\gnu mcu eclipse\\xpack-arm-none-eabi-gcc-10.2.1
+ 361              		.file 30 "c:\\users\\polzovatel\\appdata\\roaming\\gnu mcu eclipse\\xpack-arm-none-eabi-gcc-10.2.1
+ 362              		.file 31 "c:\\users\\polzovatel\\appdata\\roaming\\gnu mcu eclipse\\xpack-arm-none-eabi-gcc-10.2.1
+ 363              		.file 32 "c:\\users\\polzovatel\\appdata\\roaming\\gnu mcu eclipse\\xpack-arm-none-eabi-gcc-10.2.1
+ 364              		.file 33 "c:\\users\\polzovatel\\appdata\\roaming\\gnu mcu eclipse\\xpack-arm-none-eabi-gcc-10.2.1
+ 365              		.file 34 "c:\\users\\polzovatel\\appdata\\roaming\\gnu mcu eclipse\\xpack-arm-none-eabi-gcc-10.2.1
+ 366              		.file 35 "c:\\users\\polzovatel\\appdata\\roaming\\gnu mcu eclipse\\xpack-arm-none-eabi-gcc-10.2.1
+ 367              		.file 36 "c:\\users\\polzovatel\\appdata\\roaming\\gnu mcu eclipse\\xpack-arm-none-eabi-gcc-10.2.1
+ 368              		.file 37 "c:\\users\\polzovatel\\appdata\\roaming\\gnu mcu eclipse\\xpack-arm-none-eabi-gcc-10.2.1
+ 369              		.file 38 "c:\\users\\polzovatel\\appdata\\roaming\\gnu mcu eclipse\\xpack-arm-none-eabi-gcc-10.2.1
+ 370              		.file 39 "Core/Inc/etl/circular_buffer.h"
+ 371              		.file 40 "Core/Inc/etl/smallest.h"
+ 372              		.file 41 "Core/Inc/etl/frame_check_sequence.h"
+ 373              		.file 42 "Core/Inc/etl/iterator.h"
+ 374              		.file 43 "Core/Inc/etl/memory.h"
+ 375              		.file 44 "<built-in>"
+ 376              		.file 45 "c:\\users\\polzovatel\\appdata\\roaming\\gnu mcu eclipse\\xpack-arm-none-eabi-gcc-10.2.1
+ 377              		.file 46 "c:\\users\\polzovatel\\appdata\\roaming\\gnu mcu eclipse\\xpack-arm-none-eabi-gcc-10.2.1
+ 378              		.file 47 "c:\\users\\polzovatel\\appdata\\roaming\\gnu mcu eclipse\\xpack-arm-none-eabi-gcc-10.2.1
+ 379              		.file 48 "c:\\users\\polzovatel\\appdata\\roaming\\gnu mcu eclipse\\xpack-arm-none-eabi-gcc-10.2.1
+ 380              		.file 49 "c:\\users\\polzovatel\\appdata\\roaming\\gnu mcu eclipse\\xpack-arm-none-eabi-gcc-10.2.1
+ 381              		.file 50 "Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h"
+ 382              		.file 51 "c:\\users\\polzovatel\\appdata\\roaming\\gnu mcu eclipse\\xpack-arm-none-eabi-gcc-10.2.1
+ 383              		.file 52 "Core/Inc/etl/type_traits.h"
+ARM GAS  C:\Users\POLZOV~1\AppData\Local\Temp\ccbHDPqK.s 			page 11
+
+
+DEFINED SYMBOLS
+                            *ABS*:0000000000000000 stm32f1xx_it.cpp
+C:\Users\POLZOV~1\AppData\Local\Temp\ccbHDPqK.s:16     .text.NMI_Handler:0000000000000000 $t
+C:\Users\POLZOV~1\AppData\Local\Temp\ccbHDPqK.s:24     .text.NMI_Handler:0000000000000000 NMI_Handler
+      .ARM.exidx.text.NMI_Handler:0000000000000000 $d
+C:\Users\POLZOV~1\AppData\Local\Temp\ccbHDPqK.s:44     .text.HardFault_Handler:0000000000000000 $t
+C:\Users\POLZOV~1\AppData\Local\Temp\ccbHDPqK.s:51     .text.HardFault_Handler:0000000000000000 HardFault_Handler
+.ARM.exidx.text.HardFault_Handler:0000000000000000 $d
+C:\Users\POLZOV~1\AppData\Local\Temp\ccbHDPqK.s:70     .text.MemManage_Handler:0000000000000000 $t
+C:\Users\POLZOV~1\AppData\Local\Temp\ccbHDPqK.s:77     .text.MemManage_Handler:0000000000000000 MemManage_Handler
+.ARM.exidx.text.MemManage_Handler:0000000000000000 $d
+C:\Users\POLZOV~1\AppData\Local\Temp\ccbHDPqK.s:96     .text.BusFault_Handler:0000000000000000 $t
+C:\Users\POLZOV~1\AppData\Local\Temp\ccbHDPqK.s:103    .text.BusFault_Handler:0000000000000000 BusFault_Handler
+ .ARM.exidx.text.BusFault_Handler:0000000000000000 $d
+C:\Users\POLZOV~1\AppData\Local\Temp\ccbHDPqK.s:122    .text.UsageFault_Handler:0000000000000000 $t
+C:\Users\POLZOV~1\AppData\Local\Temp\ccbHDPqK.s:129    .text.UsageFault_Handler:0000000000000000 UsageFault_Handler
+.ARM.exidx.text.UsageFault_Handler:0000000000000000 $d
+C:\Users\POLZOV~1\AppData\Local\Temp\ccbHDPqK.s:148    .text.SVC_Handler:0000000000000000 $t
+C:\Users\POLZOV~1\AppData\Local\Temp\ccbHDPqK.s:155    .text.SVC_Handler:0000000000000000 SVC_Handler
+      .ARM.exidx.text.SVC_Handler:0000000000000000 $d
+C:\Users\POLZOV~1\AppData\Local\Temp\ccbHDPqK.s:171    .text.DebugMon_Handler:0000000000000000 $t
+C:\Users\POLZOV~1\AppData\Local\Temp\ccbHDPqK.s:178    .text.DebugMon_Handler:0000000000000000 DebugMon_Handler
+ .ARM.exidx.text.DebugMon_Handler:0000000000000000 $d
+C:\Users\POLZOV~1\AppData\Local\Temp\ccbHDPqK.s:194    .text.PendSV_Handler:0000000000000000 $t
+C:\Users\POLZOV~1\AppData\Local\Temp\ccbHDPqK.s:201    .text.PendSV_Handler:0000000000000000 PendSV_Handler
+   .ARM.exidx.text.PendSV_Handler:0000000000000000 $d
+C:\Users\POLZOV~1\AppData\Local\Temp\ccbHDPqK.s:217    .text.SysTick_Handler:0000000000000000 $t
+C:\Users\POLZOV~1\AppData\Local\Temp\ccbHDPqK.s:224    .text.SysTick_Handler:0000000000000000 SysTick_Handler
+  .ARM.extab.text.SysTick_Handler:0000000000000000 $d
+  .ARM.exidx.text.SysTick_Handler:0000000000000000 $d
+C:\Users\POLZOV~1\AppData\Local\Temp\ccbHDPqK.s:248    .text.USART1_IRQHandler:0000000000000000 $t
+C:\Users\POLZOV~1\AppData\Local\Temp\ccbHDPqK.s:255    .text.USART1_IRQHandler:0000000000000000 USART1_IRQHandler
+C:\Users\POLZOV~1\AppData\Local\Temp\ccbHDPqK.s:325    .text.USART1_IRQHandler:0000000000000034 $d
+.ARM.extab.text.USART1_IRQHandler:0000000000000000 $d
+.ARM.exidx.text.USART1_IRQHandler:0000000000000000 $d
+
+UNDEFINED SYMBOLS
+HAL_IncTick
+__aeabi_unwind_cpp_pr1
+HAL_UART_GetState
+HAL_UART_IRQHandler
+ESP
