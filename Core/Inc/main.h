@@ -29,6 +29,8 @@ extern "C" {
 
 #include "stm32f1xx_hal.h"
 
+// #define IS_TEST
+
 void Error_Handler(void);
 
 

@@ -122,7 +122,11 @@ void SysTick_Handler(void)
   */
 void USART1_IRQHandler(void)
 {
+#ifdef IS_TEST
   Uart_isr(&huart1);
+#else
+  ESP.HandleIRQ();
+#endif
 }
 
 /************************ (C) COPYRIGHT STMicroelectronics *****END OF FILE****/

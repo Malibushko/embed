@@ -1,13 +1,13 @@
 #pragma once
 #include <etl/circular_buffer.h>
-#include <etl/string.h>
-#include <etl/function.h>
 
 class Uart final {
     using handle_t = __UART_HandleTypeDef;
-    using return_t = HAL_StatusTypeDef;
+    using return_t = void;
 
-    etl::circular_buffer<char,128> m_Buffer;
+    etl::circular_buffer<unsigned char,64> m_RxBuffer;
+    etl::circular_buffer<unsigned char,64> m_TxBuffer;
+    
     handle_t*                      m_UartHandle;
     
     bool m_IsReady { false };
@@ -18,88 +18,85 @@ public:
     {
         // Empty
     }
+    
+    void Init() {
+        __HAL_UART_ENABLE_IT(m_UartHandle, UART_IT_ERR);
+        __HAL_UART_ENABLE_IT(m_UartHandle, UART_IT_RXNE);
+    }
+
+    void Clear() {
+        m_RxBuffer.clear();
+        m_TxBuffer.clear();
+    }
+    
     bool WaitForData(const char * _Data, size_t _TimeoutMs) 
     {
-        int Size = strlen(_Data);
-
-        if (ReceiveData(Size + 1, _TimeoutMs) == HAL_OK) 
-        {
-            if (etl::equal(_Data, _Data+Size ,m_Buffer.begin()))
-            {
-                return true;
-            }
-        }
         return false;
-    }
-    const auto& GetBuffer() const 
-    {
-        return m_Buffer; 
     }
 
     void HandleIRQ() {
-        HAL_UART_StateTypeDef State = HAL_UART_GetState(m_UartHandle);   
-        switch (State)
-        {
-            case HAL_UART_STATE_RESET: 
+        uint32_t SR_Flags  = READ_REG(m_UartHandle->Instance->SR);
+        uint32_t CR1_Flags = READ_REG(m_UartHandle->Instance->CR1);
+
+        if (((SR_Flags  & USART_SR_RXNE) != RESET) && 
+            ((CR1_Flags & USART_CR1_RXNEIE) != RESET)) 
+             {
+                 m_UartHandle->Instance->SR;
+                 unsigned char Data = m_UartHandle->Instance->DR;
+                
+                 m_RxBuffer.push(Data);
+                 return;
+             }
+        
+
+        if (((SR_Flags & USART_SR_TXE) != RESET) && 
+            ((CR1_Flags & USART_CR1_TXEIE) != RESET))
             {
-                m_IsReady = false;
-                break;
+                if (!m_TxBuffer.empty())
+                {
+                    unsigned char Data = m_TxBuffer.back();
+                    m_TxBuffer.pop();
+
+                    m_UartHandle->Instance->SR;
+                    m_UartHandle->Instance->DR = Data;
+                }
+                else
+                    __HAL_UART_DISABLE_IT(m_UartHandle, UART_IT_TXE);
+
+                return;
             }
-            case HAL_UART_STATE_READY:
-            {
-                m_IsReady = true;
-                break;
-            }
-            case HAL_UART_STATE_BUSY:
-            break;
-            case HAL_UART_STATE_BUSY_TX:
-            break;
-            case HAL_UART_STATE_BUSY_RX:
-            break;
-            case HAL_UART_STATE_BUSY_TX_RX:
-            break;
-            case HAL_UART_STATE_ERROR:
-            break;
-            default:
-            break;
+    }
+
+    return_t Write(const char * _Data)
+    {
+        while(*_Data) WriteChar(*_Data++);
+    }
+
+    return_t WriteChar(char _Data) {
+        m_TxBuffer.push(_Data);
+        __HAL_UART_ENABLE_IT(m_UartHandle, UART_IT_TXE);
+        // HAL_Delay(1); -- Это фиксит проблему
+    }
+
+    char Read() {
+        char Data = m_RxBuffer.back();
+        m_RxBuffer.pop();
+        return Data; 
+    }
+
+    bool IsEmpty() const {
+        return m_RxBuffer.empty();
+    }
+
+    template<size_t N>
+    void ReadData() {
+        /*
+        etl::string<N> Data;
+        for (size_t i = 0; i < N && !m_RxBuffer.empty(); ++i) {
+            Data.push_back(m_RxBuffer.back());
+            m_RxBuffer.pop();
         }
-        HAL_UART_IRQHandler(m_UartHandle);
-    }
-    return_t WriteDataAsync(const char * _Data, uint32_t _TimeoutMs = 1000) {
-        return HAL_UART_Transmit(m_UartHandle, (uint8_t*)_Data, strlen(_Data) + 1, _TimeoutMs);
-    }
-    return_t WriteData(const char * _Data)
-    {
-        return WriteDataAsync(_Data);
-    }
-    
-    return_t ReceiveData(int _Count, uint32_t _TimeoutMs = 1000)
-    {
-        uint8_t Buffer = '\0';
-        for (int i = 0; i < _Count;++i) 
-        {
-            auto Status = HAL_UART_Receive(m_UartHandle, &Buffer, 1 ,_TimeoutMs);
-            if (Status == HAL_OK)
-                m_Buffer.push(Buffer);
-            else
-                return Status;
-        }
-        return HAL_OK;
-    }
-    return_t ReceiveDataAsync(size_t _Count)
-    {
-        return ReceiveData(_Count);
-    }
-    return_t StopReadWrite() const 
-    {
-        return HAL_UART_Abort(m_UartHandle);
-    }
-    return_t StopWriting() const 
-    {
-        return HAL_UART_AbortTransmit(m_UartHandle);
-    }
-    return_t StopReceiving() const
-    {
-        return HAL_UART_AbortReceive(m_UartHandle);
+        return Data;
+        */
     }
 };

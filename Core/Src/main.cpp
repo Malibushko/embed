@@ -1,7 +1,15 @@
 #include "main.h"
+#ifdef IS_TEST
 #include "ESP_DATA_HANDLER.h"
+#else
+#include "uart.h"
+#endif
 
 UART_HandleTypeDef huart1;
+
+#ifndef IS_TEST
+Uart               ESP(&huart1);
+#endif
 
 void SystemClock_Config(void);
 static void MX_GPIO_Init(void);
@@ -9,17 +17,31 @@ static void MX_USART1_UART_Init(void);
 
 int main(void)
 {
-
   HAL_Init();
   SystemClock_Config();
   MX_GPIO_Init();
   MX_USART1_UART_Init();
- 
-  ESP_Init("Vernite_2007_2.4G","pAkishOh", "192.168.0.8");
-  while (1)
-  {
+
+ #ifdef IS_TEST
+  ESP_Init("Vernite_2007_2.4G","pAkishOh","192.168.0.8");
+
+  while (1) {
     Server_Start();
   }
+ #else
+  ESP.Init();
+  
+  ESP.Write("AT+RST\r\n");
+  HAL_Delay(2000);
+
+  ESP.Write("AT\r\n");
+  HAL_Delay(1000);
+
+  while (1) {
+    HAL_GPIO_TogglePin(GPIOC, GPIO_PIN_13);
+    HAL_Delay(500);
+  }
+#endif
 }
 
 /**
